@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Chris Otto Blog`,
+    description: `Test engineer by day, programming afficiado by night.`,
+    author: `@wisco_cmo`,
+    hello: `hello`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +28,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    //`gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: 'posts',
+      },
+    },
   ],
 }
