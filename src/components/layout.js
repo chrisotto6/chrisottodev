@@ -9,6 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Archive from './archive'
 import Header from './header'
 import './layout.css'
 
@@ -36,6 +37,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+        <Archive />
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

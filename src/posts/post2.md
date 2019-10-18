@@ -1,11 +1,11 @@
 ---
-slug: '/first-post'
-title: 'Our First Post'
+slug: '/second-post'
+title: 'Our Second Post'
 author: 'Chris Otto'
-date: '2019-10-10'
+date: '2019-10-17'
 ---
 
-# Hello
+# Yo
 
 Osweiler, 28, went 2-3 as a fill-in starter for the Dolphins last season when Ryan Tannehill was injured. He gave the fan base hope during a period dubbed "Brocktober," which began with him throwing for a career-high 380 yards in an upset overtime victory against the Chicago Bears, but his play leveled off in the following games.
 
