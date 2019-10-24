@@ -2,6 +2,7 @@
 slug: '/second-post'
 title: 'Our Second Post'
 author: 'Chris Otto'
+tags: ['react', 'gatsby']
 date: '2019-10-17'
 ---
 

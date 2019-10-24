@@ -2,6 +2,7 @@
 slug: '/first-post'
 title: 'Our First Post'
 author: 'Chris Otto'
+tags: ['testing', 'automation', 'graphql']
 date: '2019-10-10'
 ---
 

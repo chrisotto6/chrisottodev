@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Chris Otto Blog`,
+    title: `Chris Otto`,
     description: `Test engineer by day, programming afficiado by night.`,
     author: `@wisco_cmo`,
-    hello: `hello`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Chris Otto's Peronsal Site`,
+        short_name: `Chris Otto`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

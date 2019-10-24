@@ -26,10 +26,13 @@ const Listing = ({ children }) => {
     <>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <article key={node.frontmatter.slug}>
-          <h2>{node.frontmatter.title}</h2>
+          <h2>
+            <Link to={`posts${node.frontmatter.slug}`}>
+              {node.frontmatter.title}
+            </Link>
+          </h2>
           <p>{node.frontmatter.date}</p>
           <p>{node.excerpt}</p>
-          <Link to={`posts${node.frontmatter.slug}`}>Read more...</Link>
         </article>
       ))}
     </>
