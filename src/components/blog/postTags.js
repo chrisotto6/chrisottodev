@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 import { Link } from 'gatsby'
 
-export default function TagsList({ tags, ...otherProps }) {
+export default function postTags({ tags, ...otherProps }) {
   if (!tags || tags.length === 0) {
     return null
   }

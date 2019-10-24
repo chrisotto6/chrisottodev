@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../common/layout'
+import PostTags from './postTags'
 
 export default class postLayout extends Component {
   render() {
@@ -8,6 +9,8 @@ export default class postLayout extends Component {
     return (
       <Layout>
         <h1>{markdownRemark.frontmatter.title}</h1>
+        <p>{markdownRemark.frontmatter.date}</p>
+        <PostTags tags={markdownRemark.frontmatter.tags} />
         <div
           dangerouslySetInnerHTML={{
             __html: markdownRemark.html,
@@ -24,7 +27,9 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
         slug
+        tags
       }
     }
   }
