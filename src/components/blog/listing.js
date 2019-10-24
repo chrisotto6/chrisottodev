@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+import TagsList from './postTags'
 
 const Listing = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -15,6 +16,7 @@ const Listing = ({ children }) => {
               title
               date(formatString: "MMMM DD, YYYY")
               slug
+              tags
             }
           }
         }
@@ -33,6 +35,9 @@ const Listing = ({ children }) => {
           </h2>
           <p>{node.frontmatter.date}</p>
           <p>{node.excerpt}</p>
+          <p>
+            <TagsList tags={node.frontmatter.tags} />
+          </p>
         </article>
       ))}
     </>

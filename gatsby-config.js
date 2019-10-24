@@ -35,6 +35,12 @@ module.exports = {
         name: 'posts',
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+      },
+    },
     `gatsby-transformer-remark`,
   ],
 }
