@@ -1,8 +1,11 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../common/layout'
 import PostTags from './postTags'
 
+// eslint-disable-next-line react/prefer-stateless-function
 export default class postLayout extends Component {
   render() {
     const { markdownRemark } = this.props.data
@@ -12,6 +15,7 @@ export default class postLayout extends Component {
         <p>{markdownRemark.frontmatter.date}</p>
         <PostTags tags={markdownRemark.frontmatter.tags} />
         <div
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: markdownRemark.html,
           }}

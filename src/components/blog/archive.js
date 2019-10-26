@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
-const Archive = ({ children }) => {
+const Archive = () => {
   const data = useStaticQuery(graphql`
     query BlogPostArchive {
       allMarkdownRemark(

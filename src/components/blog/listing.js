@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import PostTags from './postTags'
 
-const Listing = ({ children }) => {
+const Listing = () => {
   const data = useStaticQuery(graphql`
     query BlogPostListing {
       allMarkdownRemark(

@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -51,8 +44,10 @@ const Layout = ({ children }) => {
         >
           <p style={{ textAlign: `center`, verticalAlign: `bottom` }}>
             {' '}
-            © 2014 - {new Date().getFullYear()}, Built with
-            {` `}
+            © 2014 -
+            {' '}
+            {new Date().getFullYear()}
+            , Built with
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </p>
         </div>
