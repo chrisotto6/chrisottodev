@@ -53,7 +53,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "lint": "eslint ./src",
     "e2e:open": "cypress open",
-    "e2e:ci": "start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
+    "e2e:ci": "start-server-and-test serve http://localhost:9000 'npx cypress run'"
   },
   "repository": {
     "type": "git",
