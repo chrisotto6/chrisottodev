@@ -12,10 +12,10 @@ const ContactPage = () => (
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
-        <input name="name" placeholder="Your Name" type="text" />
+        <input name="name" placeholder="John Smith" type="text" />
       </p>
       <p>
-        <input name="email" placeholder="name@name.com" type="email" />
+        <input name="email" placeholder="john@smith.com" type="email" />
       </p>
       <p>
         <textarea name="message" />

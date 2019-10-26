@@ -24,7 +24,21 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "@testing-library/cypress": "^5.0.2",
+    "axe-core": "^3.4.0",
+    "cypress": "^3.5.0",
+    "cypress-axe": "^0.5.1",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "start-server-and-test": "^1.10.6"
   },
   "keywords": [
     "gatsby"
@@ -36,7 +50,10 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "lint": "eslint ./src",
+    "e2e:open": "cypress open",
+    "e2e:ci": "start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
   },
   "repository": {
     "type": "git",
@@ -44,5 +61,16 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

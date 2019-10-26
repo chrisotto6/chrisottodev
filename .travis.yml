@@ -1,0 +1,24 @@
+
+language: node_js
+
+node_js:
+  - '10'
+
+addons:
+  apt:
+    packages:
+      # cypress dep
+      - libgconf-2-4
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - npm ci
+
+script:
+  - npm run lint
+  - npm run build
+  - npm run e2e:ci
