@@ -26,7 +26,6 @@ const ContactPage = () => (
           Message: <textarea name="message" placeholder="Hello!"></textarea>
         </label>
       </p>
-      <div type="hidden" data-netlify-recaptcha="true" />
       <p>
         <button type="submit">Send</button>
       </p>
