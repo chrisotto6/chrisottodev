@@ -21,7 +21,7 @@ const ContactPage = () => (
         <textarea name="message" />
       </p>
       <p>
-        <button>Send</button>
+        <button type="button">Send</button>
       </p>
     </form>
   </Layout>

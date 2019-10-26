@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@percy/cypress": "^2.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.17.4",
     "gatsby-image": "^2.2.29",
@@ -17,6 +18,7 @@
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^2.3.0",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -53,7 +55,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "lint": "eslint ./src",
     "e2e:open": "cypress open",
-    "e2e:ci": "start-server-and-test serve http://localhost:9000 'npx cypress run'"
+    "e2e:ci": "start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
   },
   "repository": {
     "type": "git",

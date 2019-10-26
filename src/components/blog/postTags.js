@@ -1,15 +1,16 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-export default function postTags({ tags, ...otherProps }) {
+export default function postTags({ tags }) {
   if (!tags || tags.length === 0) {
     return null
   }
 
   return (
-    <Ul {...otherProps}>
+    <Ul>
       {tags.map(tag => (
         <Li key={tag}>
           <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
@@ -17,6 +18,10 @@ export default function postTags({ tags, ...otherProps }) {
       ))}
     </Ul>
   )
+}
+
+postTags.propTypes = {
+  tags: PropTypes.string.isRequired,
 }
 
 const Ul = styled.ul`
