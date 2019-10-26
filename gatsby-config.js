@@ -3,9 +3,11 @@ module.exports = {
     title: `Chris Otto`,
     description: `Test engineer by day, programming afficiado by night.`,
     author: `@wisco_cmo`,
+    siteUrl: `https://gatsby-otto.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
