@@ -28,6 +28,8 @@
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
     "axe-core": "^3.4.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.20",
     "cypress": "^3.5.0",
     "cypress-axe": "^0.5.1",
     "eslint": "^6.6.0",
@@ -38,8 +40,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
+    "react-test-renderer": "^16.11.0",
     "start-server-and-test": "^1.10.6"
   },
   "keywords": [
@@ -52,7 +57,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "test": "jest",
     "lint": "eslint ./src",
     "e2e:open": "cypress open",
     "e2e:ci": "start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
