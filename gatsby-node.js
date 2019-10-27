@@ -4,8 +4,8 @@ const _ = require('lodash')
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve('./src/components/blog/postLayout.js')
-  const tagTemplate = path.resolve('./src/components/blog/tagLayout.js')
+  const blogPostTemplate = path.resolve('./src/templates/postLayout.js')
+  const tagTemplate = path.resolve('./src/templates/tagLayout.js')
 
   const result = await graphql(`
     {
