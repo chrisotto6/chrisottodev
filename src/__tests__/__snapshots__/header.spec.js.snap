@@ -3,6 +3,7 @@
 exports[`Header renders correctly 1`] = `
 <div
   className="header"
+  role="banner"
 >
   <a
     className="header__link"
@@ -10,8 +11,9 @@ exports[`Header renders correctly 1`] = `
   >
     Default Starter
   </a>
-  <section
+  <div
     className="menu__section"
+    role="navigation"
   >
     <ul
       className="menu"
@@ -49,6 +51,6 @@ exports[`Header renders correctly 1`] = `
         </a>
       </li>
     </ul>
-  </section>
+  </div>
 </div>
 `;
