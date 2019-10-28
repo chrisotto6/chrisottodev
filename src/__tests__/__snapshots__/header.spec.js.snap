@@ -1,50 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<header
-  style={
-    Object {
-      "background": "cyan",
-      "marginBottom": "1.45rem",
-    }
-  }
+<div
+  className="header"
 >
-  <div
-    style={
-      Object {
-        "margin": "0 auto",
-        "maxWidth": 960,
-        "padding": "1.45rem 1.0875rem",
-      }
-    }
+  <a
+    className="header__link"
+    href="/"
   >
-    <h1
-      style={
-        Object {
-          "margin": 0,
-        }
-      }
+    Default Starter
+  </a>
+  <section
+    className="menu__section"
+  >
+    <ul
+      className="menu"
     >
-      <a
-        href="/"
-        style={
-          Object {
-            "color": "black",
-            "textDecoration": "none",
-          }
-        }
-      >
-        <img
-          alt="Gatsby Logo"
-          style={
-            Object {
-              "width": "100px",
-            }
-          }
-        />
-        Default Starter
-      </a>
-    </h1>
-  </div>
-</header>
+      <li>
+        <a
+          className="menu__item"
+          href="/"
+        >
+          home
+        </a>
+      </li>
+      <li>
+        <a
+          className="menu__item"
+          href="/about"
+        >
+          about
+        </a>
+      </li>
+      <li>
+        <a
+          className="menu__item"
+          href="/posts"
+        >
+          posts
+        </a>
+      </li>
+      <li>
+        <a
+          className="menu__item"
+          href="/contact"
+        >
+          contact
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
 `;
