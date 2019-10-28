@@ -11,14 +11,15 @@ const ContactPage = () => (
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
+
+        <label for="name" class="visuallyhidden">Name:</label>
+        <input name="name" id="name" placeholder="John Smith" type="text" /><br/>
+
       <p>
-        <input name="name" placeholder="John Smith" type="text" />
+        <input name="email" label="email" placeholder="john@smith.com" type="email" />
       </p>
       <p>
-        <input name="email" placeholder="john@smith.com" type="email" />
-      </p>
-      <p>
-        <textarea name="message" />
+        <textarea name="message" label="message" />
       </p>
       <p>
         <button type="button">Send</button>
