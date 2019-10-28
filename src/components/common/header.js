@@ -5,7 +5,7 @@ import Menu from './menu'
 import './header.css'
 
 const Header = ({ siteTitle }) => (
-  <div className="header">
+  <div className="header" role="banner">
     <Link to="/" className="header__link">
       {siteTitle}
     </Link>

@@ -58,7 +58,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
+    "test:cypress": "cypress run",
     "lint": "eslint ./src",
+    "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
     "e2e:open": "cypress open",
     "e2e:ci": "start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
   },
