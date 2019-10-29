@@ -17,6 +17,12 @@ describe('Accessibility checks', () => {
     cy.checkA11y()
   })
 
+  it('Tags Page', () => {
+    cy.visit('/tags')
+    cy.injectAxe()
+    cy.checkA11y()
+  })
+
   it('Contact Page', () => {
     cy.visit('/contact')
     cy.injectAxe()
