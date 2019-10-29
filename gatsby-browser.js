@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// eslint-disable-next-line import/prefer-default-export
+export const onServiceWorkerUpdateReady = () => {
+    // eslint-disable-next-line no-alert
+    const answer = window.confirm(
+      `This application has been updated. ` +
+        `Reload to display the latest version?`
+    )
 
-// You can delete this file if you're not using it
+    if (answer === true) {
+      window.location.reload()
+    }
+  }
