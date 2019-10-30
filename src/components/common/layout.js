@@ -42,8 +42,7 @@ const Layout = ({ children }) => {
           }}
         >
           <p style={{ textAlign: `center`, verticalAlign: `bottom` }}>
-            {' '}
-            © 2014 -
+            ©
             {' '}
             {new Date().getFullYear()}
             , Built with
