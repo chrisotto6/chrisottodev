@@ -1,20 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import kebabCase from 'lodash/kebabCase'
-import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/common/layout'
+import SEO from '../components/common/seo'
 
 const TagsPage = ({
   data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
+    allMarkdownRemark: { group }
   },
 }) => (
   <Layout>
-    <Helmet title={title} />
+    <SEO title="Tags" />
     <div>
       <h1>Tags</h1>
       <ul>
@@ -23,9 +20,9 @@ const TagsPage = ({
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue}
               {' '}
-(
+              (
               {tag.totalCount}
-)
+              )
             </Link>
           </li>
         ))}
@@ -44,22 +41,12 @@ TagsPage.propTypes = {
         }).isRequired
       ),
     }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
   }),
 }
 export default TagsPage
 
 export const pageQuery = graphql`
   query TagsPageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
