@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact Form renders correctly 1`] = `
+<form
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  method="post"
+  name="contact"
+>
+  <input
+    name="form-name"
+    type="hidden"
+    value="contact"
+  />
+  <p>
+    <div
+      aria-label="name"
+      className="MuiFormControl-root MuiTextField-root makeStyles-textField-1 MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+        data-shrink={false}
+        htmlFor="name"
+        id="name-label"
+      >
+        Name
+        <span
+          className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="name"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </p>
+  <p>
+    <div
+      aria-label="email"
+      className="MuiFormControl-root MuiTextField-root makeStyles-textField-1 MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+        data-shrink={false}
+        htmlFor="email"
+        id="email-label"
+      >
+        E-Mail
+        <span
+          className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          className="MuiInputBase-input MuiInput-input"
+          disabled={false}
+          id="email"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </p>
+  <p>
+    <div
+      aria-label="message"
+      className="MuiFormControl-root MuiTextField-root makeStyles-textField-1 MuiFormControl-marginNormal"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+        data-shrink={false}
+        htmlFor="message"
+        id="message-label"
+      >
+        Message
+        <span
+          className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+        onClick={[Function]}
+      >
+        <textarea
+          aria-invalid={false}
+          className="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+          disabled={false}
+          id="message"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={true}
+          rows="4"
+        />
+      </div>
+    </div>
+  </p>
+  <p>
+    <button
+      aria-label="send"
+      className="MuiButtonBase-root MuiFab-root classes.fab MuiFab-extended"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiFab-label"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root makeStyles-extendedIcon-3"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
+          />
+        </svg>
+        Send
+      </span>
+    </button>
+  </p>
+</form>
+`;

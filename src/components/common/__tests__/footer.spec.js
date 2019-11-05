@@ -1,12 +1,12 @@
 import React from "react"
 import renderer from "react-test-renderer"
 
-import Header from "../components/common/header"
+import Footer from "../footer"
 
-describe("Header", () => {
+describe("Footer", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Header siteTitle="Default Starter" />)
+      .create(<Footer />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

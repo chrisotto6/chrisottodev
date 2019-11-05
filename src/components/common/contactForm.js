@@ -54,7 +54,7 @@ const ContactForm = () => {
           className={classes.textField}
           label="Message"
           margin="normal"
-          multiline="true"
+          multiline
           rows="4"
           aria-label="message"
           required
