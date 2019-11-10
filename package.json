@@ -62,7 +62,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:cypress": "cypress run",
     "lint": "eslint ./src",
     "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
