@@ -18,13 +18,3 @@
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 2.5em;
 }
-
-.header__logo {
-  margin-bottom: 0;
-}
-
-@media (min-width: 790px) {
-  .header {
-    flex-direction: row;
-  }
-}
