@@ -13,8 +13,8 @@ module.exports = {
       options: {
         host: 'https://www.example.com',
         sitemap: 'https://www.example.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

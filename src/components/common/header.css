@@ -1,6 +1,6 @@
 .header {
   margin-bottom: 0;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 0rem;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -16,5 +16,15 @@
   margin-bottom: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: 2.5em;
+  font-size: 3em;
+}
+
+.header__logo {
+  margin-bottom: 0;
+}
+
+@media (min-width: 790px) {
+  .header {
+    flex-direction: row;
+  }
 }

@@ -4,7 +4,6 @@ import Layout from '../components/common/layout'
 import SEO from '../components/common/seo'
 
 const ContactPage = () => {
-
   return (
     <Layout>
       <SEO title="Contact" />
@@ -14,4 +13,4 @@ const ContactPage = () => {
   )
 }
 
-export default ContactPage;
+export default ContactPage

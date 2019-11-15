@@ -1,14 +1,14 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import TextField from '@material-ui/core/TextField';
-import SendIcon from '@material-ui/icons/Send';
+import { makeStyles } from '@material-ui/core/styles'
+import Fab from '@material-ui/core/Fab'
+import TextField from '@material-ui/core/TextField'
+import SendIcon from '@material-ui/icons/Send'
 
 const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width:`100%`,
+    width: `100%`,
   },
   fab: {
     margin: theme.spacing(1),
@@ -16,10 +16,10 @@ const useStyles = makeStyles(theme => ({
   extendedIcon: {
     marginRight: theme.spacing(1),
   },
-}));
+}))
 
 const ContactForm = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <form
       name="contact"
@@ -61,11 +61,7 @@ const ContactForm = () => {
         />
       </p>
       <p>
-        <Fab
-          variant="extended"
-          aria-label="send"
-          className="classes.fab"
-        >
+        <Fab variant="extended" aria-label="send" className="classes.fab">
           <SendIcon className={classes.extendedIcon} />
           Send
         </Fab>
@@ -74,4 +70,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm;
+export default ContactForm
