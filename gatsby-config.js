@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://www.chrisotto.dev',
+        sitemap: 'https://www.chrisotto.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -51,7 +51,20 @@ module.exports = {
         displayName: false,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'chrisotto6',
+              includeDefaultCss: true,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
