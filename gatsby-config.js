@@ -53,15 +53,17 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      plugins: [
-        {
-          resolve: 'gatsby-remark-embed-gist',
-          options: {
-            username: 'chrisotto6',
-            includeDefaultCss: true,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'chrisotto6',
+              includeDefaultCss: true,
+            },
           },
-        },
-      ],
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-feed`,
