@@ -9,10 +9,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: 'gatsby-remark-embed-gist',
+      options: {
+        username: 'chrisotto6',
+        includeDefaultCss: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://www.chrisotto.dev',
+        sitemap: 'https://www.chrisotto.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
