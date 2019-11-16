@@ -9,13 +9,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: 'gatsby-remark-embed-gist',
-      options: {
-        username: 'chrisotto6',
-        includeDefaultCss: true,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.chrisotto.dev',
@@ -58,7 +51,18 @@ module.exports = {
         displayName: false,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      plugins: [
+        {
+          resolve: 'gatsby-remark-embed-gist',
+          options: {
+            username: 'chrisotto6',
+            includeDefaultCss: true,
+          },
+        },
+      ],
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
