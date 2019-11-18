@@ -1,9 +1,10 @@
 language: node_js
 
 node_js:
-  - '10'
+  - "10"
 
 addons:
+  chrome: stable
   apt:
     packages:
       # cypress dep
@@ -14,6 +15,9 @@ cache:
     - ~/.npm
     - ~/.cache
 
+before_install:
+  - npm install -g @lhci/cli@0.3.x
+
 install:
   - npm ci
 
@@ -21,4 +25,5 @@ script:
   - npm run lint
   - npm run test
   - npm run build
+  - lhci autorun
   - npm run e2e:ci
