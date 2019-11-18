@@ -11,7 +11,7 @@
     "@percy/cypress": "^2.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.17.4",
-    "gatsby-image": "^2.2.29",
+    "gatsby-image": "^2.2.33",
     "gatsby-plugin-feed": "^2.3.21",
     "gatsby-plugin-google-analytics": "^2.1.27",
     "gatsby-plugin-manifest": "^2.2.23",
