@@ -21,7 +21,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-plugin-sitemap": "^2.2.19",
-    "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-plugin-styled-components": "^3.1.13",
     "gatsby-remark-embed-gist": "^1.1.9",
     "gatsby-source-filesystem": "^2.1.37",
     "gatsby-transformer-remark": "^2.6.36",
