@@ -24,7 +24,7 @@
     "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-remark-embed-gist": "^1.1.9",
     "gatsby-source-filesystem": "^2.1.37",
-    "gatsby-transformer-remark": "^2.6.36",
+    "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.3.5",
     "jest-coverage-badges": "^1.1.2",
     "lodash": "^4.17.15",
