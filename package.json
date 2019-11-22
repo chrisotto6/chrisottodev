@@ -38,7 +38,7 @@
     "@testing-library/cypress": "^5.0.2",
     "axe-core": "^3.4.0",
     "babel-jest": "^24.9.0",
-    "babel-preset-gatsby": "^0.2.20",
+    "babel-preset-gatsby": "^0.2.22",
     "cypress": "^3.6.1",
     "cypress-axe": "^0.5.1",
     "eslint": "^6.6.0",
