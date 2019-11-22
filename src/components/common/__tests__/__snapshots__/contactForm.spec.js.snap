@@ -37,6 +37,7 @@ exports[`Contact Form renders correctly 1`] = `
       >
         <input
           aria-invalid={false}
+          autoFocus={false}
           className="MuiInputBase-input MuiInput-input"
           disabled={false}
           id="name"
@@ -75,6 +76,7 @@ exports[`Contact Form renders correctly 1`] = `
       >
         <input
           aria-invalid={false}
+          autoFocus={false}
           className="MuiInputBase-input MuiInput-input"
           disabled={false}
           id="email"
@@ -113,6 +115,7 @@ exports[`Contact Form renders correctly 1`] = `
       >
         <textarea
           aria-invalid={false}
+          autoFocus={false}
           className="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
           disabled={false}
           id="message"
