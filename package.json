@@ -23,7 +23,7 @@
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-plugin-styled-components": "^3.1.14",
     "gatsby-remark-embed-gist": "^1.1.9",
-    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-source-filesystem": "^2.1.42",
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
     "jest-coverage-badges": "^1.1.2",
