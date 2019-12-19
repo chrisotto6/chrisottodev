@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^5.0.2",
-    "axe-core": "^3.4.0",
+    "axe-core": "^3.4.1",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.26",
     "cypress": "^3.8.0",
