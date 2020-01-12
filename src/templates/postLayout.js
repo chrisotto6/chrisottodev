@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { DiscussionEmbed } from 'disqus-react'
+import styled from 'styled-components'
 import Layout from '../components/common/layout'
 import PostTags from '../components/blog/postTags'
 
@@ -17,10 +18,10 @@ const pageLayout = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <H1>{title}</H1>
+      <H5>{date}</H5>
       <PostTags tags={tags} />
-      <div
+      <Div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: data.markdownRemark.html,
@@ -59,4 +60,17 @@ export const query = graphql`
       }
     }
   }
+`
+
+const H1 = styled.h1`
+  margin-top: 20px;
+  margin-bottom: 20px;
+`
+
+const H5 = styled.h5`
+  margin-bottom: 0px;
+`
+
+const Div = styled.div`
+  margin-top: 20px;
 `
