@@ -1,29 +1,42 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/common/layout'
 import PostTags from '../components/blog/postTags'
 
-// eslint-disable-next-line react/prefer-stateless-function
-export default class postLayout extends Component {
-  render() {
-    const { markdownRemark } = this.props.data
-    return (
-      <Layout>
-        <h1>{markdownRemark.frontmatter.title}</h1>
-        <p>{markdownRemark.frontmatter.date}</p>
-        <PostTags tags={markdownRemark.frontmatter.tags} />
-        <div
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: markdownRemark.html,
-          }}
-        />
-      </Layout>
-    )
-  }
+const pageLayout = ({ data }) => {
+  const { title, date, tags } = data.markdownRemark.frontmatter
+
+  return (
+    <Layout>
+      <h1>{title}</h1>
+      <p>{date}</p>
+      <PostTags tags={tags} />
+      <div
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: data.markdownRemark.html,
+        }}
+      />
+    </Layout>
+  )
 }
+
+pageLayout.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+        tags: PropTypes.object.isRequired,
+      }),
+    }),
+  }),
+}
+
+export default pageLayout
 
 export const query = graphql`
   query PostQuery($slug: String!) {
