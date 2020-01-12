@@ -1,11 +1,19 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { DiscussionEmbed } from 'disqus-react'
 import Layout from '../components/common/layout'
 import PostTags from '../components/blog/postTags'
 
 const pageLayout = ({ data }) => {
-  const { title, date, tags } = data.markdownRemark.frontmatter
+  const { title, date, tags, slug } = data.markdownRemark.frontmatter
+  const short = process.env.GATSBY_DISQUS_NAME
+
+  const disqusConfig = {
+    shortname: short,
+    config: { identifier: slug, title },
+  }
 
   return (
     <Layout>
@@ -18,6 +26,7 @@ const pageLayout = ({ data }) => {
           __html: data.markdownRemark.html,
         }}
       />
+      <DiscussionEmbed {...disqusConfig} />
     </Layout>
   )
 }

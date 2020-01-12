@@ -10,6 +10,7 @@
     "@material-ui/styles": "^4.8.2",
     "@percy/cypress": "^2.2.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "disqus-react": "^1.0.7",
     "gatsby": "^2.18.20",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-feed": "^2.3.26",
