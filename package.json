@@ -49,7 +49,7 @@
     "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.18.0",
     "husky": "^4.0.10",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
