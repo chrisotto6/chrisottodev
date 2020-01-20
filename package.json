@@ -27,7 +27,7 @@
     "gatsby-remark-embed-gist": "^1.1.9",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-sharp": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.3.13",
     "jest-coverage-badges": "^1.1.2",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
