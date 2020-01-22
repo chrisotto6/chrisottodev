@@ -56,7 +56,7 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.12.0",
-    "start-server-and-test": "^1.10.6"
+    "start-server-and-test": "^1.10.7"
   },
   "keywords": [
     "gatsby"
