@@ -22,9 +22,7 @@ const Article = props => {
         }
         @from-width desktop {
           .article {
-            padding: ${`calc(${theme.space.default} * 2 + 90px) 0 calc(${
-              theme.space.default
-            } * 2)`};
+            padding: ${`calc(${theme.space.default} * 2 + 90px) 0 calc(${theme.space.default} * 2)`};
             max-width: ${theme.text.maxWidth.desktop};
           }
         }

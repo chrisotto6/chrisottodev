@@ -5,24 +5,23 @@ import { InstantSearch, SearchBox, Hits, Stats, Pagination } from "react-instant
 import Hit from "./Hit";
 
 const Search = props => {
-  const { algolia, theme } = props;
+  const { algolia } = props;
 
   return (
     <React.Fragment>
       <div className="search">
-        {algolia &&
-          algolia.appId && (
-            <InstantSearch
-              appId={algolia.appId}
-              apiKey={algolia.searchOnlyApiKey}
-              indexName={algolia.indexName}
-            >
-              <SearchBox translations={{ placeholder: "Search" }} />
-              <Stats />
-              <Hits hitComponent={Hit} />
-              <Pagination />
-            </InstantSearch>
-          )}
+        {algolia && algolia.appId && (
+          <InstantSearch
+            appId={algolia.appId}
+            apiKey={algolia.searchOnlyApiKey}
+            indexName={algolia.indexName}
+          >
+            <SearchBox translations={{ placeholder: "Search" }} />
+            <Stats />
+            <Hits hitComponent={Hit} />
+            <Pagination />
+          </InstantSearch>
+        )}
       </div>
 
       {/* --- STYLES --- */}
@@ -86,8 +85,7 @@ const Search = props => {
 };
 
 Search.propTypes = {
-  algolia: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  algolia: PropTypes.object.isRequired
 };
 
 export default Search;
