@@ -1,14 +1,14 @@
 # Conversion
 
-- [] Algolia API keys
-- [] Cypress tests
-- [] Jest snapshot tests
+- [ ] Algolia API keys
+- [ ] Cypress tests
+- [ ] Jest snapshot tests
 - [x] Remove starters
 - [x] Remove with greg
 - [x] Remove privacy policy
 - [x] Remove terms and conditions
-- [] Update footer
-- [] Update configs
-- [] Update package.json
-- [] Update header
-- [] Remove posts
+- [ ] Update footer
+- [ ] Update configs
+- [ ] Update package.json
+- [ ] Update header
+- [ ] Remove posts
