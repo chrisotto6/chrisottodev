@@ -2,5 +2,5 @@
 title: Success
 ---
 
-Thank you. <br />
-I will answer to your message as soon as possible.
+Thank you for reaching out! <br />
+I will answer your message as soon as possible.
