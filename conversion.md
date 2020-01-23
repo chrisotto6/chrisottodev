@@ -1,6 +1,7 @@
 # Conversion
 
 - [ ] Algolia API keys
+- [ ] Google analytics API key
 - [ ] Cypress tests
 - [ ] Jest snapshot tests
 - [x] Remove starters
@@ -15,4 +16,9 @@
 - [ ] Update header
 - [ ] Remove posts
 - [ ] Add dev.to/stackoverflow/instagram/etc socials
-- [ ] 
+- [ ] Plugin sitemap
+- [ ] Check robots plugin
+- [ ] Rss plugin
+- [ ] Change landing page
+- [ ] Change button style from green to something better
+- [ ] Fix lighthouse issue
