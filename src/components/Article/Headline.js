@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Headline = props => {
-  const { title, children, theme } = props;
+  const { title, children, theme } = props
 
   return (
     <React.Fragment>
@@ -52,13 +52,13 @@ const Headline = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Headline.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default Headline;
+export default Headline

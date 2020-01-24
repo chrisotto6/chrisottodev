@@ -1,11 +1,11 @@
-import { FaArrowRight } from "react-icons/fa/";
-import { FaCalendar } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
-import Img from "gatsby-image";
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { FaArrowRight } from 'react-icons/fa/'
+import { FaCalendar } from 'react-icons/fa/'
+import { FaTag } from 'react-icons/fa/'
+import { FaUser } from 'react-icons/fa/'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const Item = props => {
   const {
@@ -18,11 +18,11 @@ const Item = props => {
         category,
         author,
         cover: {
-          children: [{ fluid }]
-        }
-      }
-    }
-  } = props;
+          children: [{ fluid }],
+        },
+      },
+    },
+  } = props
 
   return (
     <React.Fragment>
@@ -78,7 +78,7 @@ const Item = props => {
 
           &::after {
             border-top: 1px solid ${theme.line.color};
-            content: "";
+            content: '';
             height: 0;
             position: absolute;
             bottom: ${`calc(${theme.space.default} * -1.5)`};
@@ -91,7 +91,7 @@ const Item = props => {
           &:first-child {
             &::before {
               border-top: 1px solid ${theme.line.color};
-              content: "";
+              content: '';
               height: 0;
               position: absolute;
               top: ${`calc(${theme.space.default} * -1.5)`};
@@ -236,12 +236,12 @@ const Item = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Item.propTypes = {
   post: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default Item;
+export default Item

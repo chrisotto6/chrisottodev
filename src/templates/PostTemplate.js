@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-require("prismjs/themes/prism-okaidia.css");
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+require('prismjs/themes/prism-okaidia.css')
 
-import Seo from "../components/Seo";
-import Article from "../components/Article";
-import Post from "../components/Post";
-import { ThemeContext } from "../layouts";
+import Seo from '../components/Seo'
+import Article from '../components/Article'
+import Post from '../components/Post'
+import { ThemeContext } from '../layouts'
 
 const PostTemplate = props => {
   const {
@@ -14,11 +14,11 @@ const PostTemplate = props => {
       post,
       authornote: { html: authorNote },
       site: {
-        siteMetadata: { facebook }
-      }
+        siteMetadata: { facebook },
+      },
     },
-    pageContext: { next, prev }
-  } = props;
+    pageContext: { next, prev },
+  } = props
 
   return (
     <React.Fragment>
@@ -39,15 +39,15 @@ const PostTemplate = props => {
 
       <Seo data={post} facebook={facebook} />
     </React.Fragment>
-  );
-};
+  )
+}
 
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired
-};
+  pageContext: PropTypes.object.isRequired,
+}
 
-export default PostTemplate;
+export default PostTemplate
 
 //eslint-disable-next-line no-undef
 export const postQuery = graphql`
@@ -84,4 +84,4 @@ export const postQuery = graphql`
       }
     }
   }
-`;
+`

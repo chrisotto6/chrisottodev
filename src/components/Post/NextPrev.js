@@ -1,22 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import { FaArrowRight } from "react-icons/fa/";
-import { FaArrowLeft } from "react-icons/fa/";
+import { FaArrowRight } from 'react-icons/fa/'
+import { FaArrowLeft } from 'react-icons/fa/'
 
 const NextPrev = props => {
   const {
     theme,
     next: {
       fields: { prefix: nextPrefix, slug: nextSlug } = {},
-      frontmatter: { title: nextTitle } = {}
+      frontmatter: { title: nextTitle } = {},
     } = {},
     prev: {
       fields: { prefix: prevPrefix, slug: prevSlug } = {},
-      frontmatter: { title: prevTitle } = {}
-    } = {}
-  } = props;
+      frontmatter: { title: prevTitle } = {},
+    } = {},
+  } = props
 
   return (
     <React.Fragment>
@@ -105,13 +105,13 @@ const NextPrev = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 NextPrev.propTypes = {
   next: PropTypes.object,
   prev: PropTypes.object,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default NextPrev;
+export default NextPrev

@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
-import { FaCalendar } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
+import { FaCalendar } from 'react-icons/fa/'
+import { FaUser } from 'react-icons/fa/'
+import { FaTag } from 'react-icons/fa/'
 
 const Meta = props => {
-  const { prefix, author: authorName, category, theme } = props;
+  const { prefix, author: authorName, category, theme } = props
 
   return (
     <p className="meta">
@@ -20,7 +20,7 @@ const Meta = props => {
       {category && (
         <span>
           <FaTag size={18} />
-          <Link to={`/category/${category.split(" ").join("-")}`}>{category}</Link>
+          <Link to={`/category/${category.split(' ').join('-')}`}>{category}</Link>
         </span>
       )}
 
@@ -51,14 +51,14 @@ const Meta = props => {
         }
       `}</style>
     </p>
-  );
-};
+  )
+}
 
 Meta.propTypes = {
   prefix: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default Meta;
+export default Meta

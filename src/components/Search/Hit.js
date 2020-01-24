@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 const Hit = props => {
-  const { hit } = props;
+  const { hit } = props
 
   return (
     <React.Fragment>
@@ -21,18 +21,18 @@ const Hit = props => {
         }
 
         .ais-Hits-item:before {
-          content: "•";
+          content: '•';
           position: absolute;
           top: 0.5em;
           left: 0.1em;
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Hit.propTypes = {
-  hit: PropTypes.object.isRequired
-};
+  hit: PropTypes.object.isRequired,
+}
 
-export default Hit;
+export default Hit

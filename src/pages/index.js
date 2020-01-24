@@ -1,42 +1,42 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import { ThemeContext } from "../layouts";
-import Blog from "../components/Blog";
-import Hero from "../components/Hero";
-import Seo from "../components/Seo";
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+import { ThemeContext } from '../layouts'
+import Blog from '../components/Blog'
+import Hero from '../components/Hero'
+import Seo from '../components/Seo'
 
 class IndexPage extends React.Component {
-  separator = React.createRef();
+  separator = React.createRef()
 
   scrollToContent = e => {
-    this.separator.current.scrollIntoView({ block: "start", behavior: "smooth" });
-  };
+    this.separator.current.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }
 
   render() {
     const {
       data: {
         posts: { edges: posts = [] },
         bgDesktop: {
-          resize: { src: desktop }
+          resize: { src: desktop },
         },
         bgTablet: {
-          resize: { src: tablet }
+          resize: { src: tablet },
         },
         bgMobile: {
-          resize: { src: mobile }
+          resize: { src: mobile },
         },
         site: {
-          siteMetadata: { facebook }
-        }
-      }
-    } = this.props;
+          siteMetadata: { facebook },
+        },
+      },
+    } = this.props
 
     const backgrounds = {
       desktop,
       tablet,
-      mobile
-    };
+      mobile,
+    }
 
     return (
       <React.Fragment>
@@ -61,15 +61,15 @@ class IndexPage extends React.Component {
           }
         `}</style>
       </React.Fragment>
-    );
+    )
   }
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+  data: PropTypes.object.isRequired,
+}
 
-export default IndexPage;
+export default IndexPage
 
 //eslint-disable-next-line no-undef
 export const query = graphql`
@@ -125,6 +125,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
 //hero-background

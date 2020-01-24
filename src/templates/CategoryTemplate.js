@@ -1,12 +1,12 @@
-import { FaTag } from "react-icons/fa/";
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import Seo from "../components/Seo";
-import { ThemeContext } from "../layouts";
-import Article from "../components/Article";
-import Headline from "../components/Article/Headline";
-import List from "../components/List";
+import { FaTag } from 'react-icons/fa/'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+import Seo from '../components/Seo'
+import { ThemeContext } from '../layouts'
+import Article from '../components/Article'
+import Headline from '../components/Article/Headline'
+import List from '../components/List'
 
 const CategoryTemplate = props => {
   const {
@@ -14,10 +14,10 @@ const CategoryTemplate = props => {
     data: {
       allMarkdownRemark: { totalCount, edges },
       site: {
-        siteMetadata: { facebook }
-      }
-    }
-  } = props;
+        siteMetadata: { facebook },
+      },
+    },
+  } = props
 
   return (
     <React.Fragment>
@@ -30,8 +30,8 @@ const CategoryTemplate = props => {
                 {category}
               </Headline>
               <p className="meta">
-                There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post
-                {totalCount > 1 ? "s" : ""} in the category.
+                There {totalCount > 1 ? 'are' : 'is'} <strong>{totalCount}</strong> post
+                {totalCount > 1 ? 's' : ''} in the category.
               </p>
               <List edges={edges} theme={theme} />
             </header>
@@ -41,15 +41,15 @@ const CategoryTemplate = props => {
 
       <Seo facebook={facebook} />
     </React.Fragment>
-  );
-};
+  )
+}
 
 CategoryTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired
-};
+  pageContext: PropTypes.object.isRequired,
+}
 
-export default CategoryTemplate;
+export default CategoryTemplate
 
 // eslint-disable-next-line no-undef
 export const categoryQuery = graphql`
@@ -82,4 +82,4 @@ export const categoryQuery = graphql`
       }
     }
   }
-`;
+`

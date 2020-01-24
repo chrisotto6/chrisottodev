@@ -1,23 +1,23 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-require("core-js/fn/array/find");
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+require('core-js/fn/array/find')
 
-import Article from "../components/Article";
-import Search from "../components/Search";
-import { ThemeContext } from "../layouts";
-import Seo from "../components/Seo";
+import Article from '../components/Article'
+import Search from '../components/Search'
+import { ThemeContext } from '../layouts'
+import Seo from '../components/Seo'
 
-import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo";
+import AlgoliaIcon from '!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo'
 
 const SearchPage = props => {
   const {
     data: {
       site: {
-        siteMetadata: { algolia, facebook }
-      }
-    }
-  } = props;
+        siteMetadata: { algolia, facebook },
+      },
+    },
+  } = props
 
   return (
     <React.Fragment>
@@ -47,14 +47,14 @@ const SearchPage = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 SearchPage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+  data: PropTypes.object.isRequired,
+}
 
-export default SearchPage;
+export default SearchPage
 
 //eslint-disable-next-line no-undef
 export const query = graphql`
@@ -72,4 +72,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

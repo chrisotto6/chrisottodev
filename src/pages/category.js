@@ -1,44 +1,44 @@
-import { FaTag } from "react-icons/fa/";
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import { ThemeContext } from "../layouts";
-import Article from "../components/Article/";
-import Headline from "../components/Article/Headline";
-import List from "../components/List";
-import Seo from "../components/Seo";
+import { FaTag } from 'react-icons/fa/'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+import { ThemeContext } from '../layouts'
+import Article from '../components/Article/'
+import Headline from '../components/Article/Headline'
+import List from '../components/List'
+import Seo from '../components/Seo'
 
 const CategoryPage = props => {
   const {
     data: {
       posts: { edges: posts },
       site: {
-        siteMetadata: { facebook }
-      }
-    }
-  } = props;
+        siteMetadata: { facebook },
+      },
+    },
+  } = props
 
   // Create category list
-  const categories = {};
+  const categories = {}
   posts.forEach(edge => {
     const {
       node: {
-        frontmatter: { category }
-      }
-    } = edge;
+        frontmatter: { category },
+      },
+    } = edge
 
     if (category && category != null) {
       if (!categories[category]) {
-        categories[category] = [];
+        categories[category] = []
       }
-      categories[category].push(edge);
+      categories[category].push(edge)
     }
-  });
+  })
 
-  const categoryList = [];
+  const categoryList = []
 
   for (var key in categories) {
-    categoryList.push([key, categories[key]]);
+    categoryList.push([key, categories[key]])
   }
 
   return (
@@ -73,14 +73,14 @@ const CategoryPage = props => {
 
       <Seo facebook={facebook} />
     </React.Fragment>
-  );
-};
+  )
+}
 
 CategoryPage.propTypes = {
-  data: PropTypes.object.isRequired
-};
+  data: PropTypes.object.isRequired,
+}
 
-export default CategoryPage;
+export default CategoryPage
 
 //eslint-disable-next-line no-undef
 export const query = graphql`
@@ -121,4 +121,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
