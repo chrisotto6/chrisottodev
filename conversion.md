@@ -1,24 +1,24 @@
 # Conversion
 
-- [ ] Algolia API keys
-- [ ] Google analytics API key
-- [ ] Cypress tests
+- [x] Algolia API keys
+- [x] Google analytics API key
+- [x] Facebook APP ID
+- [x] Cypress tests
 - [ ] Jest snapshot tests
 - [x] Remove starters
 - [x] Remove with greg
 - [x] Remove privacy policy
 - [x] Remove terms and conditions
-- [x] Update success message for contact 
+- [x] Update success message for contact
 - [ ] Update author
-- [ ] Update footer
-- [ ] Update configs
+- [x] Update footer
+- [x] Update configs
 - [ ] Update package.json
-- [ ] Update header
-- [ ] Remove posts
-- [ ] Add dev.to/stackoverflow/instagram/etc socials
+- [x] Update header
+- [x] Remove posts
 - [ ] Plugin sitemap
 - [ ] Check robots plugin
 - [ ] Rss plugin
 - [ ] Change landing page
-- [ ] Change button style from green to something better
+- [x] Change button style from green to something better
 - [ ] Fix lighthouse issue

@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { InstantSearch, SearchBox, Hits, Stats, Pagination } from "react-instantsearch/dom";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { InstantSearch, SearchBox, Hits, Stats, Pagination } from 'react-instantsearch/dom'
 
-import Hit from "./Hit";
+import Hit from './Hit'
 
 const Search = props => {
-  const { algolia } = props;
+  const { algolia } = props
 
   return (
     <React.Fragment>
@@ -16,7 +16,7 @@ const Search = props => {
             apiKey={algolia.searchOnlyApiKey}
             indexName={algolia.indexName}
           >
-            <SearchBox translations={{ placeholder: "Search" }} />
+            <SearchBox translations={{ placeholder: 'Search' }} />
             <Stats />
             <Hits hitComponent={Hit} />
             <Pagination />
@@ -81,11 +81,11 @@ const Search = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Search.propTypes = {
-  algolia: PropTypes.object.isRequired
-};
+  algolia: PropTypes.object.isRequired,
+}
 
-export default Search;
+export default Search

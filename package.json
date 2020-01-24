@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hero-blog",
+  "name": "gatsby-chris-otto-dev",
   "version": "1.0.0",
   "author": "Chris Otto <chris.otto6@gmail.com>",
   "license": "MIT",
@@ -60,12 +60,17 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "devhost": "gatsby develop --host 192.168.0.112",
     "format": "prettier --write 'src/**/*.js'",
-    "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
+    "lint-errors": "eslint ./src --quiet",
     "lint": "eslint ./src",
     "lintFix": "eslint ./src --fix",
     "stylelint": "stylelint src/**/*.js",
+    "test": "jest --coverage && jest-coverage-badges",
+    "test:cypress": "cypress run",
+    "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
+    "e2e:open": "cypress open",
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh"
   },
   "devDependencies": {
@@ -81,7 +86,7 @@
     "babel-webpack-plugin": "^0.1.1",
     "cypress": "^3.8.2",
     "cypress-axe": "^0.5.3",
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
     "eslint": "^5.1.0",
     "eslint-config-google": "^0.9.1",
     "eslint-config-prettier": "^2.9.0",

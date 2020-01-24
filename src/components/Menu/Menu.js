@@ -1,42 +1,42 @@
-import React from "react";
-import PropTypes from "prop-types";
-require("core-js/fn/array/from");
+import React from 'react'
+import PropTypes from 'prop-types'
+require('core-js/fn/array/from')
 
-import { FaHome } from "react-icons/fa/";
-import { FaSearch } from "react-icons/fa/";
-import { FaEnvelope } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
+import { FaHome } from 'react-icons/fa/'
+import { FaSearch } from 'react-icons/fa/'
+import { FaEnvelope } from 'react-icons/fa/'
+import { FaTag } from 'react-icons/fa/'
 
-import Item from "./Item";
-import Expand from "./Expand";
+import Item from './Item'
+import Expand from './Expand'
 
 class Menu extends React.Component {
   constructor(props) {
-    super(props);
-    this.itemList = React.createRef();
+    super(props)
+    this.itemList = React.createRef()
 
     const pages = props.pages.map(page => ({
       to: page.node.fields.slug,
       label: page.node.frontmatter.menuTitle
         ? page.node.frontmatter.menuTitle
-        : page.node.frontmatter.title
-    }));
+        : page.node.frontmatter.title,
+    }))
 
     this.items = [
-      { to: "/", label: "Home", icon: FaHome },
-      { to: "/category/", label: "Categories", icon: FaTag },
-      { to: "/search/", label: "Search", icon: FaSearch },
+      { to: '/', label: 'Home', icon: FaHome },
+      { to: '/category/', label: 'Categories', icon: FaTag },
+      { to: '/search/', label: 'Search', icon: FaSearch },
       ...pages,
-      { to: "/contact/", label: "Contact", icon: FaEnvelope }
-    ];
+      { to: '/contact/', label: 'Contact', icon: FaEnvelope },
+    ]
 
-    this.renderedItems = []; // will contain references to rendered DOM elements of menu
+    this.renderedItems = [] // will contain references to rendered DOM elements of menu
   }
 
   state = {
     open: false,
-    hiddenItems: []
-  };
+    hiddenItems: [],
+  }
 
   static propTypes = {
     path: PropTypes.string.isRequired,
@@ -44,11 +44,11 @@ class Menu extends React.Component {
     screenWidth: PropTypes.number.isRequired,
     fontLoaded: PropTypes.bool.isRequired,
     pages: PropTypes.array.isRequired,
-    theme: PropTypes.object.isRequired
-  };
+    theme: PropTypes.object.isRequired,
+  }
 
   componentDidMount() {
-    this.renderedItems = this.getRenderedItems();
+    this.renderedItems = this.getRenderedItems()
   }
 
   componentDidUpdate(prevProps) {
@@ -59,92 +59,92 @@ class Menu extends React.Component {
       this.props.fontLoaded !== prevProps.fontLoaded
     ) {
       if (this.props.path !== prevProps.path) {
-        this.closeMenu();
+        this.closeMenu()
       }
-      this.hideOverflowedMenuItems();
+      this.hideOverflowedMenuItems()
     }
   }
 
   getRenderedItems = () => {
-    const itemList = this.itemList.current;
-    return Array.from(itemList.children);
-  };
+    const itemList = this.itemList.current
+    return Array.from(itemList.children)
+  }
 
   hideOverflowedMenuItems = () => {
-    const PADDING_AND_SPACE_FOR_MORELINK = this.props.screenWidth >= 1024 ? 60 : 0;
+    const PADDING_AND_SPACE_FOR_MORELINK = this.props.screenWidth >= 1024 ? 60 : 0
 
-    const itemsContainer = this.itemList.current;
-    const maxWidth = itemsContainer.offsetWidth - PADDING_AND_SPACE_FOR_MORELINK;
+    const itemsContainer = this.itemList.current
+    const maxWidth = itemsContainer.offsetWidth - PADDING_AND_SPACE_FOR_MORELINK
 
-    this.setState({ hiddenItems: [] }); // clears previous state
+    this.setState({ hiddenItems: [] }) // clears previous state
 
     const menu = this.renderedItems.reduce(
       (result, item) => {
-        item.classList.add("item");
-        item.classList.remove("hideItem");
+        item.classList.add('item')
+        item.classList.remove('hideItem')
 
-        const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth;
-        result.cumulativeWidth = currentCumulativeWidth;
+        const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth
+        result.cumulativeWidth = currentCumulativeWidth
 
-        if (!item.classList.contains("more") && currentCumulativeWidth > maxWidth) {
-          const link = item.querySelector("a");
+        if (!item.classList.contains('more') && currentCumulativeWidth > maxWidth) {
+          const link = item.querySelector('a')
 
-          item.classList.add("hideItem");
-          item.classList.remove("item");
+          item.classList.add('hideItem')
+          item.classList.remove('item')
           result.hiddenItems.push({
-            to: link.getAttribute("data-slug"),
-            label: link.text
-          });
+            to: link.getAttribute('data-slug'),
+            label: link.text,
+          })
         }
-        return result;
+        return result
       },
       { visibleItems: [], cumulativeWidth: 0, hiddenItems: [] }
-    );
+    )
 
-    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }));
-  };
+    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }))
+  }
 
   toggleMenu = e => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (this.props.screenWidth < 1024) {
       this.renderedItems.map(item => {
-        const oldClass = this.state.open ? "showItem" : "hideItem";
-        const newClass = this.state.open ? "hideItem" : "showItem";
+        const oldClass = this.state.open ? 'showItem' : 'hideItem'
+        const newClass = this.state.open ? 'hideItem' : 'showItem'
 
         if (item.classList.contains(oldClass)) {
-          item.classList.add(newClass);
-          item.classList.remove(oldClass);
+          item.classList.add(newClass)
+          item.classList.remove(oldClass)
         }
-      });
+      })
     }
 
-    this.setState(prevState => ({ open: !prevState.open }));
-  };
+    this.setState(prevState => ({ open: !prevState.open }))
+  }
 
   closeMenu = e => {
     //e.preventDefault();
 
     if (this.state.open) {
-      this.setState({ open: false });
+      this.setState({ open: false })
       if (this.props.screenWidth < 1024) {
         this.renderedItems.map(item => {
-          if (item.classList.contains("showItem")) {
-            item.classList.add("hideItem");
-            item.classList.remove("item");
+          if (item.classList.contains('showItem')) {
+            item.classList.add('hideItem')
+            item.classList.remove('item')
           }
-        });
+        })
       }
     }
-  };
+  }
 
   render() {
-    const { screenWidth, theme } = this.props;
-    const { open } = this.state;
+    const { screenWidth, theme } = this.props
+    const { open } = this.state
 
     return (
       <React.Fragment>
-        <nav className={`menu ${open ? "open" : ""}`} rel="js-menu">
+        <nav role="navigation" className={`menu ${open ? 'open' : ''}`} rel="js-menu">
           <ul className="itemList" ref={this.itemList}>
             {this.items.map(item => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
@@ -169,7 +169,7 @@ class Menu extends React.Component {
             display: flex;
             flex-grow: 1;
             left: 0;
-            max-height: ${open ? "1000px" : "50px"};
+            max-height: ${open ? '1000px' : '50px'};
             padding: 0 ${theme.space.inset.s};
             position: fixed;
             width: 100%;
@@ -275,8 +275,8 @@ class Menu extends React.Component {
           }
         `}</style>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Menu;
+export default Menu

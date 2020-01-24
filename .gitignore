@@ -2,7 +2,7 @@
 .env.development
 
 # Cypress
-cypress/screenshots/*.png
+cypress/screenshots/*
 coverage/lcov-report
 coverage/*.json
 coverage/*.xml

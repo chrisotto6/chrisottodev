@@ -1,45 +1,45 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import VisibilitySensor from "react-visibility-sensor";
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
 
-import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
-import config from "../../../content/meta/config";
-import Menu from "../Menu";
+import { ScreenWidthContext, FontLoadedContext } from '../../layouts'
+import config from '../../../content/meta/config'
+import Menu from '../Menu'
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from '../../images/jpg/avatar.jpg'
 
 class Header extends React.Component {
   state = {
-    fixed: false
-  };
+    fixed: false,
+  }
 
   visibilitySensorChange = val => {
     if (val) {
-      this.setState({ fixed: false });
+      this.setState({ fixed: false })
     } else {
-      this.setState({ fixed: true });
+      this.setState({ fixed: true })
     }
-  };
+  }
 
   getHeaderSize = () => {
-    const fixed = this.state.fixed ? "fixed" : "";
-    const homepage = this.props.path === "/" ? "homepage" : "";
+    const fixed = this.state.fixed ? 'fixed' : ''
+    const homepage = this.props.path === '/' ? 'homepage' : ''
 
-    return `${fixed} ${homepage}`;
-  };
+    return `${fixed} ${homepage}`
+  }
 
   render() {
-    const { pages, path, theme } = this.props;
-    const { fixed } = this.state;
+    const { pages, path, theme } = this.props
+    const { fixed } = this.state
 
     return (
       <React.Fragment>
-        <header className={`header ${this.getHeaderSize()}`}>
+        <header className={`header ${this.getHeaderSize()}`} role="banner">
           <Link to="/" className="logoType">
             <div className="logo">
               <img
-                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                src={config.gravatarImgMd5 == '' ? avatar : config.gravatarImgMd5}
                 alt={config.siteTitle}
               />
             </div>
@@ -85,7 +85,7 @@ class Header extends React.Component {
             :global(a.logoType) {
               align-items: center;
               display: flex;
-              flex-direction: "column";
+              flex-direction: 'column';
               color: ${theme.text.color.primary};
 
               .logo {
@@ -141,7 +141,7 @@ class Header extends React.Component {
             left: 0;
             right: 0;
             height: 1px;
-            top: ${path === "/" ? theme.header.height.homepage : theme.header.height.default};
+            top: ${path === '/' ? theme.header.height.homepage : theme.header.height.default};
           }
 
           @from-width tablet {
@@ -247,14 +247,14 @@ class Header extends React.Component {
           }
         `}</style>
       </React.Fragment>
-    );
+    )
   }
 }
 
 Header.propTypes = {
   pages: PropTypes.array.isRequired,
   path: PropTypes.string.isRequired,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default Header;
+export default Header

@@ -1,6 +1,7 @@
 {
   "baseUrl": "http://localhost:9000/",
-  "ignoreTestFiles": ["visual-testing.test.js"],
+  "ignoreTestFiles": [""],
   "integrationFolder": "cypress/e2e",
-  "video": false
+  "video": false,
+  "chromeWebSecurity": false
 }

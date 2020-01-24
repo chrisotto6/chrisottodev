@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Footer = props => {
-  const { html, theme } = props;
+  const { html, theme } = props
 
   return (
     <React.Fragment>
-      <footer className="footer" dangerouslySetInnerHTML={{ __html: html }} />
+      <footer className="footer" role="contentinfo" dangerouslySetInnerHTML={{ __html: html }} />
 
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -29,12 +29,12 @@ const Footer = props => {
               display: inline-block;
 
               &::after {
-                content: "•";
+                content: '•';
                 position: absolute;
                 right: ${`calc(${theme.space.xs} * -1)`};
               }
               &:last-child::after {
-                content: "";
+                content: '';
               }
             }
           }
@@ -47,12 +47,12 @@ const Footer = props => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
 Footer.propTypes = {
   html: PropTypes.string,
-  theme: PropTypes.object.isRequired
-};
+  theme: PropTypes.object.isRequired,
+}
 
-export default Footer;
+export default Footer

@@ -1,9 +1,9 @@
 # OPTIONS
 
 # SPACE
-space :
+space:
   # space options
-  default : 20px
+  default: 20px
   xxs: 2px
   xs: 5px
   s: 10px
@@ -11,20 +11,20 @@ space :
   l: 40px
   xl: 80px
   inset:
-    default : 20px
+    default: 20px
     xs: 5px
     s: 10px
     m: 20px
     l: 40px
   stack:
-    default : 0 0 20px 0
+    default: 0 0 20px 0
     xxs: 0 0 2px 0
     xs: 0 0 5px 0
     s: 0 0 10px 0
     m: 0 0 20px 0
     l: 0 0 40px 0
   inline:
-    default : 0 20px 0 0
+    default: 0 20px 0 0
     xxs: 0 2px 0 0
     xs: 0 5px 0 0
     s: 0 10px 0 0
@@ -47,19 +47,19 @@ color:
       d: '#dddbda'
       e: '#c9c7c5'
       f: '#b0adab'
-      g: '#969492'
+      g: '#2c3e50'
       h: '#706e6b'
       i: '#514f4d'
       j: &color-gray-10 '#3e3e3c'
       k: '#2b2826'
     black: '#000000'
   brand:
-    primary: &color-brand-primary '#709425'
-    primaryActive: '#709425'
-    light: '#709425'
-    lightActive: '#709425'
-    dark: '#709425'
-    darkActive: '#709425'
+    primary: &color-brand-primary '#2c3e50'
+    primaryActive: '#2c3e50'
+    light: '#2c3e50'
+    lightActive: '#2c3e50'
+    dark: '#2c3e50'
+    darkActive: '#2c3e50'
   special:
     attention: &color-special-attention orange
 # FONT
@@ -93,7 +93,6 @@ time:
   duration:
     default: 0.5s
     long: 1s
-
 
 # GENERAL TOKENS
 background:
@@ -129,7 +128,6 @@ line:
 icon:
   color: *color-brand-primary
 
-
 # COMPONENT TOKENS
 hero:
   h1:
@@ -147,4 +145,3 @@ header:
     default: 80px
     fixed: 50px;
     homepage: 100px;
-
