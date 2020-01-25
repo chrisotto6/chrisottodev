@@ -101,7 +101,7 @@
     "identity-obj-proxy": "^3.0.0",
     "json-loader": "^0.5.7",
     "postcss": "^7.0.0",
-    "postcss-cli": "^5.0.1",
+    "postcss-cli": "^7.1.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-properties": "^7.0.0",
     "postcss-custom-selectors": "^4.0.1",
