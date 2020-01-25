@@ -14,7 +14,7 @@ describe('Accessibility checks', () => {
   //})
 
   it('Categories Page', () => {
-    cy.visit('/category')
+    cy.visit('/tag')
     cy.injectAxe()
     cy.checkA11y()
   })
