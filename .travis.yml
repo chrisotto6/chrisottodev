@@ -1,29 +1,23 @@
 language: node_js
-
 node_js:
-  - '10'
-
+  - "10"
 addons:
   chrome: stable
   apt:
     packages:
-      # cypress dep
       - libgconf-2-4
-
 cache:
   directories:
-    - ~/.npm
-    - ~/.cache
-
-before_install:
-  - npm install -g @lhci/cli@0.3.x
-
+    - "~/.npm"
+    - "~/.cache"
 install:
   - npm ci
-
 script:
   - npm run lint
-  - npm run test
   - npm run build
-  #- lhci autorun
-  - npm run e2e:ci
+env:
+  global:
+    - secure: yJqJL4x1eQD3JSWf4UrDyuFwTKq1OBVccSX34yAIA7faiwWmlEg0Keh5833eD4z1gNXxKV6iRpY4Uy6FNA11M7kvfbbL9dWlzu6gVNpKdH5cQ7WnE54k7g2OPf8c7dFAYWConEqXQVQ5U7luTavXFHTXEoqgZF+G84rEtPQXRL0u/AGhWBG5mZUpQegXGlFTvctrMDjdiMi9VUQnytFohMfKpB3hN2oOjWNksLxreD63DfPAInuTRS6bosGaIncmoGTDR9taajv3KC1PTE4Cl50jawtooafeGuYcgXwM9PIWMNwfSnCDwZs0sCH6ZfHtZi/y9nsmJ8Y3EVltGSg+TtSI0l86gHF7i5wO3bdvlDkFFI6XcIdPvmn3BLVVkfPKlLadQaruFgmwaP/1N1MTNJbRuM2cg+cDx4NE9s5IZ2H3Yl+Dy+uL85Q6UgG5qabsGobNIkDUHfACw19XyXgSWoFI/bVctZjw8U771TQmWWAgXqPX1xozqt2kCcw4URkbEad/ADSwY9gswB3xEau+gYZ1iMIDPuYA5myqAYkyHMm+ZFkGl31uVmR0Zs/WHfe0lxSVKdJB5CPTyTjD0U2qKLeVL9grPuyn/+8XR8xQUKppJS+E+E1SQDR/RRfZeu1bWqb5kvU9yYE2xkR8JYDq+S6pyilG4MYOWFlsGyYa5cc=
+    - secure: yXkqW5SZGpkPXrs5/ZOWLo0POH6x1+c9AlrqAvRdPyqfG6qd8PmiJAcgVgqni/HGC6nuebJXyK5n08514IXBeWMjgkoFreouUb6zGpZ+5NqT9wIK4R2ZfKZ0JSTAUCMtqaW2ixKIQAuuNFEkNUvPrj/JGI1L9ndRKDz8Any0wu5Y2V6rL8g/GaGytov316goRhfVz4HSOnbwxa1EfWDzrvjAHeSjuUY7kO4rKI8Sh3gDjFvP9fNA4PeHdns/lLQ88t/YepreofhU56EdIomJxejGhjpyA8jUgF4abGXJapSQahZAantCtnQ562BOEAHDzZM8IneLvekDyDOgR2LUNV5d19tQW4Tgrpw7fgdB5CLPRSbvTm8T6TgHgADpXD7MrCwRYAHTC/gqn50CZIdEXip10mRa8i4VYR5nIWy+W9VgeVeWvB1ZuGUOAlq3RrzZ3l/6FHmhaYMJ51vbmtCXfVfMeuOuz5DwLO0QbyKWXBPWMM4zdTfFccHJCjHhw3r3zy6+TzjRLUZ9GwSi+eg+d5UqKZrhMiAXKGbQ8WmWc/VbTr02MfgWeENcgWxtJvDoVgOxXIxTMv4LJC+VJmiXYUpXfzZDuL7e4w8hcWIjIP64+C47aNF6J65/yS8q6qbzrMzYU1JwjXskdJ52BxvRVjhSYHURcoNJKLDGiupsnSY=
+    - secure: Sp1d7b47KZuhqTgKh8vqJmuStZyd/Ry8AN7Kb3oTyYmuCbU/f7g9M3AXfL+JC25aG2Xsk+uY5GXie3vYNbffBvvcpjjP6xLoDUxyqGAQ3TNCEL3mEz6aQ5xE9Pz3egCt8M4Cn5Abm7V1j9DHWFh4mx/b/bKaLvKWw70ROK3vr2SAoXeC1I2zohucZL/zosKU89gEV5JGlg/Rphps2Q8TKzWt87zxbDw9/C6HKvSHoag2gFmP5SeznVHFD9qTezDDNjrrNkQVaW4fcf6wLYlkq2u0tPG9/EZ6QIQR4PvtltGcKUgpI8hd5Cah4m2y0bFTT+OT3ttdbKN2mJ2GOIDvKh/X09GIfNxFfykX+hxqd9NFTLeT6d6flTBQlBku6XFPwW5CwG7I9ZqU3CRnIDuOzMSw41nUCsUZsiBy9tvnOhBpzwFMnrgDqxeMteh/vuQz8/Upc/qfCaKVarYB/BT2CCrEl4vJrT/nKdEp7U/DPYlJ7H340jQ0skuYj8bVOszaLkJYM2hNJoLU/JF2JIj0TxlvcWQb/jY0Hv50uSesZQIy/+TUvzMgYX/JcMFIUUt+hXFN8Wp7zvPx9hVleFKd66MO9wQny6t9zq7k7v9iJJ8T5Jf5kMEINQYhNXX348PrcoYVZLQx1Wzk14q/M3eYcr5wmZk/GCOM4GYseh7S7CI=
+    - secure: MzvE9DJINA/mobr1bfB9NJqHGs6vw6ImieyYm9WBqvF7WEWhR2pzu9TOcAOYRZejzIjjcnBOdtUTr2hU0qu9eRa+F7HAybELlfOjlWidvnzMrGIg+YdJrQXEKPMJhM29V7EY4vLYpboQ7cFdraR3hmVWC8KyACeuM6736jg57DECMOfSxOph4AUlzaRIxtRcq8yxOY5eFE8FGR529uIM1Jp2Vnh/GcII4pkIgLF4nkfFJ7lrNtwXbBIFLuaKSVJsV7y7t2qqX9+PRV/8qcZrlieRbVXEjVz7ldtbpzwWU3FuLTRAJE5Xumaok//puwEImEdI2hGwPZN2YJbRubqc2EQzXwnJhK/Srx1WT4VCnairM38uGXTcTWpJsQymHElX/HH2P+b830poEC1+c8VwiGzQc6ErWqOAKaq658jfNgNpesi2DBJT4C4W16mM+cou71Alzpa1ORm7kGGKn6fDuqmI/eI/ibrj51R0Kg9DD2qRZVgSXSB/MPTXaRIJzAjHEIsmtkL2SPQnQ4C9nGtvU2h88VzzcLtfbajUcdpoKrbmtLx7BD1pAr0+GgYm/MjqDdE53kF/2TXdvwwNBaXHiEPP+hNNIVsMk8SK3FPfkz9SwJfPYn4EwAQSpMCvmDqmI460yzQgQXOM/ay2KZCb1eGXntG9aaIiTiK512yfD4o=

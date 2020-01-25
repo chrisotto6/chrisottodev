@@ -1,0 +1,25 @@
+# Conversion
+
+- [x] Algolia API keys
+- [x] Google analytics API key
+- [x] Facebook APP ID
+- [x] Cypress tests
+- [x] Fix Travis CI builds
+- [!] Jest snapshot tests
+- [x] Remove starters
+- [x] Remove with greg
+- [x] Remove privacy policy
+- [x] Remove terms and conditions
+- [x] Update success message for contact
+- [x] Update author
+- [x] Update footer
+- [x] Update configs
+- [x] Update package.json
+- [x] Update header
+- [x] Remove posts
+- [x] Plugin sitemap
+- [x] Check robots plugin
+- [x] Rss plugin
+- [x] Change landing page
+- [x] Change button style from green to something better
+- [x] Fix lighthouse issue
