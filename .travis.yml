@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "12"
+  - "10"
 addons:
   chrome: stable
   apt:
@@ -10,14 +10,11 @@ cache:
   directories:
     - "~/.npm"
     - "~/.cache"
-before_install:
-  - npm install -g @lhci/cli@0.3.x
 install:
   - npm ci
 script:
   - npm run lint
   - npm run build
-  - npm run e2e
 env:
   global:
     - secure: yJqJL4x1eQD3JSWf4UrDyuFwTKq1OBVccSX34yAIA7faiwWmlEg0Keh5833eD4z1gNXxKV6iRpY4Uy6FNA11M7kvfbbL9dWlzu6gVNpKdH5cQ7WnE54k7g2OPf8c7dFAYWConEqXQVQ5U7luTavXFHTXEoqgZF+G84rEtPQXRL0u/AGhWBG5mZUpQegXGlFTvctrMDjdiMi9VUQnytFohMfKpB3hN2oOjWNksLxreD63DfPAInuTRS6bosGaIncmoGTDR9taajv3KC1PTE4Cl50jawtooafeGuYcgXwM9PIWMNwfSnCDwZs0sCH6ZfHtZi/y9nsmJ8Y3EVltGSg+TtSI0l86gHF7i5wO3bdvlDkFFI6XcIdPvmn3BLVVkfPKlLadQaruFgmwaP/1N1MTNJbRuM2cg+cDx4NE9s5IZ2H3Yl+Dy+uL85Q6UgG5qabsGobNIkDUHfACw19XyXgSWoFI/bVctZjw8U771TQmWWAgXqPX1xozqt2kCcw4URkbEad/ADSwY9gswB3xEau+gYZ1iMIDPuYA5myqAYkyHMm+ZFkGl31uVmR0Zs/WHfe0lxSVKdJB5CPTyTjD0U2qKLeVL9grPuyn/+8XR8xQUKppJS+E+E1SQDR/RRfZeu1bWqb5kvU9yYE2xkR8JYDq+S6pyilG4MYOWFlsGyYa5cc=
