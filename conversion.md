@@ -11,7 +11,7 @@
 - [x] Remove privacy policy
 - [x] Remove terms and conditions
 - [x] Update success message for contact
-- [ ] Update author
+- [x] Update author
 - [x] Update footer
 - [x] Update configs
 - [x] Update package.json
@@ -20,6 +20,6 @@
 - [x] Plugin sitemap
 - [x] Check robots plugin
 - [x] Rss plugin
-- [ ] Change landing page
+- [x] Change landing page
 - [x] Change button style from green to something better
 - [x] Fix lighthouse issue

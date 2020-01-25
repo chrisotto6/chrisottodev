@@ -9,9 +9,7 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
-        </h1>
+        <h1>Hi, I'm&nbsp;Chris!</h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
@@ -41,22 +39,6 @@ const Hero = props => {
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 'Open Sans';
-
-          :global(strong) {
-            position: relative;
-
-            &::after,
-            &::before {
-              content: '›';
-              color: ${theme.text.color.attention};
-              margin: 0 ${theme.space.xs} 0 0;
-              text-shadow: 0 0 ${theme.space.s} ${theme.color.neutral.gray.k};
-            }
-            &::after {
-              content: '‹';
-              margin: 0 0 0 ${theme.space.xs};
-            }
-          }
         }
 
         button {

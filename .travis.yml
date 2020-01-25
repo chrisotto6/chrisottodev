@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '12'
+  - "12"
 addons:
   chrome: stable
   apt:
@@ -8,15 +8,14 @@ addons:
       - libgconf-2-4
 cache:
   directories:
-    - '~/.npm'
-    - '~/.cache'
+    - "~/.npm"
+    - "~/.cache"
 before_install:
   - npm install -g @lhci/cli@0.3.x
 install:
   - npm ci
 script:
   - npm run lint
-  #  - npm run test
   - npm run build
   - npm run e2e
 env:
