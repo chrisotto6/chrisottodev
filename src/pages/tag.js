@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { graphql } from 'gatsby'
 import { ThemeContext } from '../layouts'
-import Article from '../components/Article/'
+import Article from '../components/Article'
 import Headline from '../components/Article/Headline'
 import List from '../components/List'
 import Seo from '../components/Seo'
@@ -47,7 +47,7 @@ const CategoryPage = props => {
         {theme => (
           <Article theme={theme}>
             <header>
-              <Headline title="Posts by categories" theme={theme} />
+              <Headline title="Posts by tags" theme={theme} />
             </header>
             {categoryList.map(item => (
               <section key={item[0]}>

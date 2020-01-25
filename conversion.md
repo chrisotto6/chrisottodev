@@ -4,6 +4,7 @@
 - [x] Google analytics API key
 - [x] Facebook APP ID
 - [x] Cypress tests
+- [x] Fix Travis CI builds
 - [ ] Jest snapshot tests
 - [x] Remove starters
 - [x] Remove with greg
@@ -21,4 +22,4 @@
 - [ ] Rss plugin
 - [ ] Change landing page
 - [x] Change button style from green to something better
-- [ ] Fix lighthouse issue
+- [x] Fix lighthouse issue
