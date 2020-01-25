@@ -50,6 +50,9 @@ module.exports = {
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
     `gatsby-plugin-styled-jsx-postcss`, // as above
     {
+      resolve: ``,
+    },
+    {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/layouts/`),
@@ -140,6 +143,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: 'https://www.chrisotto.dev',
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -256,12 +265,21 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
+            title: "Chris Otto's RSS Feed",
           },
         ],
       },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.chrisotto.dev',
+        sitemap: 'https://www.chrisotto.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
