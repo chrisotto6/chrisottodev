@@ -61,7 +61,7 @@ color:
     dark: "#2c3e50"
     darkActive: "#2c3e50"
   special:
-    attention: &color-special-attention "#2c3e50"
+    attention: &color-special-attention "#787878"
 
 # FONT
 font:
