@@ -39,35 +39,36 @@ size:
 color:
   # color options
   neutral:
-    white: &color-white '#ffffff'
+    white: &color-white "#ffffff"
     gray:
-      a: &color-gray-1 '#fafaf9'
-      b: &color-gray-2 '#f3f2f2'
-      c: &color-gray-3 '#ecebea'
-      d: '#dddbda'
-      e: '#c9c7c5'
-      f: '#b0adab'
-      g: '#2c3e50'
-      h: '#706e6b'
-      i: '#514f4d'
-      j: &color-gray-10 '#3e3e3c'
-      k: '#2b2826'
-    black: '#000000'
+      a: &color-gray-1 "#fafaf9"
+      b: &color-gray-2 "#f3f2f2"
+      c: &color-gray-3 "#ecebea"
+      d: "#dddbda"
+      e: "#c9c7c5"
+      f: "#b0adab"
+      g: "#2c3e50"
+      h: "#706e6b"
+      i: "#514f4d"
+      j: &color-gray-10 "#3e3e3c"
+      k: "#2b2826"
+    black: "#000000"
   brand:
-    primary: &color-brand-primary '#2c3e50'
-    primaryActive: '#2c3e50'
-    light: '#2c3e50'
-    lightActive: '#2c3e50'
-    dark: '#2c3e50'
-    darkActive: '#2c3e50'
+    primary: &color-brand-primary "#2c3e50"
+    primaryActive: "#2c3e50"
+    light: "#2c3e50"
+    lightActive: "#2c3e50"
+    dark: "#2c3e50"
+    darkActive: "#2c3e50"
   special:
-    attention: &color-special-attention orange
+    attention: &color-special-attention "#2c3e50"
+
 # FONT
 font:
   # font options
   family:
-    initial: 'Arial, sans-serif'
-    target: &font-family-target 'Open Sans'
+    initial: "Arial, sans-serif"
+    target: &font-family-target "Open Sans"
   weight:
     standard: 400
     bold: 600
@@ -134,7 +135,7 @@ hero:
     size: *font-size-xxl
     color: *color-white
     lineHeight: *font-line-height-xs
-  background: 'linear-gradient(0deg, #E0306E, #6438B5)'
+  background: "linear-gradient(0deg, #E0306E, #6438B5)"
 blog:
   h1:
     size: *font-size-l

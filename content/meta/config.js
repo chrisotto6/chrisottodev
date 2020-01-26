@@ -4,7 +4,7 @@ module.exports = {
   siteDescription: 'Thoughts and projects',
   siteUrl: 'https://chrisotto.dev',
   // pathPrefix: "",
-  siteImage: 'preview.jpg',
+  // siteImage: 'preview.jpg',
   siteLanguage: 'en',
 
   /* author */

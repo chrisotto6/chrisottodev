@@ -7,7 +7,7 @@ import { FaUser } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 
 const Meta = props => {
-  const { prefix, author: authorName, category, theme } = props
+  const { prefix, author: authorName, tags, theme } = props
 
   return (
     <p className="meta">
@@ -17,12 +17,13 @@ const Meta = props => {
       <span>
         <FaUser size={18} /> {authorName}
       </span>
-      {category && (
-        <span>
-          <FaTag size={18} />
-          <Link to={`/category/${category.split(' ').join('-')}`}>{category}</Link>
-        </span>
-      )}
+      {tags &&
+        tags.map(tag => (
+          <span key={tag}>
+            <FaTag size={18} />
+            <Link to={`/tag/${tag.split(' ').join('-')}`}>{tag}</Link>
+          </span>
+        ))}
 
       {/* --- STYLES --- */}
       <style jsx>{`
