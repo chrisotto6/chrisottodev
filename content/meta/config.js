@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'Chris Otto | Father, Developer, Test Engineer', // <title>
-  shortSiteTitle: 'Developer', // <title> ending for posts and pages
-  siteDescription: 'HeroBlog is a GatsbyJS starter.',
+  shortSiteTitle: 'Techie, Developer', // <title> ending for posts and pages
+  siteDescription: 'Thoughts and projects',
   siteUrl: 'https://chrisotto.dev',
   // pathPrefix: "",
   siteImage: 'preview.jpg',
@@ -13,7 +13,7 @@ module.exports = {
 
   /* info */
   headerTitle: 'Chris Otto',
-  headerSubTitle: 'Father, Developer, Test Engineer',
+  headerSubTitle: '',
 
   /* manifest.json */
   manifestName: 'Chris Otto | Father, Developer, Test Engineer',
