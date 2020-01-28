@@ -15,7 +15,7 @@ const Item = props => {
       fields: { slug, prefix },
       frontmatter: {
         title,
-        category,
+        tags,
         author,
         cover: {
           children: [{ fluid }],
@@ -23,6 +23,18 @@ const Item = props => {
       },
     },
   } = props
+
+  var size = tags.length
+  var tagList = ''
+
+  tags.forEach(tag => {
+    if (size > 1) {
+      tagList += `${tag}, `
+      size--
+    } else {
+      tagList += `${tag}`
+    }
+  })
 
   return (
     <React.Fragment>
@@ -41,9 +53,9 @@ const Item = props => {
             <span>
               <FaUser size={18} /> {author}
             </span>
-            {category && (
+            {tags && (
               <span>
-                <FaTag size={18} /> {category}
+                <FaTag size={18} /> {tagList}
               </span>
             )}
           </p>
@@ -86,20 +98,6 @@ const Item = props => {
             transform: translateX(-50%);
             transition: all ${theme.time.duration.default};
             width: 50%;
-          }
-
-          &:first-child {
-            &::before {
-              border-top: 1px solid ${theme.line.color};
-              content: '';
-              height: 0;
-              position: absolute;
-              top: ${`calc(${theme.space.default} * -1.5)`};
-              left: 50%;
-              transform: translateX(-50%);
-              transition: all ${theme.time.duration.default};
-              width: 50%;
-            }
           }
         }
 

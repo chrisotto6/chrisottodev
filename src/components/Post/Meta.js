@@ -7,22 +7,23 @@ import { FaUser } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 
 const Meta = props => {
-  const { prefix, author: authorName, category, theme } = props
+  const { prefix, author: authorName, tags, theme } = props
 
   return (
     <p className="meta">
       <span>
-        <FaCalendar size={18} /> {prefix}
+        <FaCalendar size={10} /> {prefix}
       </span>
       <span>
-        <FaUser size={18} /> {authorName}
+        <FaUser size={10} /> {authorName}
       </span>
-      {category && (
-        <span>
-          <FaTag size={18} />
-          <Link to={`/category/${category.split(' ').join('-')}`}>{category}</Link>
-        </span>
-      )}
+      {tags &&
+        tags.map(tag => (
+          <span key={tag}>
+            <FaTag size={10} />
+            <Link to={`/tag/${tag.split(' ').join('-')}`}>{tag}</Link>
+          </span>
+        ))}
 
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -59,6 +60,7 @@ Meta.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string,
   theme: PropTypes.object.isRequired,
+  tags: PropTypes.object.isRequired,
 }
 
 export default Meta

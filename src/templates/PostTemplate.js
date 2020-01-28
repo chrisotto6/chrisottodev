@@ -55,6 +55,7 @@ export const postQuery = graphql`
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       fields {
         slug
         prefix
@@ -62,7 +63,7 @@ export const postQuery = graphql`
       frontmatter {
         title
         author
-        category
+        tags
         cover {
           childImageSharp {
             resize(width: 300) {

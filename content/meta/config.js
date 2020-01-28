@@ -1,10 +1,10 @@
 module.exports = {
   siteTitle: 'Chris Otto | Father, Developer, Test Engineer', // <title>
-  shortSiteTitle: 'Developer', // <title> ending for posts and pages
-  siteDescription: 'HeroBlog is a GatsbyJS starter.',
+  shortSiteTitle: 'Techie, Developer', // <title> ending for posts and pages
+  siteDescription: 'Thoughts and projects',
   siteUrl: 'https://chrisotto.dev',
   // pathPrefix: "",
-  siteImage: 'preview.jpg',
+  // siteImage: 'preview.jpg',
   siteLanguage: 'en',
 
   /* author */
@@ -13,7 +13,7 @@ module.exports = {
 
   /* info */
   headerTitle: 'Chris Otto',
-  headerSubTitle: 'Father, Developer, Test Engineer',
+  headerSubTitle: 'Test Engineer, Developer',
 
   /* manifest.json */
   manifestName: 'Chris Otto | Father, Developer, Test Engineer',
@@ -32,8 +32,10 @@ module.exports = {
 
   // social
   authorSocialLinks: [
-    { name: 'github', url: 'https://github.com/chrisotto6' },
-    { name: 'twitter', url: 'https://twitter.com/wisco_cmo' },
     { name: 'dev', url: 'https://dev.to/chrisotto' },
+    { name: 'github', url: 'https://github.com/chrisotto6' },
+    { name: 'instagram', url: 'https://instagram.com/wisco_cmo' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/ottochristopher/' },
+    { name: 'twitter', url: 'https://twitter.com/wisco_cmo' },
   ],
 }
