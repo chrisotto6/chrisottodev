@@ -16,7 +16,11 @@ const Search = props => {
             apiKey={algolia.searchOnlyApiKey}
             indexName={algolia.indexName}
           >
-            <SearchBox translations={{ placeholder: 'Search' }} />
+            <SearchBox
+              translations={{ placeholder: 'Search' }}
+              reset={<img src="" alt="" />}
+              submit={<img src="" alt="" />}
+            />
             <Stats />
             <Hits hitComponent={Hit} />
             <Pagination />

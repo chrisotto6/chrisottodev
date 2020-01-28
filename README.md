@@ -10,4 +10,4 @@
 
 ### About
 
-Peronsal website template.
+Chris Otto's personal website.
