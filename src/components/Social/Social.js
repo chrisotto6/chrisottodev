@@ -43,11 +43,20 @@ const Social = props => {
       {/* --- STYLES --- */}
       <style jsx global>
         {`
+          @media screen and (max-width: 450px) {
+            .social {
+              width: 95%;
+            }
+          }
+          @media screen and (min-width: 450px) {
+            .social {
+              width: 40%;
+            }
+          }
           .social {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40%;
             margin: 0 auto;
             padding: 20px;
 
