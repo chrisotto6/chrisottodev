@@ -13,7 +13,7 @@ module.exports = {
 
   /* info */
   headerTitle: 'Chris Otto',
-  headerSubTitle: '',
+  headerSubTitle: 'Test Engineer, Developer',
 
   /* manifest.json */
   manifestName: 'Chris Otto | Father, Developer, Test Engineer',
@@ -32,8 +32,10 @@ module.exports = {
 
   // social
   authorSocialLinks: [
-    { name: 'github', url: 'https://github.com/chrisotto6' },
-    { name: 'twitter', url: 'https://twitter.com/wisco_cmo' },
     { name: 'dev', url: 'https://dev.to/chrisotto' },
+    { name: 'github', url: 'https://github.com/chrisotto6' },
+    { name: 'instagram', url: 'https://instagram.com/wisco_cmo' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/ottochristopher/' },
+    { name: 'twitter', url: 'https://twitter.com/wisco_cmo' },
   ],
 }

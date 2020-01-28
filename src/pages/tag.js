@@ -30,10 +30,10 @@ const TagPage = props => {
     if (tags && tags != null) {
       tags.forEach(tag => {
         if (tag && tag != null) {
-          if (!tagsPosts[tag]) {
-            tagsPosts[tag] = []
+          if (!tagPosts[tag]) {
+            tagPosts[tag] = []
           }
-          tagsPosts[tag].push(edge)
+          tagPosts[tag].push(edge)
         }
       })
     }
@@ -41,8 +41,8 @@ const TagPage = props => {
 
   const tagList = []
 
-  for (var tag in tagsPosts) {
-    tagList.push([tag, tagsPosts[tag]])
+  for (var tag in tagPosts) {
+    tagList.push([tag, tagPosts[tag]])
   }
 
   return (

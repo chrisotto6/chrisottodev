@@ -12,15 +12,15 @@ const Meta = props => {
   return (
     <p className="meta">
       <span>
-        <FaCalendar size={18} /> {prefix}
+        <FaCalendar size={10} /> {prefix}
       </span>
       <span>
-        <FaUser size={18} /> {authorName}
+        <FaUser size={10} /> {authorName}
       </span>
       {tags &&
         tags.map(tag => (
           <span key={tag}>
-            <FaTag size={18} />
+            <FaTag size={10} />
             <Link to={`/tag/${tag.split(' ').join('-')}`}>{tag}</Link>
           </span>
         ))}
@@ -60,6 +60,7 @@ Meta.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string,
   theme: PropTypes.object.isRequired,
+  tags: PropTypes.object.isRequired,
 }
 
 export default Meta
