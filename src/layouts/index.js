@@ -81,23 +81,6 @@ class Layout extends React.Component {
       <StaticQuery
         query={graphql`
           query LayoutQuery {
-            pages: allMarkdownRemark(
-              filter: { fileAbsolutePath: { regex: "//pages//" }, fields: { prefix: { regex: "/^\\d+$/" } } }
-              sort: { fields: [fields___prefix], order: ASC }
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    prefix
-                  }
-                  frontmatter {
-                    title
-                    menuTitle
-                  }
-                }
-              }
-            }
             footnote: markdownRemark(fileAbsolutePath: { regex: "/footnote/" }) {
               id
               html
@@ -108,7 +91,6 @@ class Layout extends React.Component {
           const { children } = this.props
           const {
             footnote: { html: footnoteHTML },
-            pages: { edges: pages },
           } = data
 
           return (
@@ -116,11 +98,7 @@ class Layout extends React.Component {
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
                   <React.Fragment>
-                    <Header
-                      path={this.props.location.pathname}
-                      pages={pages}
-                      theme={this.state.theme}
-                    />
+                    <Header path={this.props.location.pathname} theme={this.state.theme} />
                     <main role="main">
                       <section>{children}</section>
                     </main>
@@ -159,6 +137,7 @@ class Layout extends React.Component {
                       }
                       h1 {
                         letter-spacing: -0.04em;
+                        font-size: ${this.state.theme.font.size.l};
                       }
                       p {
                         margin: 0;
@@ -193,33 +172,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-//eslint-disable-next-line no-undef
-/*
-export const postQuery = graphql`
-  query LayoutQuery {
-    pages: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//pages//" }, fields: { prefix: { regex: "/^\\d+$/" } } }
-      sort: { fields: [fields___prefix], order: ASC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            prefix
-          }
-          frontmatter {
-            title
-            menuTitle
-          }
-        }
-      }
-    }
-    footnote: markdownRemark(fileAbsolutePath: { regex: "/footnote/" }) {
-      id
-      html
-    }
-  }
-`;
-
-*/
