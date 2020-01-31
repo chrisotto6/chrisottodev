@@ -44,7 +44,7 @@
     "react-facebook": "^5.0.3",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.1.0",
-    "react-instantsearch": "^5.2.2",
+    "react-instantsearch": "^6.3.0",
     "react-md-spinner": "^0.3.0",
     "react-obfuscate": "^2.1.4",
     "react-share": "^2.2.0",
