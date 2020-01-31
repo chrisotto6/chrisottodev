@@ -1,0 +1,8 @@
+[
+  {
+    "name": "VSCode FitNesse",
+    "description": "Extension used to interact FitNesse tests from Visual Studio Code. Formats, runs tests and provides syntax highlighting.",
+    "img": "vscodefitnesse.png",
+    "url": "https://github.com/chrisotto6/VSCodeFitNesse"
+  }
+]
