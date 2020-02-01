@@ -1,0 +1,24 @@
+---
+title: Dynamically Set Footer Copyright Date
+cover: 2019.jpg
+author: Chris Otto
+tags: ['javascript']
+---
+
+With 2018 winding down I found myself thinking that I will need to leave a note to update the footer on my site to change the year to 2019. Having to come back year after year to statically change the copyright year in my footer is something I will no longer do. So why not have it set dynamically?
+
+```html
+<script>
+  document.write(new Date().getFullYear())
+</script>
+```
+
+Instead of just adding the year I also included a copyright character and my name wrapping the new script.
+
+```html
+©
+<script>
+  document.write(new Date().getFullYear())
+</script>
+Chris Otto
+```

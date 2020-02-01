@@ -1,0 +1,30 @@
+---
+title: React Tutorial - Add Typescript
+cover: react-logo.png
+author: Chris Otto
+tags: ['react', 'typescript']
+---
+
+This week I was going through the React [tutorial](https://reactjs.org/tutorial/tutorial.html). While going through each phase of the tutorial; going over state, JSX and React Components I wanted to be writing it in Typescript. I'll go through the tutorial code of what I had to change in order to get it working.
+
+- Use node to install the typescript dependencies we need:
+
+`npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+
+- Change the function definition of Square, pass (props: any) instead of just (props):
+
+```js
+function Square(props: any) {}
+```
+
+- Modify the Board and Game Component to accept any in the Component definition:
+
+```js
+class Board extends React.Component<any, any> {}
+
+class Game extends React.Component<any, any> {}
+```
+
+- Change the file type to be .tsx instead of .js
+
+Just like that, with a few package installs and a few code changes you're able to compile the project using typescript instead of normal JS. You will probably want to make other modifications to take advantage of other useful parts of typescript.

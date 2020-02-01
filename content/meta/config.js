@@ -3,8 +3,6 @@ module.exports = {
   shortSiteTitle: 'Techie, Developer', // <title> ending for posts and pages
   siteDescription: 'Thoughts and projects',
   siteUrl: 'https://chrisotto.dev',
-  // pathPrefix: "",
-  // siteImage: 'preview.jpg',
   siteLanguage: 'en',
 
   /* author */
@@ -13,7 +11,7 @@ module.exports = {
 
   /* info */
   headerTitle: 'Chris Otto',
-  headerSubTitle: 'Test Engineer, Developer',
+  headerSubTitle: 'Developer, Test Engineer',
 
   /* manifest.json */
   manifestName: 'Chris Otto | Father, Developer, Test Engineer',
@@ -24,10 +22,6 @@ module.exports = {
   manifestDisplay: 'standalone',
 
   // gravatar
-  // Use your Gravatar image. If empty then will use src/images/jpg/avatar.jpg
-  // Replace your email adress with md5-code.
-  // Example https://www.gravatar.com/avatar/g.strainovic@gmail.com ->
-  // gravatarImgMd5: "https://www.gravatar.com/avatar/1db853e4df386e8f699e4b35505dd8c6",
   gravatarImgMd5: '',
 
   // social

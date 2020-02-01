@@ -15,18 +15,10 @@ class Menu extends React.Component {
     super(props)
     this.itemList = React.createRef()
 
-    const pages = props.pages.map(page => ({
-      to: page.node.fields.slug,
-      label: page.node.frontmatter.menuTitle
-        ? page.node.frontmatter.menuTitle
-        : page.node.frontmatter.title,
-    }))
-
     this.items = [
       { to: '/', label: 'Home', icon: FaHome },
       { to: '/tag/', label: 'Tags', icon: FaTag },
       { to: '/search/', label: 'Search', icon: FaSearch },
-      ...pages,
       { to: '/contact/', label: 'Contact', icon: FaEnvelope },
     ]
 
@@ -43,7 +35,6 @@ class Menu extends React.Component {
     fixed: PropTypes.bool.isRequired,
     screenWidth: PropTypes.number.isRequired,
     fontLoaded: PropTypes.bool.isRequired,
-    pages: PropTypes.array.isRequired,
     theme: PropTypes.object.isRequired,
   }
 

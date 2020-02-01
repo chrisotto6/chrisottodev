@@ -1,0 +1,46 @@
+---
+menuTitle: Uses
+---
+
+# Uses
+
+What I `use` for my developer setup, gear, software, configs, etc.
+
+## Computers
+
+### Desktop
+
+#### Core
+
+- Case: [NZXT S340 Mid Tower](https://www.amazon.com/gp/product/B00NGMIBXC)
+- Motherboard: [ROG Maximus IX Code](https://www.amazon.com/gp/product/B01NGTRXOOASUS)
+- Processor: [Intel Core i7-7700K](https://www.amazon.com/gp/product/B01MXSI216)
+- CPU Cooler: [NZXT Kraken X61 280mm Liquid Cooling System](https://www.amazon.com/gp/product/B00L0YLJJG)
+- RAM: 32 GB [Corsair Vengeance LPX DDR4](https://www.amazon.com/gp/product/B0134EW7G8)
+- Boot Drive: [MyDigitalSSD BPX M.2 PCIE 480GB](https://www.amazon.com/gp/product/B01MDRUXNZ)
+- Power Supply: [EVGA 500W](https://www.amazon.com/gp/product/B00H33SFJU)
+- Graphics Card: [EVGA GeForce GTX 970](https://www.amazon.com/gp/product/B00U2ON9B6)
+
+#### Peripherals
+
+- Monitor: 2x - [Acer 23.8 in IPS](https://www.amazon.com/gp/product/B01LY3DB9J)
+- Monitor Mount: [VIVO Dual Monitor Desk Mount](https://www.amazon.com/gp/product/B009S750LA)
+- Headset: [Astro A50](https://www.amazon.com/gp/product/B01G3WBCQY)
+- Mouse: [Razer DeathAdder Elite](https://www.amazon.com/gp/product/B01LXC1QL0)
+- Keyboard: [Corsair K55](https://www.amazon.com/gp/product/B01M4LIKLI)
+- Webcam: [Logitech C920](https://www.amazon.com/gp/product/B006JH8T3S)
+
+### Laptop
+
+#### Core
+
+- 2015 MacBook Pro
+- Processor: 2.5 GHz Quad-core Intel Core i7
+- Memory: 16 GB 1600 MHz DDR3L
+- Storage: 512GB Flash Storage
+
+#### Peripherals
+
+- Mouse: [Logitech MX Master](https://www.amazon.com/gp/product/B076VKQVK3)
+- Lapdesk: [LapGear Home Office Lap Desk](https://www.amazon.com/gp/product/B01C785EJ4)
+- Stand: [Rain Design mStand Laptop Stand](https://www.amazon.com/gp/product/B000OOYECC)
