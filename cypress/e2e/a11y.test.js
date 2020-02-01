@@ -5,16 +5,14 @@ describe('Accessibility checks', () => {
     cy.checkA11y()
   })
 
-  // Renable this test once I actually adjust this page from the list of tech dude used
-
-  //it('About Page', () => {
-  //  cy.visit('/about')
-  //  cy.injectAxe()
-  //  cy.checkA11y()
-  //})
-
-  it('Categories Page', () => {
+  it('Tags Page', () => {
     cy.visit('/tag')
+    cy.injectAxe()
+    cy.checkA11y()
+  })
+
+  it('Projects Page', () => {
+    cy.visit('/project')
     cy.injectAxe()
     cy.checkA11y()
   })
