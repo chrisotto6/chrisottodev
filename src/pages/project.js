@@ -6,7 +6,7 @@ import Article from '../components/Article'
 import Project from '../components/Project'
 import Headline from '../components/Article/Headline'
 
-const ProjectPage = props => {
+const ProjectPage = () => {
   const data = useStaticQuery(
     graphql`
       query ProjectQuery {
@@ -87,19 +87,3 @@ ProjectPage.propTypes = {
 }
 
 export default ProjectPage
-
-//eslint-disable-next-line no-undef
-//export const query = graphql`
-//  query ProjectQuery {
-//    allProjectJson {
-//      edges {
-//        node {
-//          name
-//          description
-//          img
-//          url
-//        }
-//      }
-//    }
-//  }
-//`

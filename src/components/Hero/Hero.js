@@ -11,7 +11,7 @@ const Hero = props => {
       <section className="hero">
         <h1>Hi! I&rsquo;m Chris.</h1>
         <p>
-          I'm a software engineer based in Milwaukee, WI.
+          I&rsquo;m a software engineer based in Milwaukee, WI.
           <br />I enjoy Javascript, DevOps and Testing.
         </p>
         <button onClick={scrollToContent} aria-label="scroll">
