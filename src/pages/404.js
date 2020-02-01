@@ -10,7 +10,7 @@ const NotFoundPage = () => (
         <header>
           <Headline title="Not Found" theme={theme} />
         </header>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <p>You just hit a route that doesn&#39;t exist...the sadness.</p>
       </Article>
     )}
   </ThemeContext>
