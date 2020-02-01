@@ -29,12 +29,12 @@ const Project = props => {
         </main>
         <footer>
           {projecturl && (
-            <a href={githuburl} target="_blank" rel="noopener" rel="noreferrer" title={name}>
+            <a href={githuburl} target="_blank" rel="noopener noreferrer" title={name}>
               <FaExternalLinkAlt size={28} />
             </a>
           )}
           {githuburl && (
-            <a href={githuburl} target="_blank" rel="noopener" rel="noreferrer" title={name}>
+            <a href={githuburl} target="_blank" rel="noopener noreferrer" title={name}>
               <FaGithub size={28} />
             </a>
           )}
@@ -107,6 +107,8 @@ const Project = props => {
 
 Project.propTypes = {
   project: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
+  images: PropTypes.object.isRequired,
 }
 
 export default Project

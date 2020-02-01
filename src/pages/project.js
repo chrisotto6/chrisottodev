@@ -7,7 +7,6 @@ import Project from '../components/Project'
 import Headline from '../components/Article/Headline'
 
 const ProjectPage = props => {
-  const { theme } = props
   const data = useStaticQuery(
     graphql`
       query ProjectQuery {
