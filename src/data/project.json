@@ -8,7 +8,7 @@
   },
   {
     "name": "Personal Website",
-    "description": "Extension used to interact FitNesse tests from Visual Studio Code. Formats, runs tests and provides syntax highlighting.",
+    "description": "Website built with Gatsby, React and GraphQL. Contains my blog, projects and online resume.",
     "img": "chrisottodev.png",
     "githuburl": "https://github.com/chrisotto6/chrisottodev",
     "projecturl": "https://chrisotto.dev/"
