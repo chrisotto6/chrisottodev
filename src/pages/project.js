@@ -6,8 +6,9 @@ import Article from '../components/Article'
 import Project from '../components/Project'
 import Headline from '../components/Article/Headline'
 
-const ProjectPage = () => {
-  const { edges } = useStaticQuery(
+const ProjectPage = props => {
+  const { theme } = props
+  const data = useStaticQuery(
     graphql`
       query ProjectQuery {
         allProjectJson {
@@ -16,7 +17,24 @@ const ProjectPage = () => {
               name
               description
               img
-              url
+              githuburl
+              projecturl
+            }
+          }
+        }
+        projectImages: allFile(
+          sort: { order: ASC, fields: [absolutePath] }
+          filter: { relativePath: { regex: "/project/.*.png/" } }
+        ) {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid(maxWidth: 340, maxHeight: 210) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
@@ -30,14 +48,37 @@ const ProjectPage = () => {
         {theme => (
           <Article theme={theme}>
             <header>
-              <Headline title="Contact" theme={theme} />
+              <Headline title="Projects" theme={theme} />
             </header>
-            {edges.map(edge => {
-              ;<Project theme={theme} project={edge} />
-            })}
+            <ul className="projects">
+              {data.allProjectJson.edges.map(edge => (
+                <Project
+                  theme={theme}
+                  project={edge.node}
+                  images={data.projectImages.edges}
+                  key={edge.node.name}
+                />
+              ))}
+            </ul>
           </Article>
         )}
       </ThemeContext.Consumer>
+
+      {/* --- STYLES --- */}
+      <style jsx global>
+        {`
+          .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(260px, 1fr);
+            grid-gap: 24px;
+            @media (max-width: 980px) {
+              grid-template-columns: 1fr;
+              grid-auto-rows: auto;
+            }
+          }
+        `}
+      </style>
     </React.Fragment>
   )
 }

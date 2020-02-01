@@ -1,55 +1,112 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Img } from 'gatsby'
+import Img from 'gatsby-image'
+import { FaGithub } from 'react-icons/fa/'
+import { FaExternalLinkAlt } from 'react-icons/fa/'
 
 const Project = props => {
   const {
     theme,
-    project: { name, description, img, url },
+    project: { name, description, img, githuburl, projecturl },
+    images,
   } = props
+
+  const image = images.find(x => {
+    return x.node.relativePath === `project/${img}`
+  })
 
   return (
     <React.Fragment>
-      <article className="card">
-        <Link to={url} key={name} className="link">
-          <div className="gatsby-image-outer-wrapper">
-            <Img fluid={img} />
+      <li className="card">
+        <header>
+          <div>
+            <Img fluid={image.node.childImageSharp.fluid} title={name} alt="Project image" />
           </div>
           <h3>{name}</h3>
-          <p className="description">{description}</p>
-        </Link>
-      </article>
+        </header>
+        <main>
+          <p>{description}</p>
+        </main>
+        <footer>
+          {projecturl && (
+            <a href={githuburl} target="_blank" rel="noopener" rel="noreferrer" title={name}>
+              <FaExternalLinkAlt size={28} />
+            </a>
+          )}
+          {githuburl && (
+            <a href={githuburl} target="_blank" rel="noopener" rel="noreferrer" title={name}>
+              <FaGithub size={28} />
+            </a>
+          )}
+        </footer>
+      </li>
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        .card {
-          border-radius: 4px;
-          background: #fff;
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-          transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow,
-            0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-          padding: 14px 80px 18px 36px;
-          cursor: pointer;
-          background-repeat: no-repeat;
-          background-position: right;
-          background-size: 80px;
-        }
-        .card:hover {
-          transform: scale(1.05);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-        }
-        .card h3 {
-          font-weight: 600;
-        }
-        .card img {
-          position: absolute;
-          top: 20px;
-          right: 15px;
-          max-height: 120px;
+        li {
+          display: flex;
+          overflow: hidden;
+          list-style: none;
+          flex-direction: column;
+          border-radius: ${theme.space.s};
+          background: ${theme.color.neutral.gray.b};
+          header {
+            div {
+              position: relative;
+              gatsby-image-wrapper {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                top: 0;
+                width: 100%;
+                position: absolute;
+              }
+            }
+            h3 {
+              font-weight: 500;
+              font-size: 24px;
+              padding: 0 ${theme.space.m};
+              margin: ${theme.space.m} 0;
+              @media (max-width: 567px) {
+                padding: 0 ${theme.space.m};
+              }
+            }
+          }
+          main {
+            padding: 0 ${theme.space.m};
+            height: 100%;
+            @media (max-width: 567px) {
+              padding: 0 ${theme.space.s};
+            }
+            p {
+              font-size: 16px;
+              line-height: 27px;
+              @media (max-width: 567px) {
+                font-weight: 300;
+              }
+            }
+          }
+          footer {
+            padding: ${theme.space.s};
+            margin-top: auto;
+            @media (max-width: 567px) {
+              padding: ${theme.space.s};
+            }
+            a {
+              color: ${theme.color.brand.primary};
+              text-align: right;
+              float: right;
+              margin-right: ${theme.space.m};
+            }
+          }
         }
       `}</style>
     </React.Fragment>
   )
+}
+
+Project.propTypes = {
+  project: PropTypes.object.isRequired,
 }
 
 export default Project
