@@ -30,7 +30,7 @@ const ProjectPage = () => {
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 340, maxHeight: 210) {
+                fluid(maxWidth: 340, maxHeight: 210, quality: 90, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid
                 }
               }
