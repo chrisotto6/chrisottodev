@@ -29,7 +29,7 @@ const Project = props => {
         </main>
         <footer>
           {projecturl && (
-            <a href={githuburl} target="_blank" rel="noopener noreferrer" title={name}>
+            <a href={projecturl} target="_blank" rel="noopener noreferrer" title={name}>
               <FaExternalLinkAlt size={28} />
             </a>
           )}
