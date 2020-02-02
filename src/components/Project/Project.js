@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa/'
 const Project = props => {
   const {
     theme,
-    project: { name, description, img, githuburl, projecturl },
+    project: { name, description, img, tech, githuburl, projecturl },
     images,
   } = props
 
@@ -26,6 +26,10 @@ const Project = props => {
         </header>
         <main>
           <p>{description}</p>
+          <br />
+          {tech.map(item => (
+            <span>{item}</span>
+          ))}
         </main>
         <footer>
           {projecturl && (
@@ -84,6 +88,20 @@ const Project = props => {
               @media (max-width: 567px) {
                 font-weight: 300;
               }
+            }
+            span {
+              margin-right: 5px;
+              font-size: 90%;
+              background-color: ${theme.color.brand.primary};
+              color: ${theme.color.neutral.gray.b};
+              display: inline-block;
+              padding: 0.25em 0.4em;
+              font-weight: 700;
+              line-height: 1;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: baseline;
+              border-radius: 0.25rem;
             }
           }
           footer {

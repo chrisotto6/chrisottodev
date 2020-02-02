@@ -16,6 +16,7 @@ const ProjectPage = () => {
               name
               description
               img
+              tech
               githuburl
               projecturl
             }
