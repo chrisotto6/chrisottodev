@@ -26,7 +26,6 @@ const Project = props => {
         </header>
         <main>
           <p>{description}</p>
-          <br />
           {tech.map(item => (
             <span>{item}</span>
           ))}
@@ -85,6 +84,7 @@ const Project = props => {
             p {
               font-size: 16px;
               line-height: 27px;
+              margin-bottom: 12px;
               @media (max-width: 567px) {
                 font-weight: 300;
               }
@@ -96,7 +96,7 @@ const Project = props => {
               color: ${theme.color.neutral.gray.b};
               display: inline-block;
               padding: 0.25em 0.4em;
-              font-weight: 700;
+              font-weight: 500;
               line-height: 1;
               text-align: center;
               white-space: nowrap;
@@ -106,7 +106,7 @@ const Project = props => {
           }
           footer {
             padding: ${theme.space.s};
-            margin-top: auto;
+            margin-top: 12px;
             @media (max-width: 567px) {
               padding: ${theme.space.s};
             }

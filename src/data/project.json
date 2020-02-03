@@ -1,7 +1,7 @@
 [
   {
     "name": "VSCode FitNesse",
-    "description": "Extension for FitNesse tests in VS Code. Formats, runs tests and provides syntax highlighting.",
+    "description": "Formats, runs tests and provides syntax highlighting for FitNesse tests in VS Code.",
     "img": "vscodefitnesse.png",
     "tech": ["Typescript", "Node"],
     "githuburl": "https://github.com/chrisotto6/VSCodeFitNesse",
