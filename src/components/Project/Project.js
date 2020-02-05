@@ -22,14 +22,14 @@ const Project = props => {
           <div>
             <Img fluid={image.node.childImageSharp.fluid} title={name} alt="Project image" />
           </div>
-          <h3>{name}</h3>
+          <h2>{name}</h2>
         </header>
-        <main>
+        <section>
           <p>{description}</p>
           {tech.map(item => (
             <span key={item}>{item}</span>
           ))}
-        </main>
+        </section>
         <footer>
           {projecturl && (
             <a href={projecturl} target="_blank" rel="noopener noreferrer" title={name}>
@@ -65,7 +65,7 @@ const Project = props => {
                 position: absolute;
               }
             }
-            h3 {
+            h2 {
               font-weight: 500;
               font-size: 24px;
               padding: 0 ${theme.space.m};
@@ -75,7 +75,7 @@ const Project = props => {
               }
             }
           }
-          main {
+          section {
             padding: 0 ${theme.space.m};
             height: 100%;
             @media (max-width: 567px) {
