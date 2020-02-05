@@ -27,7 +27,7 @@ const Project = props => {
         <main>
           <p>{description}</p>
           {tech.map(item => (
-            <span>{item}</span>
+            <span key={item}>{item}</span>
           ))}
         </main>
         <footer>
