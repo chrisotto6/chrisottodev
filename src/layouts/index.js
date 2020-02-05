@@ -13,7 +13,6 @@ export const ScreenWidthContext = React.createContext(0)
 export const FontLoadedContext = React.createContext(false)
 
 import themeObjectFromYaml from '../theme/theme.yaml'
-import Social from '../components/Social'
 
 class Layout extends React.Component {
   constructor() {
@@ -102,7 +101,6 @@ class Layout extends React.Component {
                     <main role="main">
                       <section>{children}</section>
                     </main>
-                    <Social theme={this.state.theme} />
                     <Footer html={footnoteHTML} theme={this.state.theme} />
 
                     {/* --- STYLES --- */}

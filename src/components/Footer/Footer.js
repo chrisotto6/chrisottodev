@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Social from '../Social'
 
 const Footer = props => {
   const { html, theme } = props
@@ -7,6 +8,7 @@ const Footer = props => {
   return (
     <React.Fragment>
       <footer className="footer" role="contentinfo">
+        <Social theme={theme} />
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </footer>
 
