@@ -12,7 +12,7 @@ export const ThemeContext = React.createContext(null)
 export const ScreenWidthContext = React.createContext(0)
 export const FontLoadedContext = React.createContext(false)
 
-import themeObjectFromYaml from '../theme/theme.yaml'
+import themeObject from '../theme/theme.json'
 
 class Layout extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ class Layout extends React.Component {
       font600loaded: false,
       screenWidth: 0,
       headerMinimized: false,
-      theme: themeObjectFromYaml,
+      theme: themeObject,
     }
 
     if (typeof window !== `undefined`) {
