@@ -38,7 +38,7 @@ const Item = props => {
 
   return (
     <React.Fragment>
-      <li id="item">
+      <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
             <Img fluid={fluid} />

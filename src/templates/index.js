@@ -102,7 +102,6 @@ class IndexPage extends React.Component {
         >
           {Array.from({ length: numPages }, (_, i) => (
             <li
-              id="post-page"
               key={`pagination-number${i + 1}`}
               style={{
                 margin: 0,

@@ -6,14 +6,14 @@ describe('Index Page', () => {
   })
   it('Posts are rendered', () => {
     cy.get('#post-list').should('be.visible')
-    cy.get('#item').should('be.visible')
-    cy.get('#item>.link>.gatsby-image-outer-wrapper')
+    cy.get('#post-list>li').should('be.visible')
+    cy.get('#post-list>li>.link>.gatsby-image-outer-wrapper')
       .first()
       .should('be.visible')
-    cy.get('#item>.link>div')
+    cy.get('#post-list>li>.link>div')
       .first()
       .should('be.visible')
-    cy.get('#item>.link>p')
+    cy.get('#post-list>li>.link>p')
       .first()
       .should('be.visible')
       .next()
@@ -22,7 +22,7 @@ describe('Index Page', () => {
   it('Footer Post Navigation', () => {
     cy.get('footer').scrollIntoView()
     cy.get('#post-page-list').should('be.visible')
-    cy.get('#post-page').should('be.visible')
+    cy.get('#post-page-list>li').should('be.visible')
   })
   it('Social Links', () => {
     cy.get('.social').should('be.visible')
