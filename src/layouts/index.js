@@ -1,4 +1,4 @@
-import 'typeface-open-sans'
+import 'typeface-open-sans/index.css'
 import FontFaceObserver from 'fontfaceobserver'
 import PropTypes from 'prop-types'
 import React from 'react'

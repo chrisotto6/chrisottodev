@@ -1,23 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FaGithub } from 'react-icons/fa/'
+import { FaLinkedin } from 'react-icons/fa/'
+import { FaTwitter } from 'react-icons/fa/'
+import { FaInstagram } from 'react-icons/fa/'
+import { FaDev } from 'react-icons/fa/'
 
 import config from '../../../content/meta/config'
-
-import GithubIcon from '!svg-react-loader!../../images/svg-icons/github.svg?name=GithubIcon'
-import LinkedInIcon from '!svg-react-loader!../../images/svg-icons/linkedin.svg?name=LinkedInIcon'
-import TwitterIcon from '!svg-react-loader!../../images/svg-icons/twitter.svg?name=TwitterIcon'
-import InstagramIcon from '!svg-react-loader!../../images/svg-icons/instagram.svg?name=InstagramIcon'
-import DevIcon from '!svg-react-loader!../../images/svg-icons/dev.svg?name=DevIcon'
 
 const Social = props => {
   const { theme } = props
   const items = config.authorSocialLinks
   const icons = {
-    twitter: TwitterIcon,
-    github: GithubIcon,
-    linkedin: LinkedInIcon,
-    instagram: InstagramIcon,
-    dev: DevIcon,
+    twitter: FaTwitter,
+    github: FaGithub,
+    linkedin: FaLinkedin,
+    instagram: FaInstagram,
+    dev: FaDev,
   }
 
   return (
