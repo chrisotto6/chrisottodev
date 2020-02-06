@@ -7,6 +7,17 @@ describe('Index Page', () => {
   it('Posts are rendered', () => {
     cy.get('#post-list').should('be.visible')
     cy.get('#item').should('be.visible')
+    cy.get('#item>.link>.gatsby-image-outer-wrapper')
+      .first()
+      .should('be.visible')
+    cy.get('#item>.link>div')
+      .first()
+      .should('be.visible')
+    cy.get('#item>.link>p')
+      .first()
+      .should('be.visible')
+      .next()
+      .should('be.visible')
   })
   it('Footer Post Navigation', () => {
     cy.get('footer').scrollIntoView()
