@@ -1,7 +1,7 @@
 describe('Accessibility checks', () => {
   it('Main Page', () => {
     cy.visit('/')
-    cy.wait(1000)
+    cy.wait(2000)
     cy.injectAxe()
     cy.checkA11y()
   })
