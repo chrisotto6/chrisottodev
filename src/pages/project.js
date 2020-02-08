@@ -50,16 +50,18 @@ const ProjectPage = () => {
             <header>
               <Headline title="Projects" theme={theme} />
             </header>
-            <ul className="projects">
-              {data.allProjectJson.edges.map(edge => (
-                <Project
-                  theme={theme}
-                  project={edge.node}
-                  images={data.projectImages.edges}
-                  key={edge.node.name}
-                />
-              ))}
-            </ul>
+            <section>
+              <ul className="projects">
+                {data.allProjectJson.edges.map(edge => (
+                  <Project
+                    theme={theme}
+                    project={edge.node}
+                    images={data.projectImages.edges}
+                    key={edge.node.name}
+                  />
+                ))}
+              </ul>
+            </section>
           </Article>
         )}
       </ThemeContext.Consumer>

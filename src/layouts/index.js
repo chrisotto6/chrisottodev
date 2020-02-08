@@ -1,8 +1,7 @@
-import 'typeface-open-sans'
+import 'typeface-open-sans/index.css'
 import FontFaceObserver from 'fontfaceobserver'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
 
 import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers'
 import Footer from '../components/Footer/'
@@ -12,8 +11,7 @@ export const ThemeContext = React.createContext(null)
 export const ScreenWidthContext = React.createContext(0)
 export const FontLoadedContext = React.createContext(false)
 
-import themeObjectFromYaml from '../theme/theme.yaml'
-import Social from '../components/Social'
+import themeObject from '../theme/theme.json'
 
 class Layout extends React.Component {
   constructor() {
@@ -24,7 +22,7 @@ class Layout extends React.Component {
       font600loaded: false,
       screenWidth: 0,
       headerMinimized: false,
-      theme: themeObjectFromYaml,
+      theme: themeObject,
     }
 
     if (typeof window !== `undefined`) {
@@ -75,92 +73,71 @@ class Layout extends React.Component {
       }
     )
   }
-
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          query LayoutQuery {
-            footnote: markdownRemark(fileAbsolutePath: { regex: "/footnote/" }) {
-              id
-              html
-            }
-          }
-        `}
-        render={data => {
-          const { children } = this.props
-          const {
-            footnote: { html: footnoteHTML },
-          } = data
+      <ThemeContext.Provider value={this.state.theme}>
+        <FontLoadedContext.Provider value={this.state.font400loaded}>
+          <ScreenWidthContext.Provider value={this.state.screenWidth}>
+            <React.Fragment>
+              <Header path={this.props.location.pathname} theme={this.state.theme} />
+              <main role="main">
+                <section>{this.props.children}</section>
+              </main>
+              <Footer theme={this.state.theme} />
 
-          return (
-            <ThemeContext.Provider value={this.state.theme}>
-              <FontLoadedContext.Provider value={this.state.font400loaded}>
-                <ScreenWidthContext.Provider value={this.state.screenWidth}>
-                  <React.Fragment>
-                    <Header path={this.props.location.pathname} theme={this.state.theme} />
-                    <main role="main">
-                      <section>{children}</section>
-                    </main>
-                    <Social theme={this.state.theme} />
-                    <Footer html={footnoteHTML} theme={this.state.theme} />
-
-                    {/* --- STYLES --- */}
-                    <style jsx>{`
-                      main {
-                        min-height: 80vh;
-                      }
-                    `}</style>
-                    <style jsx global>{`
-                      html {
-                        box-sizing: border-box;
-                      }
-                      *,
-                      *:after,
-                      *:before {
-                        box-sizing: inherit;
-                        margin: 0;
-                        padding: 0;
-                      }
-                      body {
-                        font-family: ${this.state.font400loaded
-                          ? "'Open Sans', sans-serif;"
-                          : 'Arial, sans-serif;'};
-                      }
-                      h1,
-                      h2,
-                      h3 {
-                        font-weight: ${this.state.font600loaded ? 600 : 400};
-                        line-height: 1.1;
-                        letter-spacing: -0.03em;
-                        margin: 0;
-                      }
-                      h1 {
-                        letter-spacing: -0.04em;
-                        font-size: ${this.state.theme.font.size.l};
-                      }
-                      p {
-                        margin: 0;
-                      }
-                      strong {
-                        font-weight: ${this.state.font600loaded ? 600 : 400};
-                      }
-                      a {
-                        text-decoration: none;
-                        color: #666;
-                      }
-                      main {
-                        width: auto;
-                        display: block;
-                      }
-                    `}</style>
-                  </React.Fragment>
-                </ScreenWidthContext.Provider>
-              </FontLoadedContext.Provider>
-            </ThemeContext.Provider>
-          )
-        }}
-      />
+              {/* --- STYLES --- */}
+              <style jsx>{`
+                main {
+                  min-height: 80vh;
+                }
+              `}</style>
+              <style jsx global>{`
+                html {
+                  box-sizing: border-box;
+                }
+                *,
+                *:after,
+                *:before {
+                  box-sizing: inherit;
+                  margin: 0;
+                  padding: 0;
+                }
+                body {
+                  font-family: ${this.state.font400loaded
+                    ? "'Open Sans', sans-serif;"
+                    : 'Arial, sans-serif;'};
+                }
+                h1,
+                h2,
+                h3 {
+                  font-weight: ${this.state.font600loaded ? 600 : 400};
+                  line-height: 1.1;
+                  letter-spacing: -0.03em;
+                  margin: 0;
+                }
+                h1 {
+                  letter-spacing: -0.04em;
+                  font-size: ${this.state.theme.font.size.l};
+                }
+                p {
+                  margin: 0;
+                }
+                strong {
+                  font-weight: ${this.state.font600loaded ? 600 : 400};
+                }
+                a {
+                  text-decoration: none;
+                  color: #666;
+                }
+                main {
+                  width: auto;
+                  display: block;
+                }
+              `}</style>
+            </React.Fragment>
+          </ScreenWidthContext.Provider>
+        </FontLoadedContext.Provider>
+      </ThemeContext.Provider>
     )
   }
 }

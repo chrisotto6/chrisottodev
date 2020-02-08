@@ -89,7 +89,7 @@ export default TagPage
 //eslint-disable-next-line no-undef
 export const query = graphql`
   query PostsQuery {
-    posts: allMarkdownRemark(
+    posts: allMdx(
       filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {

@@ -9,7 +9,7 @@ const Blog = props => {
   return (
     <React.Fragment>
       <section className="section">
-        <ul>
+        <ul id="post-list">
           {posts.map(post => {
             const {
               node,

@@ -1,18 +1,21 @@
 describe('Accessibility checks', () => {
   it('Main Page', () => {
     cy.visit('/')
+    cy.wait(2000)
     cy.injectAxe()
     cy.checkA11y()
   })
 
   it('Tags Page', () => {
     cy.visit('/tag')
+    cy.wait(1000)
     cy.injectAxe()
     cy.checkA11y()
   })
 
   it('Projects Page', () => {
     cy.visit('/project')
+    cy.wait(1000)
     cy.injectAxe()
     cy.checkA11y()
   })
@@ -28,6 +31,7 @@ describe('Accessibility checks', () => {
 
   it('Contact Page', () => {
     cy.visit('/contact')
+    cy.wait(1000)
     cy.injectAxe()
     cy.checkA11y()
   })
