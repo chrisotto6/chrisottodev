@@ -3,7 +3,7 @@ const config = require('./content/meta/config')
 const transformer = require('./src/utils/algolia')
 
 const query = `{
-  allMarkdownRemark(
+  allMdx(
     filter: {
       fields: { slug: { ne: null } },
       fileAbsolutePath: { regex: "/posts/"}
@@ -31,7 +31,7 @@ const queries = [
   {
     query,
     transformer: ({ data }) => {
-      return data.allMarkdownRemark.edges.reduce(transformer, [])
+      return data.allMdx.edges.reduce(transformer, [])
     },
   },
 ]
@@ -108,9 +108,21 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          posts: require.resolve('./src/templates/PostTemplate.js'),
+          page: require.resolve('./src/templates/PageTemplate.js'),
+          tags: require.resolve('./src/templates/TagTemplate.js'),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
           `gatsby-plugin-sharp`,
           {
             resolve: `gatsby-remark-images`,
@@ -125,7 +137,23 @@ module.exports = {
               wrapperStyle: `margin-bottom: 2em`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '›',
+              aliases: { js: 'javascript', sh: 'bash' },
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              prompt: {
+                user: 'root',
+                host: 'localhost',
+                global: false,
+              },
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -217,7 +245,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `
           {
@@ -233,20 +261,20 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.fields.prefix,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.body }],
                 })
               })
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [fields___prefix] },
                   filter: {
@@ -262,7 +290,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt
-                      html
+                      body
                       fields {
                         slug
                         prefix

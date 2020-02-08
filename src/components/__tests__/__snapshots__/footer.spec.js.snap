@@ -190,13 +190,33 @@ Array [
           }
         
     </style>
-    <div
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<ul><li>test</li></ul>",
-        }
-      }
-    />
+    <ul>
+      <li>
+        © 
+        2020
+         Chris Otto | Hosted on
+         
+        <a
+          href="https://www.netlify.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          title=""
+        >
+          Netlify
+        </a>
+         
+        | Build with
+         
+        <a
+          href="https://www.gatsbyjs.org"
+          rel="noopener noreferrer"
+          target="_blank"
+          title=""
+        >
+          Gatsby
+        </a>
+      </li>
+    </ul>
   </footer>,
   <style
     jsx={true}

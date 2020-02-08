@@ -1,12 +1,15 @@
 import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
 const Bodytext = props => {
-  const { html, theme } = props
+  const { body, theme } = props
 
   return (
     <React.Fragment>
-      <div className="bodytext" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="bodytext">
+        <MDXRenderer>{body}</MDXRenderer>
+      </div>
 
       <style jsx>{`
         .bodytext {
@@ -78,7 +81,7 @@ const Bodytext = props => {
 }
 
 Bodytext.propTypes = {
-  html: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired,
 }
 

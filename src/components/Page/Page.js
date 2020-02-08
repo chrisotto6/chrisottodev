@@ -1,4 +1,5 @@
 import React from 'react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
 import Headline from '../Article/Headline'
@@ -7,7 +8,7 @@ import Bodytext from '../Article/Bodytext'
 const Page = props => {
   const {
     page: {
-      html,
+      body,
       frontmatter: { title },
     },
     theme,
@@ -18,7 +19,7 @@ const Page = props => {
       <header>
         <Headline title={title} theme={theme} />
       </header>
-      <Bodytext html={html} theme={theme} />
+      <Bodytext body={body} theme={theme} />
     </React.Fragment>
   )
 }

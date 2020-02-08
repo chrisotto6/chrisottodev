@@ -12,7 +12,7 @@ const PostTemplate = props => {
   const {
     data: {
       post,
-      authornote: { html: authorNote },
+      authornote: { body: authorNote },
       site: {
         siteMetadata: { facebook },
       },
@@ -52,9 +52,9 @@ export default PostTemplate
 //eslint-disable-next-line no-undef
 export const postQuery = graphql`
   query PostBySlug($slug: String!) {
-    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+    post: mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
+      body
       excerpt
       fields {
         slug
@@ -73,9 +73,9 @@ export const postQuery = graphql`
         }
       }
     }
-    authornote: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {
+    authornote: mdx(fileAbsolutePath: { regex: "/author/" }) {
       id
-      html
+      body
     }
     site {
       siteMetadata {

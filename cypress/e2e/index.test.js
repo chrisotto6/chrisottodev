@@ -26,6 +26,9 @@ describe('Index Page', () => {
   })
   it('Social Links', () => {
     cy.get('.social').should('be.visible')
+    cy.get('.social')
+      .find('a')
+      .should('have.length', 5)
     cy.get('.social>a')
       .first()
       .should('have.attr', 'title', 'dev')

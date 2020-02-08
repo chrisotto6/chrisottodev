@@ -3,13 +3,36 @@ import PropTypes from 'prop-types'
 import Social from '../Social'
 
 const Footer = props => {
-  const { html, theme } = props
+  const { theme } = props
+
+  const year = new Date().getFullYear()
 
   return (
     <React.Fragment>
       <footer className="footer" role="contentinfo">
         <Social theme={theme} />
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <ul>
+          <li>
+            © {year} Chris Otto | Hosted on{' '}
+            <a
+              href="https://www.netlify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={name}
+            >
+              Netlify
+            </a>{' '}
+            | Build with{' '}
+            <a
+              href="https://www.gatsbyjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={name}
+            >
+              Gatsby
+            </a>
+          </li>
+        </ul>
       </footer>
 
       {/* --- STYLES --- */}
@@ -55,7 +78,6 @@ const Footer = props => {
 }
 
 Footer.propTypes = {
-  html: PropTypes.string,
   theme: PropTypes.object.isRequired,
 }
 

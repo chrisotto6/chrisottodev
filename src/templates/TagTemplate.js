@@ -12,7 +12,7 @@ const TagTemplate = props => {
   const {
     pageContext: { tag },
     data: {
-      allMarkdownRemark: { totalCount, edges },
+      allMdx: { totalCount, edges },
       site: {
         siteMetadata: { facebook },
       },
@@ -54,7 +54,7 @@ export default TagTemplate
 // eslint-disable-next-line no-undef
 export const tagQuery = graphql`
   query PostsByTag($tag: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 1000
       sort: { fields: [fields___prefix], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }

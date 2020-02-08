@@ -9,7 +9,7 @@ const newPost = `${year}-${month}-${day}--${name}`
 
 fs.mkdirSync(`content/posts/${newPost}`)
 
-let stream = fs.createWriteStream(`content/posts/${newPost}/index.md`)
+let stream = fs.createWriteStream(`content/posts/${newPost}/index.mdx`)
 
 stream.once('open', function(fd) {
   stream.write('---\n')
