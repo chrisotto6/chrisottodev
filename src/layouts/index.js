@@ -2,7 +2,6 @@ import 'typeface-open-sans/index.css'
 import FontFaceObserver from 'fontfaceobserver'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
 
 import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers'
 import Footer from '../components/Footer/'

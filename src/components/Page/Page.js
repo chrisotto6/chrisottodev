@@ -1,5 +1,4 @@
 import React from 'react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
 import Headline from '../Article/Headline'
