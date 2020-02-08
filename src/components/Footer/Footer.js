@@ -18,7 +18,7 @@ const Footer = props => {
               href="https://www.netlify.com"
               target="_blank"
               rel="noopener noreferrer"
-              title={name}
+              title="Netlify"
             >
               Netlify
             </a>{' '}
@@ -27,7 +27,7 @@ const Footer = props => {
               href="https://www.gatsbyjs.org"
               target="_blank"
               rel="noopener noreferrer"
-              title={name}
+              title="Gatsby"
             >
               Gatsby
             </a>
