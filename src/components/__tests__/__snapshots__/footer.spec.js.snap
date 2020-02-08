@@ -200,7 +200,7 @@ Array [
           href="https://www.netlify.com"
           rel="noopener noreferrer"
           target="_blank"
-          title=""
+          title="Netlify"
         >
           Netlify
         </a>
@@ -211,7 +211,7 @@ Array [
           href="https://www.gatsbyjs.org"
           rel="noopener noreferrer"
           target="_blank"
-          title=""
+          title="Gatsby"
         >
           Gatsby
         </a>

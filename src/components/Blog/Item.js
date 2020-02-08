@@ -1,5 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa/'
 import { FaCalendar } from 'react-icons/fa/'
+import { FaRegClock } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 import { FaUser } from 'react-icons/fa/'
 import Img from 'gatsby-image'
@@ -12,6 +13,7 @@ const Item = props => {
     theme,
     post: {
       excerpt,
+      timeToRead,
       fields: { slug, prefix },
       frontmatter: {
         title,
@@ -52,6 +54,9 @@ const Item = props => {
             </span>
             <span>
               <FaUser size={18} /> {author}
+            </span>
+            <span>
+              <FaRegClock size={18} /> {timeToRead} min.
             </span>
             {tags && (
               <span>

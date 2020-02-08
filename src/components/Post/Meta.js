@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import { FaCalendar } from 'react-icons/fa/'
+import { FaRegClock } from 'react-icons/fa/'
 import { FaUser } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 
 const Meta = props => {
-  const { prefix, author: authorName, tags, theme } = props
+  const { prefix, author: authorName, tags, timeToRead, theme } = props
 
   return (
     <p className="meta">
@@ -16,6 +17,9 @@ const Meta = props => {
       </span>
       <span>
         <FaUser size={10} /> {authorName}
+      </span>
+      <span>
+        <FaRegClock size={10} /> {timeToRead} min.
       </span>
       {tags &&
         tags.map(tag => (
