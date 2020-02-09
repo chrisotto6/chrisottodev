@@ -5,7 +5,7 @@ const theme = require('../../theme/theme.json')
 
 describe('Footer Component', () => {
   it('renders correctly', () => {
-    const tree = create(<Footer theme={theme} body={`<ul><li>test</li></ul>`} />).toJSON()
+    const tree = create(<Footer theme={theme} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -56,6 +56,7 @@ export const postQuery = graphql`
       id
       body
       excerpt
+      timeToRead
       fields {
         slug
         prefix

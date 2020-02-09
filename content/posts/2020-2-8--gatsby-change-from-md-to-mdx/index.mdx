@@ -1,0 +1,148 @@
+---
+title: Gatsby - Switching from Markdown to MDX
+cover: gatsby-mdx.png
+author: Chris Otto
+tags: ['gatsby','react']
+---
+
+I recently rewrote my old Wordpress site hosted through GoDaddy to a [Gatsby](https://www.gatsbyjs.org/) site hosted
+with [Netlify](https://www.netlify.com/). Originally I tried hand-rolling my site but it was taking way too long to get everything I wanted
+implemented. Gatsby starter templates to the rescue! The template I chose had everything I was looking for
+tags, search, blog, and a contact form. The few remaining features I was looking for social links,
+projects page and an about page I can add over time.
+
+The template was using the out of the box Gatsby approach of just plain markdown files. To supercharge my posts and
+components I needed to switch to [MDX](https://github.com/mdx-js/mdx).
+
+## Making The Switch 🎉
+
+Using MDX in Gatsby requires a few different packages. First things first, install them.
+
+```sh
+npm install --save @mdx-js/mdx @mdx-js/react gatsby-plugin-feed-mdx gatsby-plugin-mdx
+```
+
+### Gatsby-Plugin-MDX
+
+In the `gatsby-config.js` rename the section of the exports from `gatsby-transofrmer-remark` to `gatsby-plugin-mdx`. This tells Gatsby
+to use the plugin for MDX and stop using the transformer for just plain markdown files. Rename the `plugins` node to `gatsbyRemarkPlugins`
+and keep the plugins that you had before (there are one or two exceptions to this but we'll cover them later). I wanted the plugin
+to work with both MDX and MD to start and to use the templates that I already had.
+
+```js
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          posts: require.resolve('./src/templates/PostTemplate.js'),
+          page: require.resolve('./src/templates/PageTemplate.js'),
+          tags: require.resolve('./src/templates/TagTemplate.js'),
+        },
+```
+
+### Gatbsy-Plugin-Feed-MDX
+
+If you have your setup to publish out an RSS feed you will need to switch to this package, this is the other plugin the
+`gatsby-config.js` that we need to rename. Adjust your feed query to be from `allMarkdownRemark` to `allMdx` and instead of referencing the results `html` the MDX plugin
+uses a `body` field.
+
+```js
+-            serialize: ({ query: { site, allMarkdownRemark } }) => {
+-              return allMarkdownRemark.edges.map(edge => {
++            serialize: ({ query: { site, allMdx } }) => {
++              return allMdx.edges.map(edge => {
+```
+
+```js
+-                  custom_elements: [{ 'content:encoded': edge.node.html }],
++                  custom_elements: [{ 'content:encoded': edge.node.body }],
+```
+
+### Change All Your Queries
+
+We need to make the above change to all of the queries within the site. If you have a query that is just `markdownRemark` the MDX
+version of that is just `mdx`. This can be a bit tedious but don't worry it isn't that bad.
+
+```js
+-    posts: allMarkdownRemark(
++    posts: allMdx(
+```
+
+```js
+-    page: markdownRemark(fields: { slug: { eq: $slug } }) {
++    page: mdx(fields: { slug: { eq: $slug } }) {
+       id
+-      html
++      body
+```
+
+### Change Components and Props
+
+Now that all the queries have been updated we need to pass the updated query results to our components and make sure they are
+correctly updated in our props. One example of what this change looks like is below, from a `BodyText` component that came with
+the template I used.
+
+Instead of using `dangerouslySetInnerHTML` with MDX we need to use this component. For what I need it to do I just need to wrap the
+`body` returned from the GraphQL query in the component and it will render the MDX content for me.
+
+```js
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+```
+
+Change the props for the component to use `body` instead of `html`
+
+```js
+-  const { html, theme } = props
++  const { body, theme } = props
+```
+
+Use the `MDXRenderer` component to render the result to the page.
+
+```js
+-      <div className="bodytext" dangerouslySetInnerHTML={{ __html: html }} />
++      <div className="bodytext">
++        <MDXRenderer>{body}</MDXRenderer>
++      </div>
+```
+
+Change the propTypes for the component from `html` to `body`.
+
+```js
+-  html: PropTypes.string.isRequired,
++  body: PropTypes.string.isRequired,
+```
+
+Just by applying those and similar changes depending on the component I was able to update all of them in a short period of time.
+
+### Remove old packages
+
+After making all those changes your Gatsby page should be up and running with MDX. You can transition all of your old MD to MDX if you
+want otherwise, keep the options for extensions the same and they should render correctly. Now it's time to remove the packages that are
+not being used anymore.
+
+```sh
+npm uninstall gatsby-plugin-feed gatsby-transformer-remark
+```
+
+## Gotchas
+
+There a few gotchas along the way that tripped me up for a little bit and may be specific to the way I have things set up but wanted to
+call them out here.
+
+### MDX Doesn't Render Code Blocks
+
+One thing I didn't know about MDX before making the switch was that it didn't render code blocks out of the box. However, there are a
+few options to pick from to handle this and I went with adding PrismJS and using one of the CSS files that they have for how the
+blocks look. If you're curious about this, I highly recommend checking out the `gatsby-remark-prismjs` [plugin](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/?=prismjs).
+
+### Jest Snapshot Test Stopped Working
+
+I had an existing Jest Snapshot test that was testing the article component which has a header, a body, and styles for them.
+The body portion of the test started failing after the switch and I needed to include an exclude in my jest configuration for ignoring
+`gatsby-plugin-mdx`. It was preloading some items that Jest didn't expect.
+
+```js
+-  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
++  transformIgnorePatterns: ['node_modules/(?!(gatsby|gatsby-plugin-mdx)/)'],
+```
+
+If you've made the switch to using MDX from Gatsby I'd be curious how your experience was. If you hit some of the same hiccups that
+I did or if you used any other packages/solutions for handling the code block rendering.
