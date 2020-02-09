@@ -15,7 +15,6 @@ describe('Article Component', () => {
     expect(tree).toMatchSnapshot()
   })
   it('renders correctly without title', () => {
-    console.log(mock_page)
     const tree = create(
       <Article theme={theme}>
         <Headline theme={theme}>
