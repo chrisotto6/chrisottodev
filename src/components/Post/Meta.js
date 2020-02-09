@@ -63,6 +63,7 @@ Meta.propTypes = {
   prefix: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string,
+  timeToRead: PropTypes.string,
   theme: PropTypes.object.isRequired,
   tags: PropTypes.object.isRequired,
 }
