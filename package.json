@@ -79,7 +79,7 @@
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
     "@testing-library/cypress": "^5.0.2",
     "axe-core": "^3.4.1",
-    "babel-eslint": "^8.2.6",
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-plugin-import": "^1.8.0",
