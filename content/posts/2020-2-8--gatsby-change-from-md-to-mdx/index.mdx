@@ -41,19 +41,13 @@ to work with both MDX and MD to start and to use the templates that I already ha
 ### Gatbsy-Plugin-Feed-MDX
 
 If you have your setup to publish out an RSS feed you will need to switch to this package, this is the other plugin the
-`gatsby-config.js` that we need to rename. Adjust your feed query to be from `allMarkdownRemark` to `allMdx` and instead of referencing the results `html` the MDX plugin
-uses a `body` field.
+`gatsby-config.js` that we need to rename. Adjust your feed query to be from `allMarkdownRemark` to `allMdx`.
 
 ```js
 -            serialize: ({ query: { site, allMarkdownRemark } }) => {
 -              return allMarkdownRemark.edges.map(edge => {
 +            serialize: ({ query: { site, allMdx } }) => {
 +              return allMdx.edges.map(edge => {
-```
-
-```js
--                  custom_elements: [{ 'content:encoded': edge.node.html }],
-+                  custom_elements: [{ 'content:encoded': edge.node.body }],
 ```
 
 ### Change All Your Queries
