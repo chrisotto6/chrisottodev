@@ -148,7 +148,10 @@ export default IndexPage
 export const query = graphql`
   query IndexQuery($skip: Int!, $limit: Int!) {
     posts: allMdx(
-      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      filter: {
+        fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" }
+        frontmatter: { published: { eq: true } }
+      }
       sort: { fields: [fields___prefix], order: DESC }
       limit: $limit
       skip: $skip

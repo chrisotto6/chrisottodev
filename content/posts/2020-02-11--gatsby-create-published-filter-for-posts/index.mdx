@@ -1,0 +1,107 @@
+---
+title: Gatsby - Add a Published Filter To Posts
+cover: gatsby-blue-green.png
+author: Chris Otto
+tags: ['gatsby','react','graphql']
+published: true
+---
+
+I like [Dev.to](www.dev.to)'s published filter. It allows you to continue to write posts until they're ready to be
+viewed by everyone. If you are not familiar with the feature; in the `frontmatter` of your post there is a `boolean` named
+`published`. If it's set to false, the post is visible to you and people that have the link. Once it's set to true then
+it is visible to the world!
+
+I wanted to add that feature to my personal [Gatsby](www.gatsbyjs.com) site so that I can have articles in progress while
+not finishing them if I need to commit other changes. The one difference with my implementation is that the post won't be
+available to the client at all until it is published. The outline for the change:
+
+- Update all existing posts have `published: true` in their `frontmatter`
+- Add/Update filters to Graphql queries throughout my site keying in on the field set to `true`
+  - gatsby-config.js
+  - gatsby-node.js
+  - Pages
+  - Templates
+
+## Applying the Updates 😎
+
+### Add `published` to the frontmatter
+
+```markdown
+ tags: ['gatsby','react']
++ published: true
+---
+```
+
+This change was made to all existing posts so that right away the Graphql queries I update down the line return data. Also
+I created a dummy post that had the `published` boolean set to false to verify that it was excluded from the list of posts.
+
+### Adding the filter to `gatsby-config.js` queries
+
+Within my `gatsby-config.js` I have two queries. One query hooks up to the Algolia search for my site and the other populates
+the RSS feed. For both queries, I do not want posts that are not published to show up.
+
+#### Algolia query
+
+```graphql
+  allMdx(
+    filter: {
+      fields: { slug: { ne: null } },
+      fileAbsolutePath: { regex: "/posts/"},
++     frontmatter: { published: { eq: true } }
+    }
+```
+
+#### RSS Feed
+
+```graphql
+    frontmatter: {
+      author: { ne: null },
++     published: { eq: true}
+    }
+```
+
+### Apply filter to `gatsby-node.js`, components and templates
+
+The `createPages` in `gatsby-node.js` function uses the query to find out which pages should be created in my case this applies to posts and pages.
+Applying the filter to the components and pages makes sure that the unpublished posts don't creep in and cause errors because there
+is no post page to route to.
+
+#### gatsby-node
+
+```graphql
+    allMdx(
++     filter: { fields: { slug: { ne: null } }, frontmatter: { published: { eq: true } } }
+      sort: { fields: [fields___prefix], order: DESC }
+      limit: 1000
+    )
+```
+
+#### Tag Page and Index Template
+
+```graphql
+    posts: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" }
++       frontmatter: { published: { eq: true } }
+      }
+```
+
+#### Tag Template
+
+```graphql
+  query PostsByTag($tag: String) {
+    allMdx(
+      limit: 1000
+      sort: { fields: [fields___prefix], order: DESC }
++     filter: { frontmatter: { tags: { in: [$tag] }, published: { eq: true } } }
+    )
+```
+
+### Testing and Wrap Up 🙌
+
+At this point all the changes have been made to test out the change. All existing posts should be present and flow through
+searching, post pages, tag pages and RSS feed, all except for the one dummy post. I did some smoke testing by navigating around
+the components and pages updated to ensure that everything was working as expected and all existing automated tests passed. Win-win.
+Now I can keep posts as a work in progress until they're ready to be published and still get other development work merged in.
+
+Do you filter out in progress work from your Gatsby site? What approach did you take?
