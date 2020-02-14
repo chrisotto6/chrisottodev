@@ -43,21 +43,12 @@ exports.createPages = ({ graphql, actions }) => {
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js')
     const tagTemplate = path.resolve('./src/templates/TagTemplate.js')
 
-    // Do not create draft post files in production.
-    let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
-    console.log(`Using environment config: '${activeEnv}'`)
-    let filters = `filter: { fields: { slug: { ne: null } } }`
-    if (activeEnv == 'production')
-      filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`
-
     resolve(
       graphql(
         `
           {
             allMdx(
-              ` +
-          filters +
-          `
+              filter: { fields: { slug: { ne: null } }, frontmatter: { published: { eq: true } } }
               sort: { fields: [fields___prefix], order: DESC }
               limit: 1000
             ) {

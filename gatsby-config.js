@@ -6,7 +6,8 @@ const query = `{
   allMdx(
     filter: {
       fields: { slug: { ne: null } },
-      fileAbsolutePath: { regex: "/posts/"}
+      fileAbsolutePath: { regex: "/posts/"},
+      frontmatter: { published: { eq: true } }
     }
   ) {
     edges {
@@ -283,7 +284,8 @@ module.exports = {
                       slug: { ne: null }
                     },
                     frontmatter: {
-                      author: { ne: null }
+                      author: { ne: null },
+                      published: { eq: true}
                     }
                   }
                 ) {
@@ -297,6 +299,7 @@ module.exports = {
                       }
                       frontmatter {
                         title
+                        tags
                       }
                     }
                   }

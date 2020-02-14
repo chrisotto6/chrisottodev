@@ -90,7 +90,10 @@ export default TagPage
 export const query = graphql`
   query PostsQuery {
     posts: allMdx(
-      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      filter: {
+        fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" }
+        frontmatter: { published: { eq: true } }
+      }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {
