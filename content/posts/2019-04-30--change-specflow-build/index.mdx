@@ -1,0 +1,36 @@
+---
+title: Create Specflow `feature.cs` At Build Time
+cover: sf-logo.png
+author: Chris Otto
+tags: ['specflow', 'vs2017', 'c#']
+published: true
+---
+
+## Change Feature File to Generate the `~.feature.cs` at Compile Time
+
+Whenever a new Specflow file is created in the solution it is automatically created with the SpecFlowSingleFileGenerator specification in the Custom Tool attribute. This file generator creates the background file on save instead of during the build
+process, follow these steps to make the change:
+
+### Prerequisite
+
+To make the change you will need to add an extension to your instance of Visual Studio if you don't have it already.
+
+* In Visual Studio go to Extension Manage Extensions
+* Select Online and search for 'File Nesting'
+* Install the 'File Nesting' extension and close Visual Studio, once closed the installation will begin
+* When prompted after VS closes, select 'Modify' from the pop-up window
+
+### Making the Change
+
+With the 'File Nesting' extension installed we are now ready to change how the ~.feature.cs is created for our feature file.
+
+* Modify the existing properties
+  * In the Solution Explorer, R-Click on the feature file Select Properties
+  * The Properties window should pop up below the Solution Explorer
+  * In the Custom Tool attribute, delete 'SpecFlowSingleFileGenerator' leaving the Custom Tool attribute blank
+* Creating the File dependency
+  * With the Custom Tool removed, build the solution
+  * Once built make sure that you have 'Show All Files' selected and you should see the '~.feature.cs' file for your feature file in the Solution Explorer
+    * If you don't see it and you already had 'Show All Files' enabled, try refreshing the Solution Explorer and it should populate
+  * R-Click on the `~.feature.cs` file Select 'File Nesting'
+  * Nest the file under the respective feature file
