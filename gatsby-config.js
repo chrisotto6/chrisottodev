@@ -274,6 +274,9 @@ module.exports = {
                     {
                       'content:encoded': edge.node.html,
                     },
+                    {
+                      'content:tags': formatTags(edge.node.frontmatter.tags),
+                    },
                   ],
                 })
               })
@@ -335,4 +338,10 @@ module.exports = {
       },
     },
   ],
+}
+
+const formatTags = tags => {
+  return tags.reduce(function(prevVal, currVal, idx) {
+    return idx == 0 ? `#${currVal}` : prevVal + ' #' + currVal
+  }, '')
 }
