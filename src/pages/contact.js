@@ -40,7 +40,7 @@ ContactPage.propTypes = {
 
 export default ContactPage
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query ContactQuery {
     site {

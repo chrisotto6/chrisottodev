@@ -116,7 +116,7 @@ class Menu extends React.Component {
   }
 
   closeMenu = e => {
-    //e.preventDefault();
+    // e.preventDefault();
 
     if (this.state.open) {
       this.setState({ open: false })
