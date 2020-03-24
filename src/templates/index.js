@@ -144,7 +144,7 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query IndexQuery($skip: Int!, $limit: Int!) {
     posts: allMdx(
