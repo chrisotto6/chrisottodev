@@ -49,7 +49,7 @@ PostTemplate.propTypes = {
 
 export default PostTemplate
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const postQuery = graphql`
   query PostBySlug($slug: String!) {
     post: mdx(fields: { slug: { eq: $slug } }) {

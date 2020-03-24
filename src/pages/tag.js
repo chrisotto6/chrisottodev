@@ -41,7 +41,7 @@ const TagPage = props => {
 
   const tagList = []
 
-  for (var tag in tagPosts) {
+  for (let tag in tagPosts) {
     tagList.push([tag, tagPosts[tag]])
   }
 
@@ -86,7 +86,7 @@ TagPage.propTypes = {
 
 export default TagPage
 
-//eslint-disable-next-line no-undef
+// eslint-disable-next-line no-undef
 export const query = graphql`
   query PostsQuery {
     posts: allMdx(

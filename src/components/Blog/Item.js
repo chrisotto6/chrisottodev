@@ -26,8 +26,8 @@ const Item = props => {
     },
   } = props
 
-  var size = tags.length
-  var tagList = ''
+  let size = tags.length
+  let tagList = ''
 
   tags.forEach(tag => {
     if (size > 1) {
