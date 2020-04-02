@@ -61,7 +61,7 @@
     "styled-jsx-plugin-stylelint": "^0.1.0",
     "tinycolor2": "^1.4.1",
     "typeface-open-sans": "^0.0.75",
-    "yaml-loader": "^0.5.0"
+    "yaml-loader": "^0.6.0"
   },
   "keywords": [
     "gatsby",
