@@ -1,6 +1,5 @@
 //const webpack = require("webpack");
 const _ = require('lodash')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const path = require('path')
 const Promise = require('bluebird')
 
@@ -164,19 +163,18 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
+exports.onCreateWebpackConfig = ({ stage, actions, loaders }, options) => {
   switch (stage) {
     case `build-javascript`:
-      actions.setWebpackConfig({
-        plugins: [
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            reportFilename: './report/treemap.html',
-            openAnalyzer: true,
-            logLevel: 'error',
-            defaultSizes: 'gzip',
-          }),
-        ],
-      })
+    // actions.setWebpackConfig({
+    //   module: {
+    //     rules: [
+    //       {
+    //         test: /\.css$/,
+    //         use: [loaders.style(), loaders.css({ importLoaders: 1 }), loaders.postcss()],
+    //       },
+    //     ],
+    //   },
+    // })
   }
 }

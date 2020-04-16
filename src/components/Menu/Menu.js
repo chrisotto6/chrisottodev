@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-require('core-js/fn/array/from')
+// require('core-js/fn/array/from')
 
 import { FaHome } from 'react-icons/fa/'
 import { FaSearch } from 'react-icons/fa/'

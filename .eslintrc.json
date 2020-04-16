@@ -50,5 +50,11 @@
         "no-unused-expressions": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
 }
