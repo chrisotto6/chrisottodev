@@ -41,7 +41,7 @@ const TagPage = props => {
 
   const tagList = []
 
-  for (let tag in tagPosts) {
+  for (const tag in tagPosts) {
     tagList.push([tag, tagPosts[tag]])
   }
 
