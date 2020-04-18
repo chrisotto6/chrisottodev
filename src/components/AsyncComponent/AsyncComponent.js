@@ -6,7 +6,7 @@ function asyncComponent(getComponent, loadingComponent) {
 
     componentDidMount() {
       if (!this.state.component) {
-        getComponent().then(component => {
+        getComponent().then((component) => {
           this.setState({ component })
         })
       }

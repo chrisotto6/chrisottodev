@@ -1,4 +1,4 @@
-module.exports = function(chunksTotal, { node }) {
+module.exports = function (chunksTotal, { node }) {
   const {
     fields: { slug },
     frontmatter: { title, tags },

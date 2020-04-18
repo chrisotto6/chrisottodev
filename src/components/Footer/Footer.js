@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Social from '../Social'
 
-const Footer = props => {
+const Footer = (props) => {
   const { theme } = props
 
   const year = new Date().getFullYear()

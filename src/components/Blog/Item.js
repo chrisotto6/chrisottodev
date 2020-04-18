@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Item = props => {
+const Item = (props) => {
   const {
     theme,
     post: {
@@ -29,7 +29,7 @@ const Item = props => {
   let size = tags.length
   let tagList = ''
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     if (size > 1) {
       tagList += `${tag}, `
       size--
