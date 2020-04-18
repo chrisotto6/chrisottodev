@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.3.0",
-    "@testing-library/cypress": "^5.3.1",
+    "@testing-library/cypress": "^6.0.0",
     "axe-core": "^3.5.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.3.0",
