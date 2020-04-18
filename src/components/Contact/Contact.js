@@ -1,9 +1,7 @@
 /* eslint no-unused-vars: 0 */
 
 import { navigate } from 'gatsby'
-import Button from 'antd/lib/button'
-import Form from 'antd/lib/form'
-import Input from 'antd/lib/input'
+import { Form, Input, Button } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
 
