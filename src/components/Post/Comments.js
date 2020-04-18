@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FacebookProvider, { Comments as FBComments } from 'react-facebook'
+import { FacebookProvider, Comments as FBComments } from 'react-facebook'
 
 import config from '../../../content/meta/config'
 
