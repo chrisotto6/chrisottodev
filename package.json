@@ -44,7 +44,7 @@
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-facebook": "^5.0.3",
+    "react-facebook": "^8.1.4",
     "react-helmet": "^6.0.0",
     "react-icons": "^3.1.0",
     "react-instantsearch": "^5.2.2",
