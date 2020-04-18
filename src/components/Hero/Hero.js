@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { FaArrowDown } from 'react-icons/fa/'
 
-const Hero = props => {
+const Hero = (props) => {
   const { scrollToContent, backgrounds, theme } = props
 
   return (

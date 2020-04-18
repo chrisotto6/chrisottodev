@@ -5,7 +5,7 @@ import Headline from '../components/Article/Headline'
 
 const NotFoundPage = () => (
   <ThemeContext>
-    {theme => (
+    {(theme) => (
       <Article theme={theme}>
         <header>
           <Headline title="Not Found" theme={theme} />

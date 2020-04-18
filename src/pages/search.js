@@ -10,7 +10,7 @@ import Seo from '../components/Seo'
 
 import AlgoliaIcon from '!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo'
 
-const SearchPage = props => {
+const SearchPage = (props) => {
   const {
     data: {
       site: {
@@ -22,7 +22,7 @@ const SearchPage = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <div className="icon">
               <AlgoliaIcon />

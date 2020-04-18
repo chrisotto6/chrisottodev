@@ -2,7 +2,7 @@ import { FaAngleDown } from 'react-icons/fa/'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Expand = props => {
+const Expand = (props) => {
   const { onClick, theme } = props
 
   return (

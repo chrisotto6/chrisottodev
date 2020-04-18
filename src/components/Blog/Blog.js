@@ -3,14 +3,14 @@ import React from 'react'
 
 import Item from './Item'
 
-const Blog = props => {
+const Blog = (props) => {
   const { posts, theme } = props
 
   return (
     <React.Fragment>
       <section className="section">
         <ul id="post-list">
-          {posts.map(post => {
+          {posts.map((post) => {
             const {
               node,
               node: {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Headline from '../Article/Headline'
 import Bodytext from '../Article/Bodytext'
 
-const Page = props => {
+const Page = (props) => {
   const {
     page: {
       body,

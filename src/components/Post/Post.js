@@ -12,13 +12,13 @@ import NextPrev from './NextPrev'
 
 const Share = asyncComponent(() =>
   import('./Share')
-    .then(module => {
+    .then((module) => {
       return module.default
     })
-    .catch(error => {})
+    .catch((error) => {})
 )
 
-const Post = props => {
+const Post = (props) => {
   const {
     post,
     post: {

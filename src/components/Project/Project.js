@@ -4,14 +4,14 @@ import Img from 'gatsby-image'
 import { FaGithub } from 'react-icons/fa/'
 import { FaExternalLinkAlt } from 'react-icons/fa/'
 
-const Project = props => {
+const Project = (props) => {
   const {
     theme,
     project: { name, description, img, tech, githuburl, projecturl },
     images,
   } = props
 
-  const image = images.find(x => {
+  const image = images.find((x) => {
     return x.node.relativePath === `project/${img}`
   })
 
@@ -26,7 +26,7 @@ const Project = props => {
         </header>
         <section>
           <p>{description}</p>
-          {tech.map(item => (
+          {tech.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </section>
