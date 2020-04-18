@@ -4,13 +4,10 @@ import { navigate } from 'gatsby'
 import { Form, Input, Button } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { ThemeContext } from '../../layouts'
 
 const FormItem = Form.Item
 const { TextArea } = Input
-import 'antd/lib/form/style/index.css'
-import 'antd/lib/input/style/index.css'
-import 'antd/lib/button/style/index.css'
-import { ThemeContext } from '../../layouts'
 
 const Contact = (props) => {
   const { getFieldDecorator } = props.form
