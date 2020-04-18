@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import { FaArrowRight } from 'react-icons/fa/'
 import { FaArrowLeft } from 'react-icons/fa/'
 
-const NextPrev = props => {
+const NextPrev = (props) => {
   const {
     theme,
     next: {

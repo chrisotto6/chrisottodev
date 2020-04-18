@@ -8,7 +8,7 @@ import Headline from '../components/Article/Headline'
 import List from '../components/List'
 import Seo from '../components/Seo'
 
-const TagPage = props => {
+const TagPage = (props) => {
   const {
     data: {
       posts: { edges: posts },
@@ -20,7 +20,7 @@ const TagPage = props => {
 
   // Create tag list
   const tagPosts = {}
-  posts.forEach(edge => {
+  posts.forEach((edge) => {
     const {
       node: {
         frontmatter: { tags },
@@ -28,7 +28,7 @@ const TagPage = props => {
     } = edge
 
     if (tags && tags != null) {
-      tags.forEach(tag => {
+      tags.forEach((tag) => {
         if (tag && tag != null) {
           if (!tagPosts[tag]) {
             tagPosts[tag] = []
@@ -48,12 +48,12 @@ const TagPage = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline title="Posts by tags" theme={theme} />
             </header>
-            {tagList.map(item => (
+            {tagList.map((item) => (
               <section key={item[0]}>
                 <h2>
                   <FaTag /> {item[0]}

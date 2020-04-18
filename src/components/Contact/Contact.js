@@ -14,12 +14,12 @@ import 'antd/lib/input/style/index.css'
 import 'antd/lib/button/style/index.css'
 import { ThemeContext } from '../../layouts'
 
-const Contact = props => {
+const Contact = (props) => {
   const { getFieldDecorator } = props.form
 
   function encode(data) {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
   }
 
@@ -43,7 +43,7 @@ const Contact = props => {
         console.log('Form submission success')
         navigate('/success')
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Form submission error:', error)
         this.handleNetworkError()
       })
@@ -56,7 +56,7 @@ const Contact = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <div className="form">
             <Form
               name="contact"

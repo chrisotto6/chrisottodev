@@ -7,7 +7,7 @@ import { FaRegClock } from 'react-icons/fa/'
 import { FaUser } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 
-const Meta = props => {
+const Meta = (props) => {
   const { prefix, author: authorName, tags, timeToRead, theme } = props
 
   return (
@@ -22,7 +22,7 @@ const Meta = props => {
         <FaRegClock size={10} /> {timeToRead} min.
       </span>
       {tags &&
-        tags.map(tag => (
+        tags.map((tag) => (
           <span key={tag}>
             <FaTag size={10} />
             <Link to={`/tag/${tag.split(' ').join('-')}`}>{tag}</Link>

@@ -45,14 +45,14 @@ const ProjectPage = () => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline title="Projects" theme={theme} />
             </header>
             <section>
               <ul className="projects">
-                {data.allProjectJson.edges.map(edge => (
+                {data.allProjectJson.edges.map((edge) => (
                   <Project
                     theme={theme}
                     project={edge.node}

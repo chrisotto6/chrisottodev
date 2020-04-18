@@ -8,7 +8,7 @@ import { FaDev } from 'react-icons/fa/'
 
 import config from '../../../content/meta/config'
 
-const Social = props => {
+const Social = (props) => {
   const { theme } = props
   const items = config.authorSocialLinks
   const icons = {
@@ -22,7 +22,7 @@ const Social = props => {
   return (
     <React.Fragment>
       <div className="social">
-        {items.map(item => {
+        {items.map((item) => {
           const Icon = icons[item.name]
           return (
             <a

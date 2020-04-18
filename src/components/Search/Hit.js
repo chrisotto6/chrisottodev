@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const Hit = props => {
+const Hit = (props) => {
   const { hit } = props
 
   return (

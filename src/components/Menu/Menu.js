@@ -94,14 +94,14 @@ class Menu extends React.Component {
       { visibleItems: [], cumulativeWidth: 0, hiddenItems: [] }
     )
 
-    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }))
+    this.setState((prevState) => ({ hiddenItems: menu.hiddenItems }))
   }
 
-  toggleMenu = e => {
+  toggleMenu = (e) => {
     e.preventDefault()
 
     if (this.props.screenWidth < 1024) {
-      this.renderedItems.map(item => {
+      this.renderedItems.map((item) => {
         const oldClass = this.state.open ? 'showItem' : 'hideItem'
         const newClass = this.state.open ? 'hideItem' : 'showItem'
 
@@ -112,16 +112,16 @@ class Menu extends React.Component {
       })
     }
 
-    this.setState(prevState => ({ open: !prevState.open }))
+    this.setState((prevState) => ({ open: !prevState.open }))
   }
 
-  closeMenu = e => {
+  closeMenu = (e) => {
     // e.preventDefault();
 
     if (this.state.open) {
       this.setState({ open: false })
       if (this.props.screenWidth < 1024) {
-        this.renderedItems.map(item => {
+        this.renderedItems.map((item) => {
           if (item.classList.contains('showItem')) {
             item.classList.add('hideItem')
             item.classList.remove('item')
@@ -139,14 +139,14 @@ class Menu extends React.Component {
       <React.Fragment>
         <nav role="navigation" className={`menu ${open ? 'open' : ''}`} rel="js-menu">
           <ul className="itemList" ref={this.itemList}>
-            {this.items.map(item => (
+            {this.items.map((item) => (
               <Item item={item} key={item.label} icon={item.icon} theme={theme} />
             ))}
           </ul>
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}
           {open && screenWidth >= 1024 && (
             <ul className="hiddenItemList">
-              {this.state.hiddenItems.map(item => (
+              {this.state.hiddenItems.map((item) => (
                 <Item item={item} key={item.label} hiddenItem theme={theme} />
               ))}
             </ul>

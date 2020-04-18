@@ -14,7 +14,7 @@ class Header extends React.Component {
     fixed: false,
   }
 
-  visibilitySensorChange = val => {
+  visibilitySensorChange = (val) => {
     if (val) {
       this.setState({ fixed: false })
     } else {
@@ -49,9 +49,9 @@ class Header extends React.Component {
             </div>
           </Link>
           <FontLoadedContext.Consumer>
-            {loaded => (
+            {(loaded) => (
               <ScreenWidthContext.Consumer>
-                {width => (
+                {(width) => (
                   <Menu
                     path={path}
                     fixed={fixed}
