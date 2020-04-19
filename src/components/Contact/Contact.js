@@ -1,5 +1,4 @@
 /* eslint no-unused-vars: 0 */
-
 import { navigate } from 'gatsby'
 import { Form, Input, Button } from 'antd'
 import PropTypes from 'prop-types'
@@ -9,9 +8,7 @@ import { ThemeContext } from '../../layouts'
 const FormItem = Form.Item
 const { TextArea } = Input
 
-const Contact = (props) => {
-  const { getFieldDecorator } = props.form
-
+const ContactForm = (props) => {
   function encode(data) {
     return Object.keys(data)
       .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -59,35 +56,29 @@ const Contact = (props) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <FormItem label="Name">
-                {getFieldDecorator('name', {
-                  rules: [
-                    {
-                      whitespace: true,
-                    },
-                  ],
-                })(<Input name="name" />)}
+              <FormItem label="Name" rules={[{ whitespace: true }]}>
+                <Input name="name" />
               </FormItem>
-              <FormItem label="E-mail">
-                {getFieldDecorator('email', {
-                  rules: [
-                    {
-                      required: true,
-                      message: 'Please input your e-mail address!',
-                      whitespace: true,
-                      type: 'email',
-                    },
-                  ],
-                })(<Input name="email" />)}
+              <FormItem
+                label="E-mail"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please input your e-mail address!',
+                    whitespace: true,
+                    type: 'email',
+                  },
+                ]}
+              >
+                <Input name="email" />
               </FormItem>
-              <FormItem label="Message">
-                {getFieldDecorator('message', {
-                  rules: [
-                    { required: true, message: 'Please input your message!', whitespace: true },
-                  ],
-                })(
-                  <TextArea name="message" placeholder="" autoSize={{ minRows: 4, maxRows: 10 }} />
-                )}
+              <FormItem
+                label="Message"
+                rules={[
+                  { required: true, message: 'Please input your message!', whitespace: true },
+                ]}
+              >
+                <TextArea name="message" placeholder="" autoSize={{ minRows: 4, maxRows: 10 }} />
               </FormItem>
               <FormItem>
                 <Button type="primary" htmlType="submit">
@@ -147,10 +138,8 @@ const Contact = (props) => {
   )
 }
 
-Contact.propTypes = {
+ContactForm.propTypes = {
   form: PropTypes.object,
 }
-
-const ContactForm = Form.create({})(Contact)
 
 export default ContactForm
