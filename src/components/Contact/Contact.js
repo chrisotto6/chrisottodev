@@ -3,9 +3,12 @@ import { navigate } from 'gatsby'
 import { Form, Input, Button } from 'antd'
 import PropTypes from 'prop-types'
 import React from 'react'
+
+import 'antd/lib/form/style/index.css'
+import 'antd/lib/input/style/index.css'
+import 'antd/lib/button/style/index.css'
 import { ThemeContext } from '../../layouts'
 
-const FormItem = Form.Item
 const { TextArea } = Input
 
 const ContactForm = (props) => {
@@ -56,10 +59,10 @@ const ContactForm = (props) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <FormItem label="Name" rules={[{ whitespace: true }]}>
-                <Input name="name" />
-              </FormItem>
-              <FormItem
+              <Form.Item label="Name" rules={[{ whitespace: true }]}>
+                <Input name="name" aria-label="name" />
+              </Form.Item>
+              <Form.Item
                 label="E-mail"
                 rules={[
                   {
@@ -70,21 +73,26 @@ const ContactForm = (props) => {
                   },
                 ]}
               >
-                <Input name="email" />
-              </FormItem>
-              <FormItem
+                <Input name="email" aria-label="email" />
+              </Form.Item>
+              <Form.Item
                 label="Message"
                 rules={[
                   { required: true, message: 'Please input your message!', whitespace: true },
                 ]}
               >
-                <TextArea name="message" placeholder="" autoSize={{ minRows: 4, maxRows: 10 }} />
-              </FormItem>
-              <FormItem>
-                <Button type="primary" htmlType="submit">
+                <TextArea
+                  name="message"
+                  aria-label="message"
+                  placeholder=""
+                  autoSize={{ minRows: 4, maxRows: 10 }}
+                />
+              </Form.Item>
+              <Form.Item>
+                <Button type="primary" shape="round" htmlType="submit">
                   Submit
                 </Button>
-              </FormItem>
+              </Form.Item>
             </Form>
 
             {/* --- STYLES --- */}
