@@ -8,7 +8,7 @@ import Article from '../components/Article'
 import Headline from '../components/Article/Headline'
 import List from '../components/List'
 
-const TagTemplate = props => {
+const TagTemplate = (props) => {
   const {
     pageContext: { tag },
     data: {
@@ -22,7 +22,7 @@ const TagTemplate = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline theme={theme}>

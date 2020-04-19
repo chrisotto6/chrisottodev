@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Headline = props => {
+const Headline = (props) => {
   const { title, children, theme } = props
 
   return (

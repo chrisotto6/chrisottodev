@@ -6,7 +6,7 @@ import Article from '../components/Article'
 import Page from '../components/Page'
 import { ThemeContext } from '../layouts'
 
-const PageTemplate = props => {
+const PageTemplate = (props) => {
   const {
     data: {
       page,
@@ -19,7 +19,7 @@ const PageTemplate = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <Page page={page} theme={theme} />
           </Article>

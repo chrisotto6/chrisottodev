@@ -2,7 +2,7 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PropTypes from 'prop-types'
 
-const Bodytext = props => {
+const Bodytext = (props) => {
   const { body, theme } = props
 
   return (

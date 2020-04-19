@@ -7,7 +7,7 @@ import Contact from '../components/Contact'
 import Headline from '../components/Article/Headline'
 import Seo from '../components/Seo'
 
-const ContactPage = props => {
+const ContactPage = (props) => {
   const {
     data: {
       site: {
@@ -19,7 +19,7 @@ const ContactPage = props => {
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
-        {theme => (
+        {(theme) => (
           <Article theme={theme}>
             <header>
               <Headline title="Contact" theme={theme} />
