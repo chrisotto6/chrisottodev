@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers'
+import ErrorBoundary from '../components/ErrorBoundary'
 import Footer from '../components/Footer/'
 import Header from '../components/Header'
 
@@ -75,69 +76,71 @@ class Layout extends React.Component {
   }
   render() {
     return (
-      <ThemeContext.Provider value={this.state.theme}>
-        <FontLoadedContext.Provider value={this.state.font400loaded}>
-          <ScreenWidthContext.Provider value={this.state.screenWidth}>
-            <React.Fragment>
-              <Header path={this.props.location.pathname} theme={this.state.theme} />
-              <main role="main">
-                <section>{this.props.children}</section>
-              </main>
-              <Footer theme={this.state.theme} />
+      <ErrorBoundary>
+        <ThemeContext.Provider value={this.state.theme}>
+          <FontLoadedContext.Provider value={this.state.font400loaded}>
+            <ScreenWidthContext.Provider value={this.state.screenWidth}>
+              <React.Fragment>
+                <Header path={this.props.location.pathname} theme={this.state.theme} />
+                <main role="main">
+                  <section>{this.props.children}</section>
+                </main>
+                <Footer theme={this.state.theme} />
 
-              {/* --- STYLES --- */}
-              <style jsx>{`
-                main {
-                  min-height: 80vh;
-                }
-              `}</style>
-              <style jsx global>{`
-                html {
-                  box-sizing: border-box;
-                }
-                *,
-                *:after,
-                *:before {
-                  box-sizing: inherit;
-                  margin: 0;
-                  padding: 0;
-                }
-                body {
-                  font-family: ${this.state.font400loaded
-                    ? "'Open Sans', sans-serif;"
-                    : 'Arial, sans-serif;'};
-                }
-                h1,
-                h2,
-                h3 {
-                  font-weight: ${this.state.font600loaded ? 600 : 400};
-                  line-height: 1.1;
-                  letter-spacing: -0.03em;
-                  margin: 0;
-                }
-                h1 {
-                  letter-spacing: -0.04em;
-                  font-size: ${this.state.theme.font.size.l};
-                }
-                p {
-                  margin: 0;
-                }
-                strong {
-                  font-weight: ${this.state.font600loaded ? 600 : 400};
-                }
-                a {
-                  text-decoration: none;
-                  color: #666;
-                }
-                main {
-                  width: auto;
-                  display: block;
-                }
-              `}</style>
-            </React.Fragment>
-          </ScreenWidthContext.Provider>
-        </FontLoadedContext.Provider>
-      </ThemeContext.Provider>
+                {/* --- STYLES --- */}
+                <style jsx>{`
+                  main {
+                    min-height: 80vh;
+                  }
+                `}</style>
+                <style jsx global>{`
+                  html {
+                    box-sizing: border-box;
+                  }
+                  *,
+                  *:after,
+                  *:before {
+                    box-sizing: inherit;
+                    margin: 0;
+                    padding: 0;
+                  }
+                  body {
+                    font-family: ${this.state.font400loaded
+                      ? "'Open Sans', sans-serif;"
+                      : 'Arial, sans-serif;'};
+                  }
+                  h1,
+                  h2,
+                  h3 {
+                    font-weight: ${this.state.font600loaded ? 600 : 400};
+                    line-height: 1.1;
+                    letter-spacing: -0.03em;
+                    margin: 0;
+                  }
+                  h1 {
+                    letter-spacing: -0.04em;
+                    font-size: ${this.state.theme.font.size.l};
+                  }
+                  p {
+                    margin: 0;
+                  }
+                  strong {
+                    font-weight: ${this.state.font600loaded ? 600 : 400};
+                  }
+                  a {
+                    text-decoration: none;
+                    color: #666;
+                  }
+                  main {
+                    width: auto;
+                    display: block;
+                  }
+                `}</style>
+              </React.Fragment>
+            </ScreenWidthContext.Provider>
+          </FontLoadedContext.Provider>
+        </ThemeContext.Provider>
+      </ErrorBoundary>
     )
   }
 }
