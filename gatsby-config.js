@@ -74,6 +74,12 @@ module.exports = {
     },
     'gatsby-transformer-json',
     {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: 'https://da4c226b38794b28b58790297cc3ac87@o334552.ingest.sentry.io/1863459',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
@@ -263,7 +269,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
+              return allMdx.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.fields.prefix,
@@ -340,8 +346,8 @@ module.exports = {
   ],
 }
 
-const formatTags = tags => {
-  return tags.reduce(function(prevVal, currVal, idx) {
+const formatTags = (tags) => {
+  return tags.reduce(function (prevVal, currVal, idx) {
     return idx == 0 ? `#${currVal}` : prevVal + ' #' + currVal
   }, '')
 }
