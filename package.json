@@ -9,7 +9,7 @@
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.2",
     "algoliasearch": "^4.1.0",
-    "antd": "^4.1.3",
+    "antd": "^4.1.4",
     "fontfaceobserver": "^2.0.13",
     "gatsby": "^2.20.23",
     "gatsby-image": "^2.3.4",
