@@ -21,7 +21,7 @@ const Work = (props) => {
           <p></p>
         </TabPane>
         <TabPane tab="JDA Software" key="2">
-          <h4 className="jobTitle">Senior QA Engineer</h4>
+          <h4 className="jobTitle">Senior QA Engineer, Scrum Master</h4>
           <h4 className="duration">Nov 2017 - Jan 2019</h4>
           <p>
             <ul>
@@ -84,7 +84,7 @@ const Work = (props) => {
               </li>
             </ul>
           </p>
-          <h4 className="jobTitle">Intermediate QA Engineer</h4>
+          <h4 className="jobTitle">Intermediate QA Engineer, Scrum Master</h4>
           <h4 className="duration">Nov 2014 - Oct 2017</h4>
           <p>
             <ul>
@@ -178,11 +178,12 @@ const Work = (props) => {
           font-size: 1.2rem;
           line-height: 1.42857;
           font-weight: 600;
+          margin-bottom: 2px;
         }
         .duration {
           font-size: 1rem;
-          line-height: 1.42857;
           color: ${theme.color.neutral.gray.g};
+          font-weight: 550;
         }
       `}</style>
     </React.Fragment>

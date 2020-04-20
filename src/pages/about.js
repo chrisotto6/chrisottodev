@@ -4,6 +4,7 @@ import Article from '../components/Article'
 import Headline from '../components/Article/Headline'
 import { ThemeContext } from '../layouts'
 import Work from '../components/Work'
+import SubHeadline from '../components/Article/SubHeadline'
 
 const AboutPage = () => {
   return (
@@ -15,20 +16,20 @@ const AboutPage = () => {
               <Headline title="About" theme={theme} />
             </header>
             <section>
-              {/*SubHeadline
-               ***Summary*/}
+              <SubHeadline title="Summary" theme={theme} />
+              {/***Summary*/}
             </section>
             <section>
-              {/*SubHeadline*/}
+              <SubHeadline title="Work" theme={theme} />
               <Work theme={theme} />
             </section>
             <section>
-              {/*SubHeadline
-               ***Skills*/}
+              <SubHeadline title="Skills" theme={theme} />
+              {/***Skills*/}
             </section>
             <section>
-              {/*SubHeadline
-               ***Education*/}
+              <SubHeadline title="Education" theme={theme} />
+              {/***Education*/}
             </section>
           </Article>
         )}
