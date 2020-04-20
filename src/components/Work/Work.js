@@ -138,8 +138,8 @@ const Work = (props) => {
           </ul>
         </TabPane>
         <TabPane tab="Army National Guard" key="3">
-          <h4 className="jobTitle">Intermediate QA Engineer</h4>
-          <h4 className="duration">Nov 2014 - Oct 2017</h4>
+          <h4 className="jobTitle">SGT, Signal Support Systems Specialist (25U)</h4>
+          <h4 className="duration">Mar 2011 - Apr 2018</h4>
         </TabPane>
         <TabPane tab="Competitive Edge Software" key="4">
           <h4 className="jobTitle">Intermediate QA Engineer</h4>
