@@ -11,7 +11,7 @@
     "algoliasearch": "^4.1.0",
     "antd": "^4.1.4",
     "fontfaceobserver": "^2.0.13",
-    "gatsby": "^2.20.23",
+    "gatsby": "^2.20.26",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-algolia": "^0.8.0",
     "gatsby-plugin-catch-links": "^2.2.3",
