@@ -12,7 +12,7 @@ const SkillCard = (props) => {
           title={item}
           bordered={false}
           size="small"
-          style={{ width: 175, textAlign: 'center', paddingRight: '10px', paddingLeft: '10px' }}
+          style={{ width: 165, textAlign: 'center', paddingRight: '10px', paddingLeft: '10px' }}
         >
           <Progress
             type="circle"
