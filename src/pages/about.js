@@ -33,11 +33,11 @@ const AboutPage = () => {
             </section>
             <section>
               <SubHeadline title="Education" theme={theme} />
-              {/***Education*/}
+              {/** *Education*/}
             </section>
             <section>
               <SubHeadline title="Volunteer" theme={theme} />
-              {/***Volunteer*/}
+              {/** *Volunteer*/}
             </section>
           </Article>
         )}
