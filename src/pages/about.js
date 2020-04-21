@@ -17,7 +17,11 @@ const AboutPage = () => {
             </header>
             <section>
               <SubHeadline title="Summary" theme={theme} />
-              {/***Summary*/}
+              <p>
+                Hard-working, detail orientated individual with conviction and integrity. Student of
+                the fast-paced technology world, fast learner and challenge acceptor. Interested in
+                applying wealth of experience and knowledge to deliver quality and value.
+              </p>
             </section>
             <section>
               <SubHeadline title="Work" theme={theme} />
@@ -31,9 +35,22 @@ const AboutPage = () => {
               <SubHeadline title="Education" theme={theme} />
               {/***Education*/}
             </section>
+            <section>
+              <SubHeadline title="Volunteer" theme={theme} />
+              {/***Volunteer*/}
+            </section>
           </Article>
         )}
       </ThemeContext.Consumer>
+
+      {/* --- STYLES --- */}
+      <style jsx global>
+        {`
+          section {
+            margin-bottom: 20px;
+          }
+        `}
+      </style>
     </React.Fragment>
   )
 }
