@@ -1,30 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import 'antd/dist/antd.css'
 import { Tabs } from 'antd'
+import 'antd/dist/antd.css'
 
 const Work = (props) => {
   const { theme } = props
 
   const { TabPane } = Tabs
 
-  function callback(key) {
-    console.log(key)
-  }
-
   return (
     <React.Fragment>
-      <Tabs onChange={callback} type="card" tabPosition="left">
-        <TabPane tab="Northwestern Mutual" key="1">
+      <Tabs size="small" tabPosition="left">
+        <TabPane
+          tab={
+            <div>
+              <div>Northwestern</div>
+              <div>Mutual</div>
+            </div>
+          }
+          key="1"
+        >
           <h4 className="jobTitle">Senior Test Engineer</h4>
           <h4 className="duration">Jan 2019 - Present</h4>
           <p></p>
         </TabPane>
-        <TabPane tab="JDA Software" key="2">
+        <TabPane
+          tab={
+            <div>
+              <div>JDA Software</div>
+            </div>
+          }
+          key="2"
+        >
           <h4 className="jobTitle">Senior QA Engineer, Scrum Master</h4>
           <h4 className="duration">Nov 2017 - Jan 2019</h4>
           <p>
-            <ul>
+            <ul className="workList">
               <li>
                 Assess the testing requirements of each product or product area and its components
                 and define appropriate strategies and tools throughout product development.
@@ -87,7 +98,7 @@ const Work = (props) => {
           <h4 className="jobTitle">Intermediate QA Engineer, Scrum Master</h4>
           <h4 className="duration">Nov 2014 - Oct 2017</h4>
           <p>
-            <ul>
+            <ul className="workList">
               <li>
                 Defined and developed quality initiatives with QA Director for the whole company to
                 consume.
@@ -123,11 +134,19 @@ const Work = (props) => {
             </ul>
           </p>
         </TabPane>
-        <TabPane tab="Competitive Edge Software" key="3">
+        <TabPane
+          tab={
+            <div>
+              <div>Competitive</div>
+              <div>Edge Software</div>
+            </div>
+          }
+          key="3"
+        >
           <h4 className="jobTitle">QA Team Lead</h4>
           <h4 className="duration">May 2012 - Nov 2014</h4>
           <p>
-            <ul>
+            <ul className="workList">
               <li>
                 Established, documented and enforced testing standards for the QA Department and
                 team members.
@@ -153,11 +172,18 @@ const Work = (props) => {
             </ul>
           </p>
         </TabPane>
-        <TabPane tab="Army National Guard" key="4">
+        <TabPane
+          tab={
+            <div>
+              <div>US Army</div>
+            </div>
+          }
+          key="4"
+        >
           <h4 className="jobTitle">SGT, Signal Support Systems Specialist (25U)</h4>
           <h4 className="duration">Mar 2011 - Apr 2018</h4>
           <p>
-            <ul>
+            <ul className="workList">
               <li>
                 Troubleshot, maintained, operated, installed and fixed communication equipment at
                 the company and battalion level. Enforced communication security policy and
@@ -184,6 +210,10 @@ const Work = (props) => {
           font-size: 1rem;
           color: ${theme.color.neutral.gray.g};
           font-weight: 550;
+        }
+        .workList {
+          list-style-type: disc;
+          display: list-item;
         }
       `}</style>
     </React.Fragment>

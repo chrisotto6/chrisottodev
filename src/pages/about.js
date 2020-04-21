@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types'
 import React from 'react'
 import Article from '../components/Article'
 import Headline from '../components/Article/Headline'
+import Skill from '../components/Skill'
+import SubHeadline from '../components/Article/SubHeadline'
 import { ThemeContext } from '../layouts'
 import Work from '../components/Work'
-import SubHeadline from '../components/Article/SubHeadline'
 
 const AboutPage = () => {
   return (
@@ -25,7 +25,7 @@ const AboutPage = () => {
             </section>
             <section>
               <SubHeadline title="Skills" theme={theme} />
-              {/***Skills*/}
+              <Skill />
             </section>
             <section>
               <SubHeadline title="Education" theme={theme} />
