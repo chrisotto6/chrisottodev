@@ -22,7 +22,7 @@ const Work = (props) => {
         >
           <h4 className="jobTitle">Senior Test Engineer</h4>
           <h4 className="duration">Jan 2019 - Present</h4>
-          <p></p>
+          <p>🚧 Under Construction 🚧</p>
         </TabPane>
         <TabPane
           tab={

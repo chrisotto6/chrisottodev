@@ -1,5 +1,6 @@
 import React from 'react'
 import Article from '../components/Article'
+import Education from '../components/Work/Education'
 import Headline from '../components/Article/Headline'
 import Skill from '../components/Skill'
 import SubHeadline from '../components/Article/SubHeadline'
@@ -33,11 +34,23 @@ const AboutPage = () => {
             </section>
             <section>
               <SubHeadline title="Education" theme={theme} />
-              {/** *Education*/}
+              <Education
+                theme={theme}
+                school="Lakeland University"
+                degree="B.S. Computer Science"
+                gpa="3.9375"
+                honors="Summa cum Laude"
+              />
+              <Education
+                theme={theme}
+                school="Milwaukee Area Technical College"
+                degree="A.S. Mobile Application Development"
+                gpa="3.729"
+              />
             </section>
             <section>
               <SubHeadline title="Volunteer" theme={theme} />
-              {/** *Volunteer*/}
+              {/** Volunteer **/}
             </section>
           </Article>
         )}

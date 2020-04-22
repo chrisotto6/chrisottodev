@@ -5,11 +5,11 @@ const Skill = () => {
   return (
     <React.Fragment>
       <div className="skill">
-        <SkillCard item="JavaScript" percent="85" />
         <SkillCard item="Testing" percent="90" />
-        <SkillCard item="Regex" percent="75" />
         <SkillCard item="Agile" percent="90" />
+        <SkillCard item="JavaScript" percent="85" />
         <SkillCard item="Java" percent="80" />
+        <SkillCard item="Regex" percent="75" />
         <SkillCard item="C#" percent="70" />
       </div>
 
