@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tabs } from 'antd'
-import 'antd/lib/tabs/style/index.css'
 
 const Work = (props) => {
   const { theme } = props
@@ -13,15 +12,15 @@ const Work = (props) => {
       <Tabs size="small" tabPosition="left">
         <TabPane
           tab={
-            <div>
+            <div aria-label="Tab">
               <div>Northwestern</div>
               <div>Mutual</div>
             </div>
           }
           key="1"
         >
-          <h4 className="jobTitle">Senior Test Engineer</h4>
-          <h4 className="duration">Jan 2019 - Present</h4>
+          <h3 className="jobTitle">Senior Test Engineer</h3>
+          <h3 className="duration">Jan 2019 - Present</h3>
           <p>🚧 Under Construction 🚧</p>
         </TabPane>
         <TabPane
@@ -32,8 +31,8 @@ const Work = (props) => {
           }
           key="2"
         >
-          <h4 className="jobTitle">Senior QA Engineer, Scrum Master</h4>
-          <h4 className="duration">Nov 2017 - Jan 2019</h4>
+          <h3 className="jobTitle">Senior QA Engineer, Scrum Master</h3>
+          <h3 className="duration">Nov 2017 - Jan 2019</h3>
           <p>
             <ul className="workList">
               <li>
@@ -95,8 +94,8 @@ const Work = (props) => {
               </li>
             </ul>
           </p>
-          <h4 className="jobTitle">Intermediate QA Engineer, Scrum Master</h4>
-          <h4 className="duration">Nov 2014 - Oct 2017</h4>
+          <h3 className="jobTitle">Intermediate QA Engineer, Scrum Master</h3>
+          <h3 className="duration">Nov 2014 - Oct 2017</h3>
           <p>
             <ul className="workList">
               <li>
@@ -143,8 +142,8 @@ const Work = (props) => {
           }
           key="3"
         >
-          <h4 className="jobTitle">QA Team Lead</h4>
-          <h4 className="duration">May 2012 - Nov 2014</h4>
+          <h3 className="jobTitle">QA Team Lead</h3>
+          <h3 className="duration">May 2012 - Nov 2014</h3>
           <p>
             <ul className="workList">
               <li>
@@ -180,8 +179,8 @@ const Work = (props) => {
           }
           key="4"
         >
-          <h4 className="jobTitle">SGT, Signal Support Systems Specialist (25U)</h4>
-          <h4 className="duration">Mar 2011 - Apr 2018</h4>
+          <h3 className="jobTitle">SGT, Signal Support Systems Specialist (25U)</h3>
+          <h3 className="duration">Mar 2011 - Apr 2018</h3>
           <p>
             <ul className="workList">
               <li>

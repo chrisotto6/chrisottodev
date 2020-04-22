@@ -6,11 +6,11 @@ const SubHeadline = (props) => {
 
   return (
     <React.Fragment>
-      {title ? <h3>{title}</h3> : <h3>{children}</h3>}
+      {title ? <h2>{title}</h2> : <h2>{children}</h2>}
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        h3 {
+        h2 {
           font-size: ${theme.font.size.m};
           margin: ${theme.space.stack.m};
           animation-name: headlineEntry;
@@ -40,13 +40,13 @@ const SubHeadline = (props) => {
         }
 
         @from-width tablet {
-          h3 {
+          h2 {
             font-size: ${`calc(${theme.font.size.m} * 1.2)`};
           }
         }
 
         @from-width desktop {
-          h3 {
+          h2 {
             font-size: ${`calc(${theme.font.size.m} * 1.4)`};
           }
         }

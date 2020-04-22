@@ -1,4 +1,5 @@
 import React from 'react'
+import 'antd/dist/antd.css'
 import Article from '../components/Article'
 import Education from '../components/Work/Education'
 import Headline from '../components/Article/Headline'
@@ -65,6 +66,9 @@ const AboutPage = () => {
       {/* --- STYLES --- */}
       <style jsx global>
         {`
+          .ant-tabs-nav .ant-tabs-tab-active {
+            color: #096dd9;
+          }
           section {
             margin-bottom: 20px;
           }
