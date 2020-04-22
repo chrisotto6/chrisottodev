@@ -65,6 +65,9 @@ const AboutPage = () => {
       {/* --- STYLES --- */}
       <style jsx global>
         {`
+          .ant-tabs-nav .ant-tabs-tab-active {
+            color: #096dd9;
+          }
           section {
             margin-bottom: 20px;
           }

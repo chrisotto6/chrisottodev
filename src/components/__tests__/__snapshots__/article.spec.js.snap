@@ -54,14 +54,14 @@ Array [
         }
       
     </style>
-    <h3>
+    <h2>
       SubTest
-    </h3>
+    </h2>
     <style
       jsx={true}
     >
       
-        h3 {
+        h2 {
           font-size: 1.35em;
           margin: 0 0 20px 0;
           animation-name: headlineEntry;
@@ -91,13 +91,13 @@ Array [
         }
 
         @from-width tablet {
-          h3 {
+          h2 {
             font-size: calc(1.35em * 1.2);
           }
         }
 
         @from-width desktop {
-          h3 {
+          h2 {
             font-size: calc(1.35em * 1.4);
           }
         }
@@ -181,12 +181,12 @@ Array [
         }
       
     </style>
-    <h3 />
+    <h2 />
     <style
       jsx={true}
     >
       
-        h3 {
+        h2 {
           font-size: 1.35em;
           margin: 0 0 20px 0;
           animation-name: headlineEntry;
@@ -216,13 +216,13 @@ Array [
         }
 
         @from-width tablet {
-          h3 {
+          h2 {
             font-size: calc(1.35em * 1.2);
           }
         }
 
         @from-width desktop {
-          h3 {
+          h2 {
             font-size: calc(1.35em * 1.4);
           }
         }
