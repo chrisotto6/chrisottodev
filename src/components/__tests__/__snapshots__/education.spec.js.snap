@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Education Component renders correctly with honors 1`] = `
+Array [
+  <div
+    className="education"
+  >
+    <div
+      className="schoolInfo"
+    >
+      <div
+        className="school"
+      >
+        Lakeland University
+      </div>
+      <div
+        className="degree"
+      >
+        B.S. Computer Science
+      </div>
+    </div>
+    <div
+      className="studentInfo"
+    >
+      <div>
+        GPA: 
+        3.9375
+      </div>
+      <div>
+        Summa cum Laude
+      </div>
+    </div>
+  </div>,
+  <style
+    jsx={true}
+  >
+    
+        .education {
+          padding-bottom: 15px;
+        }
+        .schoolInfo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-content: center;
+        }
+        .studentInfo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: space-between;
+        }
+        .school {
+          font-size: 1.2rem;
+          line-height: 1.42857;
+          font-weight: 600;
+          margin-bottom: 2px;
+        }
+        .degree {
+          font-size: 1rem;
+          color: #2c3e50;
+          font-weight: 550;
+        }
+      
+  </style>,
+]
+`;
+
+exports[`Education Component renders correctly without honors 1`] = `
+Array [
+  <div
+    className="education"
+  >
+    <div
+      className="schoolInfo"
+    >
+      <div
+        className="school"
+      >
+        Milwaukee Area Technical College
+      </div>
+      <div
+        className="degree"
+      >
+        A.S. Mobile Application Development
+      </div>
+    </div>
+    <div
+      className="studentInfo"
+    >
+      <div>
+        GPA: 
+        3.729
+      </div>
+    </div>
+  </div>,
+  <style
+    jsx={true}
+  >
+    
+        .education {
+          padding-bottom: 15px;
+        }
+        .schoolInfo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-content: center;
+        }
+        .studentInfo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: space-between;
+        }
+        .school {
+          font-size: 1.2rem;
+          line-height: 1.42857;
+          font-weight: 600;
+          margin-bottom: 2px;
+        }
+        .degree {
+          font-size: 1rem;
+          color: #2c3e50;
+          font-weight: 550;
+        }
+      
+  </style>,
+]
+`;

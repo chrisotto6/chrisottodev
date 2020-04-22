@@ -1,0 +1,846 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skill Component renders correctly 1`] = `
+Array [
+  <div
+    className="skill"
+  >
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              Testing
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-0"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-0)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "265.77873849369655px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              Agile
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-1"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-1)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "265.77873849369655px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              JavaScript
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-2"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-2)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "251.01325302182448px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              Java
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-3"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-3)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "236.24776754995247px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              Regex
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-4"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-4)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "221.48228207808043px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="ant-card ant-card-small"
+        style={
+          Object {
+            "paddingLeft": "10px",
+            "paddingRight": "10px",
+            "textAlign": "center",
+            "width": 165,
+          }
+        }
+      >
+        <div
+          className="ant-card-head"
+          style={Object {}}
+        >
+          <div
+            className="ant-card-head-wrapper"
+          >
+            <div
+              className="ant-card-head-title"
+            >
+              C#
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-card-body"
+          style={Object {}}
+        >
+          <div
+            className="ant-progress ant-progress-circle ant-progress-status-normal ant-progress-show-info ant-progress-default"
+            style={
+              Object {
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              className="ant-progress-inner ant-progress-circle-gradient"
+              style={
+                Object {
+                  "fontSize": 21,
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            >
+              <svg
+                className="ant-progress-circle "
+                style={Object {}}
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <linearGradient
+                    id="ant-progress-gradient-5"
+                    x1="100%"
+                    x2="0%"
+                    y1="0%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor="#1890ff"
+                    />
+                    <stop
+                      offset="25%"
+                      stopColor="#1F75C5"
+                    />
+                    <stop
+                      offset="50%"
+                      stopColor="#25598A"
+                    />
+                    <stop
+                      offset="75%"
+                      stopColor="#27537C"
+                    />
+                    <stop
+                      offset="100%"
+                      stopColor="#2c3e50"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="ant-progress-circle-trail"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke={null}
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": null,
+                      "strokeDasharray": "295.3097094374406px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+                <path
+                  className="ant-progress-circle-path"
+                  d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94"
+                  fillOpacity="0"
+                  stroke="url(#ant-progress-gradient-5)"
+                  strokeLinecap="round"
+                  strokeWidth={6}
+                  style={
+                    Object {
+                      "stroke": Object {
+                        "0%": "#1890ff",
+                        "100%": "#2c3e50",
+                        "25%": "#1F75C5",
+                        "50%": "#25598A",
+                        "75%": "#27537C",
+                      },
+                      "strokeDasharray": "206.7167966062084px 295.3097094374406px",
+                      "strokeDashoffset": "-0px",
+                      "transition": "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s",
+                    }
+                  }
+                />
+              </svg>
+              <span
+                className="ant-progress-text"
+                title=""
+              >
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <style
+    jsx={true}
+  >
+    
+        .skill {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          border-radius: 10px;
+          padding-bottom: 20px;
+        }
+      
+  </style>,
+]
+`;

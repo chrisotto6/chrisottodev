@@ -41,6 +41,7 @@
     "gatsby-source-filesystem": "^2.2.3",
     "gatsby-transformer-json": "^2.3.1",
     "gatsby-transformer-sharp": "^2.4.4",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",

@@ -13,7 +13,7 @@
 Clone the repository and run:
 
 ```text
-npm install
+yarn install
 ```
 
 To run the local develop build run:
