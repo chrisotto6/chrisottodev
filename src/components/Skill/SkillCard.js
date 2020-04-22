@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, Progress } from 'antd'
 import PropTypes from 'prop-types'
+import 'antd/lib/card/style/index.css'
+import 'antd/lib/progress/style/index.css'
 
 const SkillCard = (props) => {
   const { item, percent } = props

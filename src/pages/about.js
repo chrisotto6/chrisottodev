@@ -1,5 +1,4 @@
 import React from 'react'
-import 'antd/dist/antd.css'
 import Article from '../components/Article'
 import Education from '../components/Work/Education'
 import Headline from '../components/Article/Headline'

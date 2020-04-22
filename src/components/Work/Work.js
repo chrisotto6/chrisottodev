@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tabs } from 'antd'
+import 'antd/lib/tabs/style/index.css'
 
 const Work = (props) => {
   const { theme } = props
