@@ -53,6 +53,7 @@ const Volunteer = (props) => {
 Volunteer.propTypes = {
   theme: PropTypes.object.isRequired,
   organization: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
 }
 
