@@ -26,8 +26,6 @@ describe('Accessibility checks', () => {
     cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
   })
 
-  // Didn't change this it's just failing
-
   it('Projects Page', () => {
     cy.visit('/project')
     cy.wait(1000)
