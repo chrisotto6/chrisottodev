@@ -75,6 +75,11 @@ const Item = (props) => {
           color: ${theme.text.color.primary};
         }
 
+        :global(.link:hover) {
+          width: 100%;
+          color: ${theme.text.color.primary};
+        }
+
         li {
           border: 1px solid transparent;
           border-radius: ${theme.size.radius.default};

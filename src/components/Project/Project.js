@@ -46,7 +46,7 @@ const Project = (props) => {
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        li {
+        .card {
           display: flex;
           overflow: hidden;
           list-style: none;

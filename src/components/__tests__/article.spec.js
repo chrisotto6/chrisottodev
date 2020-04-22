@@ -2,6 +2,7 @@ import React from 'react'
 import { create } from 'react-test-renderer'
 import Article from '../Article'
 import Headline from '../Article/Headline'
+import SubHeadline from '../Article/SubHeadline'
 import Bodytext from '../Article/Bodytext'
 const theme = require('../../theme/theme.json')
 
@@ -9,7 +10,8 @@ describe('Article Component', () => {
   it('renders correctly with title', () => {
     const tree = create(
       <Article theme={theme}>
-        <Headline title="Test" theme={theme}></Headline>
+        <Headline title="Test" theme={theme} />
+        <SubHeadline title="SubTest" theme={theme} />
       </Article>
     ).toJSON()
     expect(tree).toMatchSnapshot()
@@ -17,9 +19,9 @@ describe('Article Component', () => {
   it('renders correctly without title', () => {
     const tree = create(
       <Article theme={theme}>
-        <Headline theme={theme}>
-          <Bodytext theme={theme} body={mock_page} />
-        </Headline>
+        <Headline theme={theme} />
+        <SubHeadline theme={theme} />
+        <Bodytext theme={theme} body={mock_page} />
       </Article>
     ).toJSON()
     expect(tree).toMatchSnapshot()

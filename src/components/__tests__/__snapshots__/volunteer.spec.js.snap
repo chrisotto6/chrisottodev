@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Volunteer Component renders correctly 1`] = `
+Array [
+  <div
+    className="volunteer"
+  >
+    <div
+      className="information"
+    >
+      <div
+        className="organization"
+      >
+        Milwaukee Area Technical College
+      </div>
+      <div
+        className="duration"
+      >
+        Jan 2015 - Present
+      </div>
+    </div>
+    <div
+      className="role"
+    >
+      ITDEV Advisory Board Member
+    </div>
+  </div>,
+  <style
+    global={true}
+    jsx={true}
+  >
+    
+          .volunteer {
+            padding-bottom: 15px;
+          }
+          .information {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+          }
+          .organization {
+            font-size: 1.2rem;
+            line-height: 1.42857;
+            font-weight: 600;
+            margin-bottom: 2px;
+          }
+          .duration {
+            font-size: 1rem;
+            color: #2c3e50;
+            font-weight: 550;
+          }
+          .role {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+          }
+        
+  </style>,
+]
+`;
