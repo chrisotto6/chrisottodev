@@ -6,6 +6,7 @@ import Skill from '../components/Skill'
 import SubHeadline from '../components/Article/SubHeadline'
 import { ThemeContext } from '../layouts'
 import Work from '../components/Work'
+import Volunteer from '../components/Work/Volunteer'
 
 const AboutPage = () => {
   return (
@@ -50,7 +51,12 @@ const AboutPage = () => {
             </section>
             <section>
               <SubHeadline title="Volunteer" theme={theme} />
-              {/** Volunteer **/}
+              <Volunteer
+                theme={theme}
+                organization="Milwaukee Area Technical College"
+                role="ITDEV Advisory Board Member"
+                duration="Jan 2015 - Present"
+              />
             </section>
           </Article>
         )}

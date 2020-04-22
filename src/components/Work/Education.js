@@ -32,7 +32,7 @@ const Education = (props) => {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
-          align-content: flex-start;
+          align-content: center;
           justify-content: space-between;
         }
         .school {
