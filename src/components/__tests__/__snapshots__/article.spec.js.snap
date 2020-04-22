@@ -54,6 +54,55 @@ Array [
         }
       
     </style>
+    <h3>
+      SubTest
+    </h3>
+    <style
+      jsx={true}
+    >
+      
+        h3 {
+          font-size: 1.35em;
+          margin: 0 0 20px 0;
+          animation-name: headlineEntry;
+          animation-duration: 1s;
+
+          :global(span) {
+            font-weight: 400;
+            display: block;
+            font-size: 0.5em;
+            letter-spacing: 0;
+            margin: 0 0 5px 0;
+          }
+
+          :global(svg) {
+            height: 0.75em;
+            fill: #2c3e50;
+          }
+        }
+
+        @keyframes headlineEntry {
+          from {
+            opacity: 0.5;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @from-width tablet {
+          h3 {
+            font-size: calc(1.35em * 1.2);
+          }
+        }
+
+        @from-width desktop {
+          h3 {
+            font-size: calc(1.35em * 1.4);
+          }
+        }
+      
+    </style>
   </article>,
   <style
     jsx={true}
@@ -85,18 +134,111 @@ Array [
   <article
     className="article"
   >
-    <h1>
-      <div
-        className="bodytext"
-      >
-        <p>
-          test
-        </p>
-      </div>
-      <style
-        jsx={true}
-      >
-        
+    <h1 />
+    <style
+      jsx={true}
+    >
+      
+        h1 {
+          font-size: 1.7em;
+          margin: 0 0 40px 0;
+          animation-name: headlineEntry;
+          animation-duration: 1s;
+
+          :global(span) {
+            font-weight: 400;
+            display: block;
+            font-size: 0.5em;
+            letter-spacing: 0;
+            margin: 0 0 5px 0;
+          }
+
+          :global(svg) {
+            height: 0.75em;
+            fill: #2c3e50;
+          }
+        }
+
+        @keyframes headlineEntry {
+          from {
+            opacity: 0.5;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @from-width tablet {
+          h1 {
+            font-size: calc(2em * 1.2);
+          }
+        }
+
+        @from-width desktop {
+          h1 {
+            font-size: calc(2em * 1.4);
+          }
+        }
+      
+    </style>
+    <h3 />
+    <style
+      jsx={true}
+    >
+      
+        h3 {
+          font-size: 1.35em;
+          margin: 0 0 20px 0;
+          animation-name: headlineEntry;
+          animation-duration: 1s;
+
+          :global(span) {
+            font-weight: 400;
+            display: block;
+            font-size: 0.5em;
+            letter-spacing: 0;
+            margin: 0 0 5px 0;
+          }
+
+          :global(svg) {
+            height: 0.75em;
+            fill: #2c3e50;
+          }
+        }
+
+        @keyframes headlineEntry {
+          from {
+            opacity: 0.5;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @from-width tablet {
+          h3 {
+            font-size: calc(1.35em * 1.2);
+          }
+        }
+
+        @from-width desktop {
+          h3 {
+            font-size: calc(1.35em * 1.4);
+          }
+        }
+      
+    </style>
+    <div
+      className="bodytext"
+    >
+      <p>
+        test
+      </p>
+    </div>
+    <style
+      jsx={true}
+    >
+      
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: 1s;
@@ -158,53 +300,6 @@ Array [
           }
           to {
             opacity: 1;
-          }
-        }
-      
-      </style>
-    </h1>
-    <style
-      jsx={true}
-    >
-      
-        h1 {
-          font-size: 1.7em;
-          margin: 0 0 40px 0;
-          animation-name: headlineEntry;
-          animation-duration: 1s;
-
-          :global(span) {
-            font-weight: 400;
-            display: block;
-            font-size: 0.5em;
-            letter-spacing: 0;
-            margin: 0 0 5px 0;
-          }
-
-          :global(svg) {
-            height: 0.75em;
-            fill: #2c3e50;
-          }
-        }
-
-        @keyframes headlineEntry {
-          from {
-            opacity: 0.5;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @from-width tablet {
-          h1 {
-            font-size: calc(2em * 1.2);
-          }
-        }
-
-        @from-width desktop {
-          h1 {
-            font-size: calc(2em * 1.4);
           }
         }
       
