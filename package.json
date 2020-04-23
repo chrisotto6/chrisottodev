@@ -83,7 +83,7 @@
     "axe-core": "^3.5.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
-    "babel-preset-gatsby": "^0.3.1",
+    "babel-preset-gatsby": "^0.3.4",
     "cypress": "^4.4.1",
     "cypress-axe": "^0.8.1",
     "dotenv": "^8.2.0",
