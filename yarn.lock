@@ -7922,12 +7922,12 @@ gatsby-remark-prismjs@^3.5.0:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-responsive-iframe@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.3.3.tgz#82e382941470b86741c778169e0826d445794da7"
-  integrity sha512-h/ze0/j1EkDUoXiq8MAQSlrfCoCM8XyNW37j8VFDt5RE95JVjqj6hvLqFsGb7R2JN/okGhEghbvC2Y0+eGzVrQ==
+gatsby-remark-responsive-iframe@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.4.0.tgz#bab78d7e44799cfc9629e7be7ae143249f466ebb"
+  integrity sha512-2c5D95sJx9CCv49x1Y6YAD1xRlgyOMORme1DAgwhGMXT2dybgvKgrI7S5lkLfIHELNmxtNeuT2SbLP48fXyZhg==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
     cheerio "^1.0.0-rc.3"
     common-tags "^1.8.0"
     lodash "^4.17.15"
@@ -14110,7 +14110,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-potrace@^2.1.5, potrace@^2.1.6:
+potrace@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/potrace/-/potrace-2.1.6.tgz#687d48d4441eebca9539f4c39f6815b6e2480e67"
   integrity sha512-sXdIDGZAb3x1GSnyps7VxksRoy57/ch+kq7J79L5UPUHU5KRIJF9oLJQeRVyYlOPjois+gMxVfNJkQjSkK9xMA==
