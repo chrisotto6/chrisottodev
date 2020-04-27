@@ -7790,12 +7790,12 @@ gatsby-plugin-styled-jsx-postcss@^2.0.2:
     styled-jsx-plugin-postcss "^0.1.2"
     touch "^3.1.0"
 
-gatsby-plugin-styled-jsx@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-jsx/-/gatsby-plugin-styled-jsx-3.2.3.tgz#25950337382dace4ff95ad64a8480f83641ca627"
-  integrity sha512-m2HOOEK7pydGe3RQZyGi+GUj/jzjayhrXItzx1KtZPzoB7gkpqSMhdyO7AD9oi/m3t4kXcjDa5KEP+DPrezgqA==
+gatsby-plugin-styled-jsx@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-jsx/-/gatsby-plugin-styled-jsx-3.3.0.tgz#9157f351ce9814efa113acb56c323d0608dc91c1"
+  integrity sha512-QKHy3zVq2Za2FfdDO4acZk45Hb28EKWTcI9Xlq9PpaXeuTUKzIg1PQ3c+goiyd3z0ZTDYKBRM/jhFHSPqTDRdQ==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
 
 gatsby-react-router-scroll@^2.2.2:
   version "2.2.2"
