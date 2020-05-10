@@ -7535,10 +7535,10 @@ gatsby-page-utils@^0.2.0:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-algolia@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.9.0.tgz#0bc0d8b7beac09648ed3d5327b7d18020f34c7a6"
-  integrity sha512-jZ8TTfyl3TnycleU5gOvWLzryutr3xqkW0yStGsx0Q0YMKWP1SIPXSQqKKN/5wbNJ9JTMvtAG5EemkI+w7ZrIg==
+gatsby-plugin-algolia@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.11.0.tgz#527757baded0336fcaf3d4326f6a41a2332bf10a"
+  integrity sha512-NEvVGrJWNNqnNj3wn+w3wEqDpjTC7yeZQHuNxjrGeu4H74JVbhOgYKHse5oR/HeShU8ZXBPvWwiBHxo8CngBpA==
   dependencies:
     algoliasearch "^3.24.5"
     gatsby-cli "^1.1.58"
