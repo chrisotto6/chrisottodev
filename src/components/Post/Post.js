@@ -5,6 +5,7 @@ import 'prismjs/themes/prism-okaidia.css'
 import asyncComponent from '../AsyncComponent'
 import Headline from '../Article/Headline'
 import Bodytext from '../Article/Bodytext'
+import Subscribe from '../Subscribe'
 import Meta from './Meta'
 import Author from './Author'
 import Comments from './Comments'
@@ -43,6 +44,7 @@ const Post = (props) => {
       <Bodytext body={body} theme={theme} />
       <footer>
         <Share post={post} theme={theme} />
+        <Subscribe />
         <Author note={authornote} theme={theme} />
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
         <Comments slug={slug} facebook={facebook} theme={theme} />
