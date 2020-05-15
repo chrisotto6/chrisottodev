@@ -112,6 +112,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-0)"
                   strokeLinecap="round"
                   strokeWidth={6}
@@ -249,6 +250,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-1)"
                   strokeLinecap="round"
                   strokeWidth={6}
@@ -386,6 +388,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-2)"
                   strokeLinecap="round"
                   strokeWidth={6}
@@ -523,6 +526,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-3)"
                   strokeLinecap="round"
                   strokeWidth={6}
@@ -660,6 +664,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-4)"
                   strokeLinecap="round"
                   strokeWidth={6}
@@ -797,6 +802,7 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
+                  opacity={1}
                   stroke="url(#ant-progress-gradient-5)"
                   strokeLinecap="round"
                   strokeWidth={6}
