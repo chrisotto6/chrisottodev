@@ -36,7 +36,7 @@ export default class Subscribe extends React.Component {
           <h3 className="subscribeInfo">
             Like the article? Subscribe to get notified whenever a new article gets published!
           </h3>
-          <Form name="subscribe" onFinish={this._handleSubmit} layout="inline">
+          <Form name="subscribe" onFinish={this._handleSubmit} layout="horizontal">
             <Form.Item
               label="E-mail"
               name="email"
