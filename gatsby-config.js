@@ -63,6 +63,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://dev.us18.list-manage.com/subscribe/post?u=c9ab593ff8e65047747dcae49&amp;id=86c369f684',
+      },
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
