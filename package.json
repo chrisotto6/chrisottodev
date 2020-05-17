@@ -112,6 +112,6 @@
     "react-test-renderer": "^16.13.1",
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.4.0"
   }
 }
