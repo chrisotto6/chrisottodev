@@ -27,7 +27,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^2.6.2",
+    "gatsby-plugin-sharp": "^2.6.3",
     "gatsby-plugin-sitemap": "^2.4.2",
     "gatsby-plugin-styled-jsx": "^3.3.1",
     "gatsby-plugin-styled-jsx-postcss": "^2.0.2",
@@ -39,7 +39,7 @@
     "gatsby-remark-responsive-iframe": "^2.4.2",
     "gatsby-remark-smartypants": "^2.3.1",
     "gatsby-source-filesystem": "^2.3.1",
-    "gatsby-transformer-json": "^2.4.1",
+    "gatsby-transformer-json": "^2.4.2",
     "gatsby-transformer-sharp": "^2.5.2",
     "jest": "^26.0.1",
     "prismjs": "^1.20.0",
@@ -51,7 +51,7 @@
     "react-instantsearch": "^5.2.2",
     "react-share": "^4.1.0",
     "react-visibility-sensor": "^5.1.1",
-    "styled-jsx": "^3.2.5",
+    "styled-jsx": "^3.3.0",
     "typeface-open-sans": "^0.0.75"
   },
   "keywords": [
@@ -83,7 +83,7 @@
     "axe-core": "^3.5.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.0.1",
-    "babel-preset-gatsby": "^0.4.0",
+    "babel-preset-gatsby": "^0.4.2",
     "cypress": "^4.5.0",
     "cypress-axe": "^0.8.1",
     "dotenv": "^8.2.0",
@@ -112,6 +112,6 @@
     "react-test-renderer": "^16.13.1",
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.4.0"
   }
 }
