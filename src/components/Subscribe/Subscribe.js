@@ -29,6 +29,15 @@ export default class Subscribe extends React.Component {
   }
 
   render() {
+    const layout = {
+      labelCol: { span: 5 },
+      wrapperCol: { span: 16 },
+    }
+
+    const tailLayout = {
+      wrapperCol: { offset: 5, span: 12 },
+    }
+
     return (
       <React.Fragment>
         <Divider />
@@ -36,7 +45,7 @@ export default class Subscribe extends React.Component {
           <h3 className="subscribeInfo">
             Like the article? Subscribe to get notified whenever a new article gets published!
           </h3>
-          <Form name="subscribe" onFinish={this._handleSubmit} layout="horizontal">
+          <Form {...layout} name="subscribe" onFinish={this._handleSubmit} layout="horizontal">
             <Form.Item
               label="E-mail"
               name="email"
@@ -52,7 +61,7 @@ export default class Subscribe extends React.Component {
             >
               <Input prefix={<UserOutlined />} onChange={this.handleNameChange} />
             </Form.Item>
-            <Form.Item>
+            <Form.Item {...tailLayout}>
               <Button type="primary" htmlType="submit" shape="round">
                 Subscribe
               </Button>

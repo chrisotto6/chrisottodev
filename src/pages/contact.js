@@ -24,10 +24,23 @@ const ContactPage = (props) => {
             <header>
               <Headline title="Contact" theme={theme} />
             </header>
+            <p className="contactIntro">
+              Hello 👋 thanks for stopping by. If you want to chat, reach out below!
+            </p>
+            <div />
             <Contact theme={theme} />
           </Article>
         )}
       </ThemeContext.Consumer>
+
+      {/* --- STYLES --- */}
+      <style jsx global>
+        {`
+          .contactIntro {
+            padding-bottom: 25px;
+          }
+        `}
+      </style>
 
       <Seo facebook={facebook} />
     </React.Fragment>
