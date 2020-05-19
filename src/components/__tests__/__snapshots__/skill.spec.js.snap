@@ -54,13 +54,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-0"
+                    id="ant-progress-gradient-1"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -112,7 +112,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-0)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-1)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -191,13 +192,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-1"
+                    id="ant-progress-gradient-2"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -249,7 +250,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-1)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-2)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -328,13 +330,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-2"
+                    id="ant-progress-gradient-3"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -386,7 +388,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-2)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-3)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -465,13 +468,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-3"
+                    id="ant-progress-gradient-4"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -523,7 +526,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-3)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-4)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -602,13 +606,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-4"
+                    id="ant-progress-gradient-5"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -660,7 +664,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-4)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-5)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -739,13 +744,13 @@ Array [
               }
             >
               <svg
-                className="ant-progress-circle "
+                className="ant-progress-circle"
                 style={Object {}}
                 viewBox="0 0 100 100"
               >
                 <defs>
                   <linearGradient
-                    id="ant-progress-gradient-5"
+                    id="ant-progress-gradient-6"
                     x1="100%"
                     x2="0%"
                     y1="0%"
@@ -797,7 +802,8 @@ Array [
    a 47,47 0 1 1 0,94
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
-                  stroke="url(#ant-progress-gradient-5)"
+                  opacity={1}
+                  stroke="url(#ant-progress-gradient-6)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
