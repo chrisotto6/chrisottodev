@@ -3,7 +3,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     env:
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY	}}
       ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID	}}
@@ -12,11 +11,9 @@ jobs:
       FB_APP_ID: ${{ secrets.FB_APP_ID	}}
       GATSBY_DISQUS_NAME: ${{ secrets.GATSBY_DISQUS_NAME	}}
       GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID}}
-
     strategy:
       matrix:
         node-version: [10.x]
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
