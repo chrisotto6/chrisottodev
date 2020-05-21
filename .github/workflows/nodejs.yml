@@ -25,10 +25,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn install
-      - run: npm run lint
-      - run: npm run build:local
-      - run: npm test
-      - run: npm run e2e
+      - name: Install And Lint
+        run: yarn install
+        run: npm run lint
+      - name: Build And Test
+        run: npm run build:local
+        run: npm test
+        run: npm run e2e
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: ${{ github.repository }}
+          username: chrisotto6
+          password: ${{ secrets.AUTH }}
+          registry: docker.pkg.github.com
         env:
           CI: true
