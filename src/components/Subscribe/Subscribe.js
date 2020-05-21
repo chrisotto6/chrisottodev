@@ -10,7 +10,7 @@ export default class Subscribe extends React.Component {
     this.state = { name: '', email: '', result: null }
   }
 
-  _handleSubmit = async (e) => {
+  handleSubmit = async (e) => {
     const result = await addToMailchimp(this.state.email, { FNAME: this.state.name })
     if (result.result === 'error') {
       alert(`Whoops, ${this.state.name} you're already subscribed!`)
@@ -45,7 +45,7 @@ export default class Subscribe extends React.Component {
           <h3 className="subscribeInfo">
             Like the article? Subscribe to get notified whenever a new article gets published!
           </h3>
-          <Form {...layout} name="subscribe" onFinish={this._handleSubmit} layout="horizontal">
+          <Form {...layout} name="subscribe" onFinish={this.handleSubmit} layout="horizontal">
             <Form.Item
               label="E-mail"
               name="email"
