@@ -19,6 +19,5 @@ stream.once('open', function (fd) {
   stream.write("tags: ['']\n")
   stream.write('published: false\n')
   stream.write('---\n\n')
-  stream.write(`# `)
   stream.end()
 })
