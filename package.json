@@ -27,7 +27,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^2.6.3",
+    "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.3",
     "gatsby-plugin-styled-jsx": "^3.3.2",
     "gatsby-plugin-styled-jsx-postcss": "^2.0.2",
