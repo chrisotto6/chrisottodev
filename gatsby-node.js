@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
@@ -78,7 +78,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create tag list
         const tagSet = new Set()
-        items.forEach(edge => {
+        items.forEach((edge) => {
           const {
             node: {
               frontmatter: { tags },
@@ -86,7 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
           } = edge
 
           if (tags && tags != null) {
-            tags.forEach(tag => {
+            tags.forEach((tag) => {
               if (tag && tag !== null) {
                 tagSet.add(tag)
               }
@@ -96,7 +96,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create tag pages
         const tagList = Array.from(tagSet)
-        tagList.forEach(tag => {
+        tagList.forEach((tag) => {
           createPage({
             path: `/tag/${_.kebabCase(tag)}/`,
             component: tagTemplate,
@@ -107,7 +107,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Create posts
-        const posts = items.filter(item => item.node.fields.source === 'posts')
+        const posts = items.filter((item) => item.node.fields.source === 'posts')
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug
           const next = index === 0 ? undefined : posts[index - 1].node
@@ -127,7 +127,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // and pages.
-        const pages = items.filter(item => item.node.fields.source === 'pages')
+        const pages = items.filter((item) => item.node.fields.source === 'pages')
         pages.forEach(({ node }) => {
           const slug = node.fields.slug
           const source = node.fields.source
@@ -146,7 +146,7 @@ exports.createPages = ({ graphql, actions }) => {
         const postsPerPage = 5
         const numPages = Math.ceil(posts.length / postsPerPage)
 
-        _.times(numPages, i => {
+        _.times(numPages, (i) => {
           createPage({
             path: i === 0 ? `/` : `/${i + 1}`,
             component: path.resolve('./src/templates/index.js'),
@@ -161,20 +161,4 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
-}
-
-exports.onCreateWebpackConfig = ({ stage, actions, loaders }, options) => {
-  switch (stage) {
-    case `build-javascript`:
-    // actions.setWebpackConfig({
-    //   module: {
-    //     rules: [
-    //       {
-    //         test: /\.css$/,
-    //         use: [loaders.style(), loaders.css({ importLoaders: 1 }), loaders.postcss()],
-    //       },
-    //     ],
-    //   },
-    // })
-  }
 }
