@@ -6,7 +6,7 @@ const Headline = (props) => {
 
   return (
     <React.Fragment>
-      {title ? <h1>{title}</h1> : <h1>{children}</h1>}
+      {title ? <h1 id={title}>{title}</h1> : <h1>{children}</h1>}
 
       {/* --- STYLES --- */}
       <style jsx>{`
