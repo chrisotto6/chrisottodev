@@ -10,34 +10,34 @@ describe('Markdown Generated Pages Tests', () => {
   })
 
   it('Success Page', () => {
-    cy.visit('/Success')
+    cy.visit('/success')
     cy.get('[id=Success]').contains('Success')
   })
 })
 
 describe('Pages Tests', () => {
   it('About Page', () => {
-    cy.visit('/About')
+    cy.visit('/about')
     cy.get('[id=About]').contains('About')
   })
 
   it('Tags Page', () => {
-    cy.visit('/Tag')
+    cy.visit('/tag')
     cy.get('[id="Posts by tags"]').contains('Posts by tags')
   })
 
   it('Projects Page', () => {
-    cy.visit('/Project')
+    cy.visit('/project')
     cy.get('[id=Projects]').contains('Projects')
   })
 
   it('Search Page', () => {
-    cy.visit('/Search')
+    cy.visit('/search')
     cy.get('.ais-SearchBox-input').should('have.attr', 'placeholder', 'Search')
   })
 
   it('Contact Page', () => {
-    cy.visit('/Contact')
+    cy.visit('/contact')
     cy.get('[id=Contact]').contains('Contact')
   })
 })
