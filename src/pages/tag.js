@@ -12,9 +12,6 @@ const TagPage = (props) => {
   const {
     data: {
       posts: { edges: posts },
-      site: {
-        siteMetadata: { facebook },
-      },
     },
   } = props
 
@@ -75,7 +72,7 @@ const TagPage = (props) => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo facebook={facebook} />
+      <Seo />
     </React.Fragment>
   )
 }
@@ -117,13 +114,6 @@ export const query = graphql`
               }
             }
           }
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        facebook {
-          appId
         }
       }
     }

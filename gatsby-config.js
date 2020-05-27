@@ -49,9 +49,6 @@ module.exports = {
         : '',
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : '',
     },
-    facebook: {
-      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : '',
-    },
   },
   plugins: [
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files

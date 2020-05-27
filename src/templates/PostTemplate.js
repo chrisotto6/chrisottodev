@@ -13,9 +13,6 @@ const PostTemplate = (props) => {
     data: {
       post,
       authornote: { body: authorNote },
-      site: {
-        siteMetadata: { facebook },
-      },
     },
     pageContext: { next, prev },
   } = props
@@ -25,18 +22,11 @@ const PostTemplate = (props) => {
       <ThemeContext.Consumer>
         {(theme) => (
           <Article theme={theme}>
-            <Post
-              post={post}
-              next={next}
-              prev={prev}
-              authornote={authorNote}
-              facebook={facebook}
-              theme={theme}
-            />
+            <Post post={post} next={next} prev={prev} authornote={authorNote} theme={theme} />
           </Article>
         )}
       </ThemeContext.Consumer>
-      <Seo data={post} facebook={facebook} />
+      <Seo data={post} />
     </React.Fragment>
   )
 }
@@ -76,13 +66,6 @@ export const postQuery = graphql`
     authornote: mdx(fileAbsolutePath: { regex: "/author/" }) {
       id
       body
-    }
-    site {
-      siteMetadata {
-        facebook {
-          appId
-        }
-      }
     }
   }
 `
