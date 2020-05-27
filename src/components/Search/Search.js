@@ -15,6 +15,7 @@ const Search = (props) => {
         {algolia && algolia.appId && (
           <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
             <SearchBox
+              autoFocus
               translations={{ placeholder: 'Search' }}
               reset={<img src="" alt="" />}
               submit={<img src="" alt="" />}
