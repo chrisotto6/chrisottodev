@@ -113,7 +113,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-0)"
+                  stroke="url(#ant-progress-gradient-1)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -136,7 +136,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -251,7 +251,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-1)"
+                  stroke="url(#ant-progress-gradient-2)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -274,7 +274,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -389,7 +389,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-2)"
+                  stroke="url(#ant-progress-gradient-3)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -412,7 +412,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -527,7 +527,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-3)"
+                  stroke="url(#ant-progress-gradient-4)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -550,7 +550,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -665,7 +665,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-4)"
+                  stroke="url(#ant-progress-gradient-5)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -688,7 +688,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -803,7 +803,7 @@ Array [
    a 47,47 0 1 1 0,-94"
                   fillOpacity="0"
                   opacity={1}
-                  stroke="url(#ant-progress-gradient-5)"
+                  stroke="url(#ant-progress-gradient-6)"
                   strokeLinecap="round"
                   strokeWidth={6}
                   style={
@@ -826,7 +826,7 @@ Array [
                 className="ant-progress-text"
                 title=""
               >
-
+                
               </span>
             </div>
           </div>
@@ -837,7 +837,7 @@ Array [
   <style
     jsx={true}
   >
-
+    
         .skill {
           display: flex;
           flex-direction: row;
@@ -846,7 +846,7 @@ Array [
           border-radius: 10px;
           padding-bottom: 20px;
         }
-
+      
   </style>,
 ]
 `;
