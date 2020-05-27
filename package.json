@@ -61,7 +61,8 @@
     "portfolio"
   ],
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build:local": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "start": "gatsby build && gatsby serve",

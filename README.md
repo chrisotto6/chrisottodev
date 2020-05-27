@@ -2,7 +2,7 @@
 
 ## Build and Deploy
 
-[![Build Status](https://travis-ci.com/chrisotto6/chrisottodev.svg?branch=master)](https://travis-ci.com/chrisotto6/chrisottodev) [![Netlify Status](https://api.netlify.com/api/v1/badges/2e067759-e5e5-4337-9e22-371754eb3d3e/deploy-status)](https://app.netlify.com/sites/gatsby-otto/deploys)
+![Build Status](https://github.com/chrisotto6/chrisottodev/workflows/Build,%20Lint%20and%20Test%20CI/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/2e067759-e5e5-4337-9e22-371754eb3d3e/deploy-status)](https://app.netlify.com/sites/gatsby-otto/deploys)
 
 ## Coverage
 

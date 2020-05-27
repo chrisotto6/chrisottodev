@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: npm run lint
-      - run: npm run build
+      - run: npm run build:local
       - run: npm test
       - run: npm run e2e
         env:
