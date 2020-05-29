@@ -114,5 +114,10 @@
     "serve": "^11.3.1",
     "start-server-and-test": "^1.11.0",
     "stylelint": "^13.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
