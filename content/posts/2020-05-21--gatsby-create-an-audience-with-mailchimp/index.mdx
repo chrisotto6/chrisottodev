@@ -1,16 +1,17 @@
 ---
 title: Gatsby - Create an audience with Mailchimp
-cover: mailchimp.png
+cover: mail.jpg
 author: Chris Otto
 tags: ['gatsby','react','mailchimp']
 published: true
 ---
+Image from @mathyaskurmann on [Unsplash](https://unsplash.com/)
 
 Allowing people to get updates from your blog is a great way to create and engage with your audience. I wanted to create a subscribe component to my blog. Yes, this can be accomplished with RSS feeds but I thought it would nice to add a new UI component and integrate with a service. I chose Mailchimp to allow visitors to subscribe to my blog! The best part is that there is already a Gatsby plugin that handles the heavy lifting.
 
 ## Create a MailChimp Account 📬
 
-Head on over to [Mailchimp](www.mailchimp.com) and create an account. The free tier should be more than enough to get you started. In order to use the plugin we need to grab your Mailchimp endpoint.
+Head on over to [Mailchimp](www.mailchimp.com) and create an account. The free tier should be more than enough to get you started. In order to use the plugin, we need to grab your Mailchimp endpoint.
 
 Once your account is all set up, go to _Create_ -> _Signup Form_. Click _Begin_ and you should see the Mailchimp form template creator. Scroll down to the _Copy/Paste onto your site_ section and copy the URL value out of `<form action="%URL%"...>`. It will start like this `https://dev.us18.list-manage.com/subscribe/...`.
 
