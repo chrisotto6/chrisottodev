@@ -3,6 +3,29 @@
   "version": "1.0.0",
   "author": "Chris Otto <chris.otto6@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build:local": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "gatsby build && gatsby serve",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint ./src",
+    "lintFix": "eslint ./src --fix",
+    "stylelint": "stylelint src/**/*.js",
+    "test": "jest",
+    "badges": "jest --coverage && jest-coverage-badges",
+    "test:cypress": "cypress run",
+    "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
+    "e2e:open": "cypress open",
+    "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
+    "post": "node util/newPost.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
     "@mdx-js/react": "^1.6.4",
@@ -42,6 +65,7 @@
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-json": "^2.4.3",
     "gatsby-transformer-sharp": "^2.5.3",
+    "husky": "^4.2.5",
     "jest": "^26.0.1",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
@@ -60,25 +84,6 @@
     "personal website",
     "portfolio"
   ],
-  "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "build:local": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "start": "gatsby build && gatsby serve",
-    "devhost": "gatsby develop --host 192.168.0.112",
-    "format": "prettier --write 'src/**/*.js'",
-    "lint": "eslint ./src",
-    "lintFix": "eslint ./src --fix",
-    "stylelint": "stylelint src/**/*.js",
-    "test": "jest",
-    "badges": "jest --coverage && jest-coverage-badges",
-    "test:cypress": "cypress run",
-    "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
-    "e2e:open": "cypress open",
-    "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
-    "post": "node newPost.js"
-  },
   "devDependencies": {
     "@testing-library/cypress": "^6.0.0",
     "axe-core": "^3.5.3",
