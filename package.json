@@ -21,11 +21,6 @@
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
     "post": "node util/newPost.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
-  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
     "@mdx-js/react": "^1.6.4",
