@@ -19,7 +19,8 @@
     "e2e": "start-server-and-test serve http://localhost:9000 test:cypress",
     "e2e:open": "cypress open",
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
-    "post": "node util/newPost.js"
+    "post": "node util/newPost.js",
+    "compress": "node util/compressImages.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.4",
@@ -95,6 +96,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
+    "glob": "^7.1.6",
     "husky": "^4.2.5",
     "postcss": "^7.0.30",
     "postcss-cli": "^7.1.1",
@@ -113,12 +115,12 @@
     "react-test-renderer": "^16.13.1",
     "serve": "^11.3.1",
     "start-server-and-test": "^1.11.0",
-    "stylelint": "^13.5.0"
+    "stylelint": "^13.5.0",
+    "tinify": "^1.6.0-beta.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "yarn run lint"
     }
   }
 }

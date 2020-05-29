@@ -14802,6 +14802,11 @@ promise-inflight@^1.0.1:
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
+"promise-nodeify@>= 0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/promise-nodeify/-/promise-nodeify-3.0.1.tgz#f0f5d9720ee9ec71dd2bfa92667be504c10229c2"
+  integrity sha512-ghsSuzZXJX8iO7WVec2z7GI+Xk/EyiD+JZK7AZKhUqYfpLa/Zs4ylUD+CwwnKlG6G3HnkUPMAi6PO7zeqGKssg==
+
 promise@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
@@ -14859,6 +14864,11 @@ proxy-addr@~2.0.5:
   dependencies:
     forwarded "~0.1.2"
     ipaddr.js "1.9.1"
+
+"proxying-agent@>= 2.1":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/proxying-agent/-/proxying-agent-2.4.0.tgz#6796549fc46bf3423554440f64a4449220f9014d"
+  integrity sha512-b9vDqIcViJZVsWPpQlp9Py74u+Wqd0a+kMkkg7zX58mwNtrNbOChNlRTM7lUrlpiwNzyJCV8+5D8rnZYLDFh7Q==
 
 prr@~1.0.1:
   version "1.0.1"
@@ -18091,6 +18101,14 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tinify@^1.6.0-beta.2:
+  version "1.6.0-beta.2"
+  resolved "https://registry.yarnpkg.com/tinify/-/tinify-1.6.0-beta.2.tgz#5985ca021d11685d846c53ac8465dce78116adfe"
+  integrity sha512-jzOtntNLiRRhMN5AlRlxapUhNYVH3YhU2cfk3Xg2u5g+t4ZfdXe97TqYvIl7cyenfXmqo5SCZet7t4alv53XvQ==
+  dependencies:
+    promise-nodeify ">= 0.1"
+    proxying-agent ">= 2.1"
 
 tiny-emitter@^2.0.0:
   version "2.1.0"
