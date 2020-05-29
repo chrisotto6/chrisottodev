@@ -49,9 +49,6 @@ module.exports = {
         : '',
       indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : '',
     },
-    facebook: {
-      appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : '',
-    },
   },
   plugins: [
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
@@ -63,6 +60,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://dev.us18.list-manage.com/subscribe/post?u=c9ab593ff8e65047747dcae49&amp;id=86c369f684',
+      },
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
@@ -70,6 +74,7 @@ module.exports = {
         indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : '',
         queries,
         chunkSize: 10000, // default: 1000
+        enablePartialUpdates: true,
       },
     },
     'gatsby-transformer-json',

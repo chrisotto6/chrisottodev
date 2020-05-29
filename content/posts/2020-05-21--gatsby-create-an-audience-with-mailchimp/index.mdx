@@ -1,0 +1,140 @@
+---
+title: Gatsby - Create an audience with Mailchimp
+cover: mail.jpg
+author: Chris Otto
+tags: ['gatsby','react','mailchimp']
+published: true
+---
+Image from @mathyaskurmann on [Unsplash](https://unsplash.com/)
+
+Allowing people to get updates from your blog is a great way to create and engage with your audience. I wanted to create a subscribe component to my blog. Yes, this can be accomplished with RSS feeds but I thought it would nice to add a new UI component and integrate with a service. I chose Mailchimp to allow visitors to subscribe to my blog! The best part is that there is already a Gatsby plugin that handles the heavy lifting.
+
+## Create a MailChimp Account 📬
+
+Head on over to [Mailchimp](www.mailchimp.com) and create an account. The free tier should be more than enough to get you started. In order to use the plugin, we need to grab your Mailchimp endpoint.
+
+Once your account is all set up, go to _Create_ -> _Signup Form_. Click _Begin_ and you should see the Mailchimp form template creator. Scroll down to the _Copy/Paste onto your site_ section and copy the URL value out of `<form action="%URL%"...>`. It will start like this `https://dev.us18.list-manage.com/subscribe/...`.
+
+## Add and Setup Plugin Package 📦
+
+Add the Gatsby Plugin Mailchimp to your repository:
+
+```bash
+npm install gatsby-plugin-mailchimp
+```
+
+Setup the plugin in your `gatsby-config.js`. I wanted to keep my endpoint secure so I added it to my `.env` file and referenced the endpoint through the environment variable.
+
+```js
+require('dotenv').config()
+...
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'process.env.MAILCHIMP_ENDPOINT',
+      },
+    },
+```
+
+## Create the Subscribe Component 🧩
+
+I use Ant Design components in my site but you can use a similar UI component library or your own hand-rolled components. The end result will be the same, we're going to create a new form with three elements; a field for a name, email and a button. The form on submission will use the `addToMailChimp` import from `gatsby-plugin-mailchimp` to send the input off to Mailchimp and get the user subscribed to all your great content.
+
+```js
+import React from 'react'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
+import { Form, Input, Button, Divider } from 'antd'
+import { UserOutlined, MailOutlined } from '@ant-design/icons'
+import 'antd/dist/antd.css'
+
+export default class Subscribe extends React.Component {
+  constructor() {
+    super()
+    this.state = { name: '', email: '', result: null }
+  }
+
+  handleSubmit = async (e) => {
+    const result = await addToMailchimp(this.state.email, { FNAME: this.state.name })
+    if (result.result === 'error') {
+      alert(`Whoops, ${this.state.name} you're already subscribed!`)
+    } else {
+      alert(`Thank you for subscribing ${this.state.name}!`)
+    }
+    this.setState({ result: result })
+  }
+
+  handleEmailChange = (event) => {
+    this.setState({ email: event.target.value })
+  }
+
+  handleNameChange = (event) => {
+    this.setState({ name: event.target.value })
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Divider />
+        <div className="subscribe">
+          <h3 className="subscribeInfo">
+            Like the article? Subscribe to get notified whenever a new article gets published!
+          </h3>
+          <Form name="subscribe" onFinish={this.handleSubmit} layout="inline">
+            <Form.Item
+              label="E-mail"
+              name="email"
+              rules={[{ required: true, message: 'Please input your email.' }]}
+            >
+              <Input prefix={<MailOutlined />} onChange={this.handleEmailChange} />
+            </Form.Item>
+
+            <Form.Item
+              label="Name"
+              name="name"
+              rules={[{ required: true, message: 'Please input your name.' }]}
+            >
+              <Input prefix={<UserOutlined />} onChange={this.handleNameChange} />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit" shape="round">
+                Subscribe
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
+
+        {/* --- STYLES --- */}
+        <style jsx>{`
+          .subscribe {
+            .subscribeInfo {
+              text-align: center;
+              padding-bottom: 20px;
+            }
+          }
+          .ant-form .ant-form-inline {
+            justify-content: center;
+          }
+        `}</style>
+      </React.Fragment>
+    )
+  }
+}
+```
+
+## Finishing up 🏁
+
+Now that the component is created you can add it into your site where you want. Some add it as a popover or an aside. I wanted mine to be at the end of every post. In order to accomplish this I just added the component to the end of the post template.
+
+```js
+import Subscribe from '../Subscribe'
+...
+<Subscribe />
+```
+
+Time to enjoy the finished product.
+
+![Finished Form](./finished_form.png)
+
+From here you may want to do some testing to make sure that everything is working. Try adding yourself or a friend to your audience. Mailchimp offers automated e-mails from RSS feeds, stand-alone e-mails and other ways for you to engage with your newly created audience. Happy trails!
+

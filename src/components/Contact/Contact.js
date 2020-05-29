@@ -48,12 +48,22 @@ const ContactForm = (props) => {
     console.log('submit Error')
   }
 
+  const layout = {
+    labelCol: { span: 3 },
+    wrapperCol: { span: 16 },
+  }
+
+  const tailLayout = {
+    wrapperCol: { offset: 3, span: 12 },
+  }
+
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
         {(theme) => (
           <div className="form">
             <Form
+              {...layout}
               name="contact"
               onSubmit={handleSubmit}
               data-netlify="true"
@@ -88,7 +98,7 @@ const ContactForm = (props) => {
                   autoSize={{ minRows: 4, maxRows: 10 }}
                 />
               </Form.Item>
-              <Form.Item>
+              <Form.Item {...tailLayout}>
                 <Button type="primary" shape="round" htmlType="submit">
                   Submit
                 </Button>
