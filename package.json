@@ -4,7 +4,7 @@
   "author": "Chris Otto <chris.otto6@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.0.4",
