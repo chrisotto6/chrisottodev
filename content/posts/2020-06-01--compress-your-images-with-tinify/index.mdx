@@ -1,0 +1,237 @@
+---
+title: Manage image sizes with tinify
+cover: image.jpg
+author: Chris Otto
+tags: ['javascript', 'node', 'utility']
+published: true
+---
+
+Image from @jruscello on [Unsplash](https://unsplash.com/)
+
+Having my blog maintained in source control is awesome. I love having a commit log and be able to have my code and posts in the same spot, they're like roommates. Following the roommate analogy, sometimes your roommate may have some habits you aren't a fan of. For me, it's the images that go along with posts. There's a many to one relationship so considering not only repository size but built times with Gatsby I wanted to implement a utility to help with the situation. A mediary of sorts.
+
+Enter `tinify` a node package that with an API key gives you 500 image compression per month in the free tier. I set out to accomplish:
+
+- Use `tinify` to compress the images in specific paths of my repository
+- Create a registry of compressed images so the same image isn't compressed more than once using up more compressions per month than what is needed
+- Use `husky` to add the utility script to execute in a pre-commit hook
+
+## Install packages 📦
+
+Using whatever flavor of package manager you like install the dependencies.
+
+### NPM
+
+```bash
+npm install husky --save-dev
+npm install tinify glob
+```
+
+### Yarn
+
+```bash
+yarn install husky --dev
+yarn install tinify glob
+```
+
+## Create Tiny PNG Account 🖼
+
+Head over to [Tiny PNG](https://tinypng.com/developers) and create an account. Once you confirm your e-mail address you'll be able to access the developer dashboard. Copy your API key.
+
+In your repository's `.env` file create a new key-value pair for your API key.
+
+```yml
+# Tinify
+TINIFY_API_KEY=%API_KEY%
+```
+
+## Create the Utility File and Registry ⚙
+
+If you don't have one already, create `util` or `utility` folder in the root of your repository. Also, create two files `compressImages.js` and `registry.json`.
+
+```bash
+mkdir util
+cd util
+touch compressImages.js registry.json
+```
+
+### Stub Out Registry Structure
+
+We'll want to give the JSON file a basic structure so we can update it accordingly in the utility function. For this, I chose to have just one top-level empty array called `done` which we will read from and push the path to images to have been compressed.
+
+```JSON
+{
+  "done": []
+}
+```
+
+### Implement the Utility
+
+We'll go over the implementation in chunks. First import the dependencies, create a variable for the file path to the registry and add the API key to `tinify`.
+
+```js
+require('dotenv').config()
+const fs = require('fs')
+const glob = require('glob')
+const tinify = require('tinify')
+
+const fileName = 'util/registry.json'
+tinify.key = process.env.TINIFY_API_KEY
+```
+
+Next, we'll create a `registrar` function that will be in charge of doing a few things:
+
+- Take in an array as input
+- Reading the contents of the registry
+- Checking if an item from the array that's passed in is in the registry already
+- If the path isn't in the registry, use `tinify` to the compress the image in the path
+- Push the path of the image out to the registry
+
+```js
+const registrar = (array) => {
+  let registry = JSON.parse(fs.readFileSync(fileName))
+
+  array.forEach((item) => {
+    if (!registry.done.includes(item)) {
+      const source = tinify.fromFile(item)
+      source.toFile(item)
+      registry.done.push(item)
+    }
+  })
+  fs.writeFileSync(fileName, JSON.stringify(registry, null, 2))
+}
+```
+
+Finally, using `glob` search our repository for files matching the images we want to compress. An array is returned from the search that `glob` performed. So we'll just pass that directly to our `registrar`. I wanted to break out the top-level folder for each glob search to the three main places I have images in my repository. This will exclude images from areas like `node_modules` that we wouldn't want to compress.
+
+```js
+glob('content/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+
+glob('static/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+
+glob('src/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+```
+
+Putting it all together:
+
+```js
+require('dotenv').config()
+const fs = require('fs')
+const glob = require('glob')
+const tinify = require('tinify')
+
+const fileName = 'util/registry.json'
+tinify.key = process.env.TINIFY_API_KEY
+
+const registrar = (array) => {
+  let registry = JSON.parse(fs.readFileSync(fileName))
+
+  array.forEach((item) => {
+    if (!registry.done.includes(item)) {
+      const source = tinify.fromFile(item)
+      source.toFile(item)
+      registry.done.push(item)
+    }
+  })
+
+  fs.writeFileSync(fileName, JSON.stringify(registry, null, 2))
+}
+
+glob('content/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+
+glob('static/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+
+glob('src/**/*(*.png|*.jpg)', function (er, images) {
+  if (er) {
+    throw new Error(er)
+  }
+  if (images) {
+    registrar(images)
+  }
+})
+```
+
+## Create Script and Add to Husky 🐕‍🦺
+
+In the `package.json` create new script that will execute the `compressImage.js` file.
+
+```JSON
+{
+  "scripts": {
+    "compress": "node util/compressImages.js"
+  }
+}
+```
+
+```JSON
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run compress"
+    }
+  }
+}
+```
+
+## Run Compression and Check the Results 🏁
+
+Before committing you may want to make sure everything is hooked up and working. Run the script:
+
+```bash
+npm run compress
+```
+
+Depending on how many images you have in your site or folder where you are running the script. You will see a large amount of images show up in your Git diff. Also, check out the registry and you should the images that were process in the `done` array.
+
+```JSON
+{
+  "done": [
+    "content/posts/2018-11-10--react-tutorial-adding-typescript/react-logo.png",
+    "content/posts/2018-11-20--javascript-copyright-date/2019.jpg",
+    "content/posts/2019-04-30--change-specflow-build/sf-logo.png",
+    "content/posts/2020-02-08--gatsby-change-from-md-to-mdx/gatsby-mdx.png",
+    "content/posts/2020-02-11--gatsby-create-published-filter-for-posts/gatsby-blue-green.png",
+    "content/posts/2020-05-21--gatsby-create-an-audience-with-mailchimp/finished_form.png",
+    "content/posts/2020-05-21--gatsby-create-an-audience-with-mailchimp/mail.jpg",
+  ]
+}
+```
+
+It's also worth while checking out the developer dashboard over at [Tiny PNG](https://tinypng.com/dashboard/api) to see how many images you compressed on your first go around. After I first ran the script I used up about 50 compressions and I don't have a lot of posts, yet.
+
+I hope a utility like this has a lot of value for those using Gatsby, Next.js or any other markdown driven static site generator that isn't going through a CMS. Cheers 🍻!
