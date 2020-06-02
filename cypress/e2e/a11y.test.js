@@ -32,14 +32,11 @@ describe('Accessibility checks', () => {
     cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
   })
 
-  // https://github.com/algolia/react-instantsearch/issues/2863 - Can't have this test yet
-  // Algolia doesn't allow for defaulting an aria-label, nor supplying one
-
-  //it('Seach Page', () => {
-  //  cy.visit('/search')
-  //  cy.injectAxe()
-  //  cy.checkA11y()
-  //})
+  it('Seach Page', () => {
+    cy.visit('/search')
+    cy.injectAxe()
+    cy.checkA11y()
+  })
 
   it('Contact Page', () => {
     cy.visit('/contact')

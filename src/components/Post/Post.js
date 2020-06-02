@@ -5,9 +5,9 @@ import 'prismjs/themes/prism-okaidia.css'
 import asyncComponent from '../AsyncComponent'
 import Headline from '../Article/Headline'
 import Bodytext from '../Article/Bodytext'
+import Subscribe from '../Subscribe'
 import Meta from './Meta'
 import Author from './Author'
-import Comments from './Comments'
 import NextPrev from './NextPrev'
 
 const Share = asyncComponent(() =>
@@ -24,11 +24,10 @@ const Post = (props) => {
     post: {
       timeToRead,
       body,
-      fields: { prefix, slug },
+      fields: { prefix },
       frontmatter: { title, author, tags },
     },
     authornote,
-    facebook,
     next: nextPost,
     prev: prevPost,
     theme,
@@ -43,9 +42,9 @@ const Post = (props) => {
       <Bodytext body={body} theme={theme} />
       <footer>
         <Share post={post} theme={theme} />
+        <Subscribe />
         <Author note={authornote} theme={theme} />
         <NextPrev next={nextPost} prev={prevPost} theme={theme} />
-        <Comments slug={slug} facebook={facebook} theme={theme} />
       </footer>
     </React.Fragment>
   )
@@ -54,7 +53,6 @@ const Post = (props) => {
 Post.propTypes = {
   post: PropTypes.object.isRequired,
   authornote: PropTypes.string.isRequired,
-  facebook: PropTypes.object.isRequired,
   next: PropTypes.object,
   prev: PropTypes.object,
   theme: PropTypes.object.isRequired,

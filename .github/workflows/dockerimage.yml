@@ -1,0 +1,25 @@
+name: Publish Docker
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY	}}
+      ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID	}}
+      ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME	}}
+      ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.ALGOLIA_SEARCH_ONLY_API_KEY	}}
+      FB_APP_ID: ${{ secrets.FB_APP_ID	}}
+      GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: ${{ github.repository }}/chrisottodev
+          username: chrisotto6
+          password: ${{ secrets.AUTH }}
+          registry: docker.pkg.github.com

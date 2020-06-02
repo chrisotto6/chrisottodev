@@ -11,13 +11,13 @@ fs.mkdirSync(`content/posts/${newPost}`)
 
 let stream = fs.createWriteStream(`content/posts/${newPost}/index.mdx`)
 
-stream.once('open', function(fd) {
+stream.once('open', function (fd) {
   stream.write('---\n')
   stream.write('title: \n')
   stream.write('cover: \n')
   stream.write('author: Chris Otto\n')
   stream.write("tags: ['']\n")
   stream.write('published: false\n')
-  stream.write('---\n')
+  stream.write('---\n\n')
   stream.end()
 })
