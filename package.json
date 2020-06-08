@@ -49,7 +49,7 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.3",
-    "gatsby-plugin-styled-jsx": "^3.3.2",
+    "gatsby-plugin-styled-jsx": "^3.3.3",
     "gatsby-plugin-styled-jsx-postcss": "^2.0.2",
     "gatsby-remark-copy-linked-files": "^2.3.3",
     "gatsby-remark-emojis": "^0.4.3",
