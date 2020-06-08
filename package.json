@@ -26,7 +26,7 @@
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "@testing-library/jest-dom": "^5.9.0",
-    "@testing-library/react": "^10.0.4",
+    "@testing-library/react": "^10.2.1",
     "algoliasearch": "^4.2.0",
     "antd": "^4.3.0",
     "fontfaceobserver": "^2.0.13",
