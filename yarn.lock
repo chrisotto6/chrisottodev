@@ -2665,14 +2665,14 @@
     "@testing-library/dom" "^7.0.2"
     "@types/testing-library__cypress" "^5.0.3"
 
-"@testing-library/dom@^7.0.2", "@testing-library/dom@^7.2.2":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.6.0.tgz#bce422f3b69d01ced6e8f883c3b018e8f36b283e"
-  integrity sha512-CvriTIYAzmo/wo6kr6vPXZXHR4XDTrrp6jgrAnXeb4VTVu6UE0ldsS2y1blSB8z8NnGkkrsDcRG7aHFQ0QQd/Q==
+"@testing-library/dom@^7.0.2", "@testing-library/dom@^7.9.0":
+  version "7.11.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.11.0.tgz#db8678bc55aef7cd6091d1510e8d0949d77d79fd"
+  integrity sha512-2j+zfA6dwnzozReA2XrbZs3e9DD9UdetONrWmumIY2QdGH0h08hRW+SaLE8kIytM6KPO5yzypHZhK5AZNFEtiw==
   dependencies:
-    "@babel/runtime" "^7.9.6"
+    "@babel/runtime" "^7.10.2"
     aria-query "^4.0.2"
-    dom-accessibility-api "^0.4.4"
+    dom-accessibility-api "^0.4.5"
     pretty-format "^25.5.0"
 
 "@testing-library/jest-dom@^5.9.0":
@@ -2690,14 +2690,13 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^10.0.4":
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.0.4.tgz#8e0e299cd91acc626d81ed8489fdc13df864c31d"
-  integrity sha512-2e1B5debfuiIGbvUuiSXybskuh7ZTVJDDvG/IxlzLOY9Co/mKFj9hIklAe2nGZYcOUxFaiqWrRZ9vCVGzJfRlQ==
+"@testing-library/react@^10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.2.1.tgz#f0c5ac9072ad54c29672150943f35d6617263f26"
+  integrity sha512-pv2jZhiZgN1/alz1aImhSasZAOPg3er2Kgcfg9fzuw7aKPLxVengqqR1n0CJANeErR1DqORauQaod+gGUgAJOQ==
   dependencies:
-    "@babel/runtime" "^7.9.6"
-    "@testing-library/dom" "^7.2.2"
-    "@types/testing-library__react" "^10.0.1"
+    "@babel/runtime" "^7.10.2"
+    "@testing-library/dom" "^7.9.0"
 
 "@theme-ui/color-modes@^0.4.0-highlight.0":
   version "0.4.0-highlight.0"
@@ -2978,13 +2977,6 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-dom@*":
-  version "16.9.8"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
-  integrity sha512-ykkPQ+5nFknnlU6lDd947WbQ6TE3NNzbQAkInC2EKY1qeYdTKp7onFusmYZb+ityzx2YviqT6BXSu+LyWWJwcA==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react@*":
   version "16.9.35"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.35.tgz#a0830d172e8aadd9bd41709ba2281a3124bbd368"
@@ -3060,15 +3052,6 @@
   integrity sha512-LoZ3uonlnAbJUz4bg6UoeFl+frfndXngmkCItSjJ8DD5WlRfVqPC5/LgJASsY/dy7AHH2YJ7PcsdASOydcVeFA==
   dependencies:
     "@types/jest" "*"
-
-"@types/testing-library__react@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/@types/testing-library__react/-/testing-library__react-10.0.1.tgz#92bb4a02394bf44428e35f1da2970ed77f803593"
-  integrity sha512-RbDwmActAckbujLZeVO/daSfdL1pnjVqas25UueOkAY5r7vriavWf0Zqg7ghXMHa8ycD/kLkv8QOj31LmSYwww==
-  dependencies:
-    "@types/react-dom" "*"
-    "@types/testing-library__dom" "*"
-    pretty-format "^25.1.0"
 
 "@types/theme-ui@*":
   version "0.3.2"
@@ -6901,10 +6884,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-accessibility-api@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.4.4.tgz#c2f9fb8b591bc19581e7ef3e6fe35baf1967c498"
-  integrity sha512-XBM62jdDc06IXSujkqw6BugEWiDkp6jphtzVJf1kgPQGvfzaU7/jRtRSF/mxc8DBCIm2LS3bN1dCa5Sfxx982A==
+dom-accessibility-api@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.4.5.tgz#d9c1cefa89f509d8cf132ab5d250004d755e76e3"
+  integrity sha512-HcPDilI95nKztbVikaN2vzwvmv0sE8Y2ZJFODy/m15n7mGXLeOKGiys9qWVbFbh+aq/KYj2lqMLybBOkYAEXqg==
 
 dom-align@^1.7.0:
   version "1.12.0"
