@@ -40,7 +40,7 @@
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.4.10",
     "gatsby-plugin-mdx": "^1.2.13",
-    "gatsby-plugin-netlify": "^2.3.3",
+    "gatsby-plugin-netlify": "^2.3.4",
     "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
