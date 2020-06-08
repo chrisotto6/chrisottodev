@@ -68,7 +68,7 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
     "react-instantsearch-dom": "^6.5.0",
-    "react-share": "^4.1.0",
+    "react-share": "^4.2.0",
     "react-visibility-sensor": "^5.1.1",
     "styled-jsx": "^3.3.0",
     "typeface-open-sans": "^0.0.75"
