@@ -75,6 +75,7 @@ module.exports = {
         queries,
         chunkSize: 10000, // default: 1000
         enablePartialUpdates: true,
+        matchFields: ['slug', 'modified'],
       },
     },
     'gatsby-transformer-json',
@@ -131,11 +132,17 @@ module.exports = {
           tags: require.resolve('./src/templates/TagTemplate.js'),
         },
         gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
             },
+          },
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {},
+            services: {},
           },
           `gatsby-plugin-sharp`,
           {
