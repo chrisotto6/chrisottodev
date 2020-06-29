@@ -18,16 +18,6 @@ const ContactForm = (props) => {
       .join('&')
   }
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values)
-        sendMessage(values)
-      }
-    })
-  }
-
   function sendMessage(values) {
     fetch('/', {
       method: 'POST',
@@ -65,15 +55,16 @@ const ContactForm = (props) => {
             <Form
               {...layout}
               name="contact"
-              onSubmit={handleSubmit}
+              onFinish={sendMessage}
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <Form.Item label="Name" rules={[{ whitespace: true }]}>
+              <Form.Item name="name" label="Name" rules={[{ whitespace: true }]}>
                 <Input name="name" aria-label="name" />
               </Form.Item>
               <Form.Item
                 label="E-mail"
+                name="email"
                 rules={[
                   {
                     required: true,
@@ -87,6 +78,7 @@ const ContactForm = (props) => {
               </Form.Item>
               <Form.Item
                 label="Message"
+                name="message"
                 rules={[
                   { required: true, message: 'Please input your message!', whitespace: true },
                 ]}
