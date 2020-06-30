@@ -42,6 +42,11 @@ const TagPage = (props) => {
     tagList.push([tag, tagPosts[tag]])
   }
 
+  // Sort tagList so the tag with the most posts is at the top
+  tagList.sort((a, b) => {
+    return b[1].length - a[1].length
+  })
+
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
