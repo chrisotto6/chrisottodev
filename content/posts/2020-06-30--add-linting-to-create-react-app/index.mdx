@@ -15,11 +15,11 @@ Create-React-App gives a nice bootstrapped project. I like being able to lint ou
 This is the most painful part of the process I kept installing one package after another to see if linting worked. All-in-all eight packages later I finally had everything there and ready to run based on the configurations from create-react-app.
 
 ```bash
-npm i --save-dev babel-eslint eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+npm i --save-dev babel-eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ```bash
-yarn add --dev babel-eslint eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+yarn add --dev babel-eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ## Add ESLint Configuration to `package.json`
@@ -43,6 +43,6 @@ Now, all we need to do is to add the linting script to our `package.json` and we
 ```json
   "scripts": {
     ...
-    "lint": "eslint --ext js src"
+    "lint": "node_modules/.bin/eslint --ext js src"
   },
 ```
