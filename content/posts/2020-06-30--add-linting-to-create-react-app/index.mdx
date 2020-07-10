@@ -1,0 +1,48 @@
+---
+title: Add Linting to Create-React-App
+cover: image.jpg
+author: Chris Otto
+tags: ['react', 'javascript', 'node']
+published: true
+---
+
+Image from [Free Illustrations](https://freellustrations.com/).
+
+Create-React-App gives a nice bootstrapped project. I like being able to lint outside of the build or run process of the application, like on pre-commit hooks with husky. To do that I needed to add linting to my create-react-app. Follow these steps to add linting to your create-react-app project and get linting outside of your build process.
+
+## Install packages 📦
+
+This is the most painful part of the process I kept installing one package after another to see if linting worked. All-in-all eight packages later I finally had everything there and ready to run based on the configurations from create-react-app.
+
+```bash
+npm i --save-dev babel-eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+```
+
+```bash
+yarn add --dev babel-eslint eslint-config-react-app eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+```
+
+## Add ESLint Configuration to `package.json`
+
+You can either supply this in a separate file (`.eslintrc.json`/`.eslintrc.js`) or right in your `package.json`. For larger configuration changes I would recommend a separate file but I'm just extending the react-app configuration and applying a couple of rule adjustments.
+
+```json
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "semi": 0,
+      "no-console": 0
+    }
+  },
+```
+
+## Add Linting Script
+
+Now, all we need to do is to add the linting script to our `package.json` and we'll be able to lint whenever we want. Even hook up husky or add a specific step for linting in our CI/CD pipeline.
+
+```json
+  "scripts": {
+    ...
+    "lint": "node_modules/.bin/eslint --ext js src"
+  },
+```
