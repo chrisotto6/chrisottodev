@@ -1,0 +1,61 @@
+---
+title: Gatsby Develop with iOS Simulator
+cover: laptop.jpg
+author: Chris Otto
+tags: ['gatsby', 'react', 'iOS']
+published: true
+---
+
+Image from [@norwood](https://unsplash.com/@nordwood) at Unsplash.
+
+Chrome DevTools have come a long way in enabling users to mimic mobile devices. However, if you wanted to debug your Gatsby application locally for mobile specific features you can do that through the iOS Simulator. In order to do this you need to have a Mac, there are other ways around it without a Mac but this post will focus on setting up your Gatsby site to be accessed through the simulator.
+
+## Prerequisites
+
+- A Mac computer
+- XCode installed
+- Developer Tools Enabled in your Mac's Safari browser
+  - Launch Safari
+  - Click Safari in the Menu
+  - Preferences
+  - Advanced
+  - Enable `Show Develop menu in menu bar`
+
+### Start Gatsby 👨‍🚀
+
+First thing we'll need to do is start the Gatsby site in a special way allowing for local network access. This can be done by using the `-H` parameter when starting `gatsby develop`
+
+``` bash
+gatsby develop -H 0.0.0.0
+```
+
+### Find IP Address 💻
+
+Next you need to find your local IP Address within your network and that can be done in the terminal with the following command.
+
+```bash
+ipconfig getifaddr en0
+```
+
+### Launch the Simulator 🚀
+
+For this next part we'll be starting XCode and starting to iOS Simulator.
+
+- Launch XCode
+- Select XCode in the Menu
+- Open Developer Tool
+- Simulator
+
+With the simulator up and running we'll need to navigate to our locally served instance of our Gatsby site.
+
+- Open Safari in the simulator
+- In the address bar paste in %IP_ADDRESS%:8000
+
+With the site active in the simulator we can now open up the Safari Developer Tools for debugging our site in the simulator.
+
+- Start Safari on your computer
+- Go the Develop in the menu
+- Expand the Simulator option
+- Click on the IP Address listed for your site
+
+Now you'll be able to use your site like a true mobile user would can even change geolocation settings, accelerometer settings and all the other benefits of iOS Simulator for using your Gatsby application.
