@@ -8095,10 +8095,10 @@ gatsby-plugin-styled-jsx-postcss@^2.0.2:
     styled-jsx-plugin-postcss "^0.1.2"
     touch "^3.1.0"
 
-gatsby-plugin-styled-jsx@^3.3.10:
-  version "3.3.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-jsx/-/gatsby-plugin-styled-jsx-3.3.10.tgz#53afb5fef04bb92b123ad398b820664a088c85d5"
-  integrity sha512-BYdV6eGKYUaobdE0z0uzDC6d/rPmXyL5uzLGNVXAOYSfc8Kr1CLMMR0mqhmpsqwUpI/X1bGI/DBZQJWgAx39OA==
+gatsby-plugin-styled-jsx@^3.3.11:
+  version "3.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-jsx/-/gatsby-plugin-styled-jsx-3.3.11.tgz#9b70f4ad05ea326e2e518bdc170beb4767099938"
+  integrity sha512-3m99qghvW3R0IaCv4F6yAYO6s+xAOCAwii/zOXLuhit/BudqKuQ5ZLv3UOdhuYVJZGSAjhbGc8bYx0wL4YKAow==
   dependencies:
     "@babel/runtime" "^7.10.3"
 
