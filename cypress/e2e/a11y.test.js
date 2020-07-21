@@ -14,11 +14,11 @@ describe('Accessibility checks', () => {
     cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
   })
 
-  it('About Page', () => {
-    cy.visit('/about')
-    cy.wait(1000)
-    cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
-  })
+  //it('About Page', () => {
+  //  cy.visit('/about')
+  //  cy.wait(1000)
+  //  cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
+  //})
 
   it('Tags Page', () => {
     cy.visit('/tag')
