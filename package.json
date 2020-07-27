@@ -97,7 +97,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.1",
+    "eslint-plugin-react": "^7.20.4",
     "glob": "^7.1.6",
     "husky": "^4.2.5",
     "postcss": "^7.0.31",
