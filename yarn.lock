@@ -3260,10 +3260,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
 
-antd@^4.5.3:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.5.3.tgz#1ea0cf501e1e71626a4a57ca5e6d9544470afc09"
-  integrity sha512-/drsnAfUjrdDrIni7zmbRk4HwtuWszj+D6WBCWKh6JO3XLvCjNMJN0ayYMykS80FPw4RaOx0tl2yKhiQODvBgA==
+antd@^4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.5.4.tgz#1eaebcba7a0d9a2e69ad3365366026546fbf7b0f"
+  integrity sha512-ToBwPaEfRXpDwkFZwEeQc8TynqVLMRX/P4V2IA2cfS4H+w4HXi89kQik4/Gx48UphHmt6fcfwtfm8QZIn3nerA==
   dependencies:
     "@ant-design/css-animation" "^1.7.2"
     "@ant-design/icons" "^4.2.1"
@@ -3302,7 +3302,7 @@ antd@^4.5.3:
     rc-tabs "~11.5.0"
     rc-textarea "~0.3.0"
     rc-tooltip "~4.2.0"
-    rc-tree "~3.8.5"
+    rc-tree "~3.9.0"
     rc-tree-select "~4.1.1"
     rc-trigger "~4.4.0"
     rc-upload "~3.2.0"
@@ -15827,16 +15827,16 @@ rc-tree-select@~4.1.1:
     rc-tree "^3.8.0"
     rc-util "^5.0.5"
 
-rc-tree@^3.8.0, rc-tree@~3.8.5:
-  version "3.8.5"
-  resolved "https://registry.yarnpkg.com/rc-tree/-/rc-tree-3.8.5.tgz#1f6d8c14a4f9263d5a426f7a24703a4c7be46ea3"
-  integrity sha512-audXUWwxyGB/4rLI4v+KuVucbc74y5t10XYQlR5WUe1J0sQuxP19+5GTb6DgrGXPxWOC6mxmkiw/xsKissE0GA==
+rc-tree@^3.8.0, rc-tree@~3.9.0:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/rc-tree/-/rc-tree-3.9.1.tgz#22e158300bf339abc9df625682d7b7c2d85047c0"
+  integrity sha512-LSLkSRT2tYEkXSdm+2Q2qvnMO2udAMgimbvdOD4Dc6ds9zfYiJWtkQTVimrvIQeS501ENH0XHzkGV07IPAp+kQ==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"
     rc-motion "^1.0.0"
     rc-util "^5.0.0"
-    rc-virtual-list "^1.1.0"
+    rc-virtual-list "^2.1.1"
 
 rc-trigger@^4.0.0, rc-trigger@^4.2.1, rc-trigger@^4.3.0, rc-trigger@^4.4.0, rc-trigger@~4.4.0:
   version "4.4.0"
@@ -15857,15 +15857,15 @@ rc-upload@~3.2.0:
   dependencies:
     classnames "^2.2.5"
 
-rc-util@^5.0.0, rc-util@^5.0.1, rc-util@^5.0.5, rc-util@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.0.6.tgz#2b828bc87a818a66384b813f76a561ad4609e9b0"
-  integrity sha512-uLGxF9WjbpJSjd6iDnIjl8ZeMUglpcuh1DwO26aaXh++yAmlB6eIAJMUwwJCuqJvo4quCvsDPg1VkqHILc4U0A==
+rc-util@^5.0.0, rc-util@^5.0.1, rc-util@^5.0.5, rc-util@^5.0.6, rc-util@^5.0.7:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.0.7.tgz#125c3a2fd917803afbb685f9eadc789b085dc813"
+  integrity sha512-nr98b5aMqqvIqxm16nF+zC3K3f81r+HsflT5E9Encr5itRwV7Vo/5GjJMNds/WiFV33rilq7vzb3xeAbCycmwg==
   dependencies:
     react-is "^16.12.0"
     shallowequal "^1.1.0"
 
-rc-virtual-list@^1.1.0, rc-virtual-list@^1.1.2:
+rc-virtual-list@^1.1.2:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/rc-virtual-list/-/rc-virtual-list-1.1.5.tgz#6edf7222830c7dd732f62698c8468b7f08ac8dec"
   integrity sha512-roZ6HE5MNKaiop+Ic7jZS7xlMnXBLp0XBElsMbE4eEL3GnnnJAet2iXoT5wjKcKMXEVyVCD0L4yQozmH7+Kgxg==
@@ -15873,6 +15873,15 @@ rc-virtual-list@^1.1.0, rc-virtual-list@^1.1.2:
     classnames "^2.2.6"
     raf "^3.4.1"
     rc-util "^5.0.0"
+
+rc-virtual-list@^2.1.1:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/rc-virtual-list/-/rc-virtual-list-2.1.5.tgz#f065e9835e16c612525e884662a886a25e4ff793"
+  integrity sha512-4jcNyR74cHfEEk25xjVfjYh6RsgK22XRApz0VpMPyygUnEpm0+44w3OP8S9vsFq3QAWUpOmW4kwp3ESJ917aaw==
+  dependencies:
+    classnames "^2.2.6"
+    rc-resize-observer "^0.2.3"
+    rc-util "^5.0.7"
 
 rc@^1.0.1, rc@^1.1.6, rc@^1.2.7, rc@^1.2.8:
   version "1.2.8"
