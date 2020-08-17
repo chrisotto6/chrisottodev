@@ -62,7 +62,7 @@
     "gatsby-remark-smartypants": "^2.3.10",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-json": "^2.4.11",
-    "gatsby-transformer-sharp": "^2.5.12",
+    "gatsby-transformer-sharp": "^2.5.13",
     "jest": "^26.4.0",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
