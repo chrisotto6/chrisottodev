@@ -2745,7 +2745,7 @@
   integrity sha512-TUp5wfanU7zUZigKqIeQDChnHQ1MEzbYqrI5iCQMFiesWNOASWm/el1lFBh1JPqmd6GkdDdDiHYJnkqd9le2ww==
   dependencies:
     "@testing-library/dom" "^7.11.0"
-    cypress "*"
+    cypress "4.12.1"
 
 "@types/testing-library__jest-dom@^5.9.1":
   version "5.9.1"
