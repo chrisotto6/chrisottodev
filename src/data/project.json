@@ -16,6 +16,14 @@
     "projecturl": "https://chrisotto.dev/"
   },
   {
+    "name": "Library",
+    "description": "React application to view parts of my GoodReads Library.",
+    "img": "library.png",
+    "tech": ["React", "API", "Node"],
+    "githuburl": "https://github.com/chrisotto6/library",
+    "projecturl": "https://library.chrisotto.dev/"
+  },
+  {
     "name": "FitNesse Format",
     "description": "NPM package to format a string the same as the FitNesse client would.",
     "img": "fitnesseformat.png",
