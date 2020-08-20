@@ -96,6 +96,12 @@ class Layout extends React.Component {
                 <style jsx global>{`
                   html {
                     box-sizing: border-box;
+                    scroll-behavior: smooth;
+                  }
+                  @media (prefers-reduced-motion: reduce) {
+                    html {
+                      scroll-behavior: auto;
+                    }
                   }
                   *,
                   *:after,
