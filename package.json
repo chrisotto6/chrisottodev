@@ -23,7 +23,7 @@
     "compress": "node util/compressImages.js"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/mdx": "^1.6.17",
     "@mdx-js/react": "^1.6.16",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.2",
