@@ -186,7 +186,7 @@ class Menu extends React.Component {
             .menu {
               &::after {
                 position: absolute;
-                content: "";
+                content: '';
                 left: ${theme.space.m};
                 right: ${theme.space.m};
                 top: 0;
@@ -235,9 +235,8 @@ class Menu extends React.Component {
               border-radius: ${theme.size.radius.small};
               border-top-right-radius: 0;
 
-
               &:after {
-                content: "";
+                content: '';
                 background: ${theme.background.color.primary};
                 z-index: 10;
                 top: -10px;
