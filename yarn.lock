@@ -15259,13 +15259,12 @@ postcss-selector-parser@^6.0.2:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-sorting@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-5.0.1.tgz#10d5d0059eea8334dacc820c0121864035bc3f11"
-  integrity sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==
+postcss-sorting@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-6.0.0.tgz#2981c879bf324425ee5a19153c4d693cf60f94d5"
+  integrity sha512-bYJ0vgAiGbjCBKi7B07CzsBc9eM84nLEbavUmwNp8rAa+PNyrgdH+6PpnqTtciLuUs99c4rFQQmCaYgeBQYmSQ==
   dependencies:
-    lodash "^4.17.14"
-    postcss "^7.0.17"
+    lodash "^4.17.20"
 
 postcss-svgo@^4.0.2:
   version "4.0.2"
