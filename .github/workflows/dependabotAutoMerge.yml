@@ -2,8 +2,8 @@ name: Dependabot Automerge
 on:
   pull_request:
     types: [opened, ready_for_review]
-    branches:
-      - 'dependabot/**'
+#   branches:
+#      - 'dependabot/**'
 jobs:
   approve:
     name: Approve pull request
