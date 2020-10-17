@@ -25,5 +25,5 @@ gatsby develop
 To run the production build and serve locally run:
 
 ```text
-gatsby build && gatsby serve
+yarn build:local && gatsby serve
 ```
