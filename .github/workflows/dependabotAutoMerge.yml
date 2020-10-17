@@ -1,34 +1,12 @@
-name: Dependabot Automerge
+name: auto-merge
 on:
   pull_request:
-#    types: [opened, ready_for_review]
-#   branches:
-#      - 'dependabot/**'
 jobs:
-  approve:
-    name: Approve pull request
+  auto-merge:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: build
     steps:
-      - uses: hmarr/auto-approve-action@v2.0.0
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          github-token: '${{ secrets.PAT }}'
-  merge:
-    name: Merge pull request
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    needs: approve
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-    steps:
-      - name: Merge
-        uses: actions/github-script@0.8.0
-        with:
-          script: |
-            await github.pulls.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number
-            })
-          github-token: '${{ secrets.PAT }}'
+          target: minor
+          github-token: ${{ secrets.PAT }}
