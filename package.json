@@ -63,7 +63,7 @@
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.18",
-    "jest": "^26.4.2",
+    "jest": "^26.5.3",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
