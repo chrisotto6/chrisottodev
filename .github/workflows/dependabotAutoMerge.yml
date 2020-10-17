@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   worker:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot'
     steps:
       - name: Check
         uses: arup-group/action-all-checks-passed@master
