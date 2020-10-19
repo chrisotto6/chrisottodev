@@ -107,7 +107,7 @@
     "postcss-custom-selectors": "^5.1.2",
     "postcss-easy-media-query": "^1.0.0",
     "postcss-load-plugins": "^2.3.0",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^4.0.3",
     "postcss-media-variables": "^2.0.1",
     "postcss-nested": "^5.0.1",
     "postcss-sorting": "^6.0.0",
