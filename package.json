@@ -73,7 +73,7 @@
     "react-share": "^4.3.1",
     "react-visibility-sensor": "^5.1.1",
     "styled-jsx": "^3.3.0",
-    "typeface-open-sans": "^0.0.75"
+    "typeface-open-sans": "^1.1.13"
   },
   "keywords": [
     "gatsby",
