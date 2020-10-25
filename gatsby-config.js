@@ -76,6 +76,9 @@ module.exports = {
         chunkSize: 10000, // default: 1000
         enablePartialUpdates: true,
         matchFields: ['slug', 'modified'],
+        settings: {
+          replicaUpdateMode: 'replace',
+        },
       },
     },
     'gatsby-transformer-json',

@@ -16,13 +16,13 @@
   // 	"description": "Log output to console"
   // }
   "RC": {
-    "scope": "javascript",
+    "scope": "javascript,javascriptreact",
     "prefix": "rc",
     "body": [
       "import React from 'react'",
       "import PropTypes from 'prop-types'",
       "",
-      "const ${1:prop} = (props) => {",
+      "const ${1} = (props) => {",
       "  const {} = props",
       "",
       "  return (",
@@ -35,9 +35,9 @@
       "  )",
       "}",
       "",
-      "${1:prop}.propTypes = {}",
+      "${1}.propTypes = {}",
       "",
-      "export default ${1:prop}",
+      "export default ${1}",
       ""
     ],
     "description": "Create new React Component for this"
