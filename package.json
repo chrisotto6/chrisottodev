@@ -39,7 +39,7 @@
     "gatsby-plugin-layout": "^1.3.13",
     "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.4.37",
-    "gatsby-plugin-mdx": "^1.2.52",
+    "gatsby-plugin-mdx": "^1.2.53",
     "gatsby-plugin-netlify": "^2.3.25",
     "gatsby-plugin-offline": "^3.2.38",
     "gatsby-plugin-react-helmet": "^3.3.14",
