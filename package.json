@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.21",
-    "@mdx-js/react": "^1.6.19",
+    "@mdx-js/react": "^1.6.21",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "algoliasearch": "^4.6.0",
