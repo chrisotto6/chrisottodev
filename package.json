@@ -27,7 +27,7 @@
     "@mdx-js/react": "^1.6.21",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
-    "algoliasearch": "^4.6.0",
+    "algoliasearch": "^4.7.0",
     "antd": "^4.8.4",
     "fontfaceobserver": "^2.0.13",
     "gatsby": "^2.26.1",
