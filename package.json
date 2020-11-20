@@ -42,7 +42,7 @@
     "gatsby-plugin-mdx": "^1.2.53",
     "gatsby-plugin-netlify": "^2.5.0",
     "gatsby-plugin-offline": "^3.4.0",
-    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-react-helmet": "^3.5.0",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.3",
