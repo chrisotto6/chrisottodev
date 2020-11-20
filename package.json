@@ -52,7 +52,7 @@
     "gatsby-plugin-styled-jsx": "^3.4.0",
     "gatsby-plugin-styled-jsx-postcss": "^2.0.2",
     "gatsby-remark-autolink-headers": "^2.6.0",
-    "gatsby-remark-copy-linked-files": "^2.4.0",
+    "gatsby-remark-copy-linked-files": "^2.5.0",
     "gatsby-remark-embedder": "^4.1.0",
     "gatsby-remark-emojis": "^0.4.3",
     "gatsby-remark-external-links": "^0.0.4",
