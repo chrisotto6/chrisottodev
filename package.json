@@ -28,7 +28,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "algoliasearch": "^4.8.2",
-    "antd": "^4.8.6",
+    "antd": "^4.9.1",
     "fontfaceobserver": "^2.0.13",
     "gatsby": "^2.27.4",
     "gatsby-image": "^2.6.0",
