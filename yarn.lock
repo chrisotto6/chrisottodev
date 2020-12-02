@@ -8309,10 +8309,10 @@ gatsby-plugin-google-analytics@^2.6.0:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
-gatsby-plugin-layout@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.5.0.tgz#ce179611283340480ec951425f7559dd4fcf583d"
-  integrity sha512-QkdmAlSy/kGQVv4MNIcUTpis8V0sP6CgTem1Ar+JNNhe9FzFkhw6z4jMeXSTvw4pY0OccjAS4CeCEY1aC/FsXg==
+gatsby-plugin-layout@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.6.0.tgz#b98f7e6eb50c87e383bde92872aadb28bbc0c4dc"
+  integrity sha512-KuMKXNJWF5dbfrW72u+chbmhpyamjl8JlxOo8jSXucbGLqZqBxFsAPnmvRW8TqDKqYjnU1uB1qPtO7vTD2rZDA==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
