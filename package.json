@@ -30,7 +30,7 @@
     "algoliasearch": "^4.8.3",
     "antd": "^4.9.2",
     "fontfaceobserver": "^2.0.13",
-    "gatsby": "^2.28.1",
+    "gatsby": "^2.28.2",
     "gatsby-image": "^2.7.0",
     "gatsby-plugin-algolia": "^0.14.1",
     "gatsby-plugin-catch-links": "^2.6.0",
