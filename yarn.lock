@@ -8391,10 +8391,10 @@ gatsby-plugin-sentry@^1.0.1:
   dependencies:
     "@sentry/browser" latest
 
-gatsby-plugin-sharp@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.11.0.tgz#92b4b6b4a79b2499f944aebe1dbcf79bd001edc3"
-  integrity sha512-euNpOvvFIExsPRPHe8SYA07Dy4KsgTlS6aspwlCIc4UvyVIBS7vf2iTUnfiOSZMJ4mB5EpN2qUZEkFf8ZeTjyw==
+gatsby-plugin-sharp@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.11.1.tgz#8fc2df2d12c9d8bef1c2aaa795e78e46259e405a"
+  integrity sha512-x+szZDBequnh8bCn/TAS4TYXybPFM/jcu9MwkV85M2tnBZwU9/1Y/XFQMV6pMfrkc5xASTqG0UR9wMSPQGBtUg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
