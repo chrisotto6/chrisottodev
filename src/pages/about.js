@@ -53,6 +53,12 @@ const AboutPage = () => {
               <SubHeadline title="Volunteer" theme={theme} />
               <Volunteer
                 theme={theme}
+                organization="Microsoft TEALs"
+                role="Volunteer Teacher"
+                duration="Jul 2020 - Present"
+              />
+              <Volunteer
+                theme={theme}
                 organization="Milwaukee Area Technical College"
                 role="ITDEV Advisory Board Member"
                 duration="Jan 2015 - Present"
