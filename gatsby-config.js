@@ -53,6 +53,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
     `gatsby-plugin-styled-jsx-postcss`, // as above
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -136,18 +137,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-          {
-            resolve: `gatsby-remark-embedder`,
-            options: {},
-            services: {},
-          },
-          `gatsby-plugin-sharp`,
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -167,8 +157,6 @@ module.exports = {
               inlineCodeMarker: '›',
               aliases: { js: 'javascript', sh: 'bash' },
               classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
               prompt: {
