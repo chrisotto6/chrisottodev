@@ -111,7 +111,6 @@
     "postcss-media-variables": "^2.0.1",
     "postcss-nested": "^5.0.3",
     "postcss-sorting": "^6.0.0",
-    "postcss-text-remove-gap": "^1.1.1",
     "postcss-utilities": "^0.8.4",
     "prettier": "^2.2.1",
     "react-test-renderer": "^16.14.0",
