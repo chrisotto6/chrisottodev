@@ -1,20 +1,11 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "11:00"
-  open-pull-requests-limit: 30
-  target-branch: dependencies
-  labels:
-  - dependencies
-  ignore:
-  - dependency-name: react-instantsearch
-    versions:
-    - ">= 6.a"
-    - "< 7"
-  - dependency-name: styled-jsx-plugin-postcss
-    versions:
-    - ">= 2.a"
-    - "< 3"
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '11:00'
+    open-pull-requests-limit: 50
+    target-branch: dependencies
+    labels:
+      - dependencies

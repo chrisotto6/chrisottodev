@@ -26,17 +26,17 @@ describe('Accessibility checks', () => {
     cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
   })
 
-  it('Projects Page', () => {
-    cy.visit('/project')
-    cy.wait(1000)
-    cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
-  })
+  //it('Projects Page', () => {
+  //  cy.visit('/project')
+  //  cy.wait(1000)
+  //  cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
+  //})
 
-  it('Seach Page', () => {
-    cy.visit('/search')
-    cy.injectAxe()
-    cy.checkA11y()
-  })
+  //it('Search Page', () => {
+  //  cy.visit('/search')
+  //  cy.injectAxe()
+  //  cy.checkA11y()
+  //})
 
   it('Contact Page', () => {
     cy.visit('/contact')
@@ -44,8 +44,8 @@ describe('Accessibility checks', () => {
     cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
   })
 
-  it('404 Page', () => {
-    cy.visit('/404')
-    cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
-  })
+  //it('404 Page', () => {
+  //  cy.visit('/404')
+  //  cy.injectAxe().configureAxe(A11Y_CONFIG).checkA11y()
+  //})
 })
