@@ -8366,17 +8366,17 @@ gatsby-plugin-sentry@^1.0.1:
   dependencies:
     "@sentry/browser" latest
 
-gatsby-plugin-sharp@^2.11.2:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.12.0.tgz#3668f03e96fb024459939859f022a755fea91b8d"
-  integrity sha512-I9O9tPWT5noEhOJnqEeaQ4E9rfKSIKH+cN+xvmJcRPJP4HKcXQqs1NH/tbhKrNvuNyIQK+f8xGiXKeFVvQDcUA==
+gatsby-plugin-sharp@^2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.12.1.tgz#6cc67299ab7555187c9be12de38b3b3c595cccd8"
+  integrity sha512-peqF1m5OWk7i0sikiiaLgIlj14ysaPLLFQ9gEit1lL24NaBr0U97h1kXQpl4cyGdozXi//tkv1eN/cFl/9IQZQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
     bluebird "^3.7.2"
     fs-extra "^9.0.1"
     gatsby-core-utils "^1.8.0"
-    gatsby-telemetry "^1.8.0"
+    gatsby-telemetry "^1.8.1"
     got "^10.7.0"
     imagemin "^7.0.1"
     imagemin-mozjpeg "^9.0.0"
