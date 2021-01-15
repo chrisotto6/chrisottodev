@@ -8,11 +8,11 @@ published: true
 
 Image from [Free Illustrations](https://freellustrations.com/).
 
-Being able to monitor when your application encounters a bug in product is a nice thing to have for you personal or professional projects. The folks at [Sentry](https://sentry.io/welcome/) have created a solution to monitor errors within your applications and alert you when they happen. I have set this up for my personal site and a website I made for my wife. This guide will walk you through what you need to do to add sentry monitoring to your Gatsby applications.
+Being able to monitor when your application encounters a bug in production is a nice thing to have for your personal or professional projects. The folks at [Sentry](https://sentry.io/welcome/) have created a solution to monitor errors within your applications and alert you when they happen. I have set this up for my personal site and a website I made for my wife. This guide will walk you through what you need to do to add sentry monitoring to your Gatsby applications.
 
 ## Create Sentry Account and Project
 
-First we neeed to create an account with [Sentry](https://sentry.io/welcome/). Head over to their site, select `Sign Up` and either create an account or use Github or any of the other integrations that they have.
+First, we need to create an account with [Sentry](https://sentry.io/welcome/). Head over to their site, select `Sign Up` and either create an account or use Github or any of the other integrations that they have.
 
 Once signed in:
 
@@ -20,7 +20,7 @@ Once signed in:
 - Choose `React` for the platform
 - Set your notification preferences
 - Name your project
-  - I use the domain or the github project name of the website I'm adding sentry to
+  - I use the domain or the Github project name of the website I'm adding sentry to
 - Choose or create the team that the project should live in
 - Hit `Create Project`
 
@@ -55,13 +55,13 @@ In your `gatsby-config.js` add:
     },
 ```
 
-You'll want to setup your Sentry DSN up as an environment variable because you don't want your secret for your project being exposed. This means adding it to any CI/CD (Github Actions, TravisCI, etc.) or deployment (Netlify, Vercel, etc.) configurations as well.
+You'll want to set up your Sentry DSN up as an environment variable because you don't want your secret for your project being exposed. This means adding it to any CI/CD (Github Actions, TravisCI, etc.) or deployment (Netlify, Vercel, etc.) configurations as well.
 
 ## Create the Error Boundary Component 🧩
 
 We're going to create an Error Boundary component to catch any errors in our application and use it to send the details to Sentry. Later we're going to wrap a Gatsby layout component with our new error boundary so any page or post in your site will have the error boundary available.
 
-Create an new file called `ErrorBoundary.js` where you define your components in your project (for me this is in `src/common/components`):
+Create a new file called `ErrorBoundary.js` where you define your components in your project (for me this is in `src/common/components`):
 
 ```js
 import React from 'react'
@@ -115,16 +115,16 @@ Wrap whatever was in your Layout component with the ErrorBoundary component:
 ```js
 const Layout = (props) => (
 +  <ErrorBoundary>
-    <React.Fragment>
-      <Helmet>
-        <body className="bg-white mid-gray" />
-      </Helmet>
-      <Navbar />
-      {props.children}
-      <Footer />
-    </React.Fragment>
+      <React.Fragment>
+        <Helmet>
+          <body className="bg-white mid-gray" />
+        </Helmet>
+        <Navbar />
+        {props.children}
+        <Footer />
+      </React.Fragment>
 +  </ErrorBoundary>
-)
+  )
 ```
 
 ## Conclusion
