@@ -99,7 +99,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.22.0",
     "glob": "^7.1.6",
-    "husky": "^4.3.6",
+    "husky": "^4.3.8",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "postcss-cssnext": "^3.1.0",
