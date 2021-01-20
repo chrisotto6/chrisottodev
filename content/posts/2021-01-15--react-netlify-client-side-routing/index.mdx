@@ -1,0 +1,26 @@
+---
+title: Netlify - Client Side Routing
+cover: computer.jpg
+author: Chris Otto
+tags: ['netlify', 'react', 'react-router']
+published: true
+---
+
+I have a nice little [side project](https://library.chrisotto.dev/) based on the Goodreads API (yes, my key is still active). I had it up for a while and whenever I would refresh a page while it was deployed it would lose context to the page. This is because Netlify didn't know how to handle the state I had gotten myself into because the routing in `create-react-app` that I was using was `react-router`.
+
+Luckily enough this is an easy fix, so if you also have the following:
+
+- Create React App client side routing through `react-router`
+- Deploy your site on Netlify
+
+...then you will be able to make the same change and have your page context persist after refreshes!
+
+## Creating a Redirects File 💻
+
+In your `public` directory create a new `__redirects` file with the following code:
+
+```txt
+/*  /index.html  200
+```
+
+Now when the project gets built by Netlify, Create-React-App will place the contents of the `public` directory into the build output. Allowing Netlify to handle `pushState` from within your application. That's it!

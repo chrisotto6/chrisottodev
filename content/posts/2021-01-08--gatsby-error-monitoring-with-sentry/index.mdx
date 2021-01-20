@@ -1,0 +1,132 @@
+---
+title: Gatsby Error Monitoring with Sentry
+cover: error_image.jpg
+author: Chris Otto
+tags: ['react', 'gatsby', 'sentry']
+published: true
+---
+
+Image from [Free Illustrations](https://freellustrations.com/).
+
+Being able to monitor when your application encounters a bug in production is a nice thing to have for your personal or professional projects. The folks at [Sentry](https://sentry.io/welcome/) have created a solution to monitor errors within your applications and alert you when they happen. I have set this up for my personal site and a website I made for my wife. This guide will walk you through what you need to do to add sentry monitoring to your Gatsby applications.
+
+## Create Sentry Account and Project
+
+First, we need to create an account with [Sentry](https://sentry.io/welcome/). Head over to their site, select `Sign Up` and either create an account or use Github or any of the other integrations that they have.
+
+Once signed in:
+
+- Create a new project
+- Choose `React` for the platform
+- Set your notification preferences
+- Name your project
+  - I use the domain or the Github project name of the website I'm adding sentry to
+- Choose or create the team that the project should live in
+- Hit `Create Project`
+
+The next page will give you some default React code for adding Sentry to your application. You can disregard this for now, just copy your Sentry DSN from the code, we'll need this later for setting up the Gatsby plugin.
+
+## Install Packages 📦
+
+In your project, add the `gatsby-plugin-sentry`:
+
+```sh
+npm install gatsby-plugin-sentry
+```
+
+or
+
+```sh
+yarn add gatsby-plugin-sentry
+```
+
+## Gatsby Configuration Changes 👨‍💻
+
+Using the Sentry DSN we copied from creating our project, we now need to configure our Gatsby plugin to hook up to our Sentry project.
+
+In your `gatsby-config.js` add:
+
+```js
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+      },
+    },
+```
+
+You'll want to set up your Sentry DSN up as an environment variable because you don't want your secret for your project being exposed. This means adding it to any CI/CD (Github Actions, TravisCI, etc.) or deployment (Netlify, Vercel, etc.) configurations as well.
+
+## Create the Error Boundary Component 🧩
+
+We're going to create an Error Boundary component to catch any errors in our application and use it to send the details to Sentry. Later we're going to wrap a Gatsby layout component with our new error boundary so any page or post in your site will have the error boundary available.
+
+Create a new file called `ErrorBoundary.js` where you define your components in your project (for me this is in `src/common/components`):
+
+```js
+import React from 'react'
+import PropTypes from 'prop-types'
+import Sentry from 'gatsby-plugin-sentry'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { error: null }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    this.setState({ error })
+    Sentry.configureScope((scope) => {
+      Object.keys(errorInfo).forEach((key) => {
+        scope.setExtra(key, errorInfo[key])
+      })
+    })
+    Sentry.captureException(error)
+  }
+
+  render() {
+    if (this.state.error) {
+      // render fallback UI
+      return <h1>Something went wrong!</h1>
+    } else {
+      // when there's not an error, render children untouched
+      return this.props.children
+    }
+  }
+}
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.object.isRequired,
+}
+
+export default ErrorBoundary
+```
+
+## Wrap Contents of Layout Component with Error Boundary
+
+Now in your layout component import the new ErrorBoundary component:
+
+```js
+import ErrorBoundary from '../components/ErrorBoundary'
+```
+
+Wrap whatever was in your Layout component with the ErrorBoundary component:
+
+```js
+const Layout = (props) => (
++  <ErrorBoundary>
+      <React.Fragment>
+        <Helmet>
+          <body className="bg-white mid-gray" />
+        </Helmet>
+        <Navbar />
+        {props.children}
+        <Footer />
+      </React.Fragment>
++  </ErrorBoundary>
+  )
+```
+
+## Conclusion
+
+Just like that you should be all setup. Make sure to keep an eye out for Sentry e-mails coming from your application and this will give you a great way to issues reported from your applications in production. Cheers 🍻!

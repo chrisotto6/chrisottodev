@@ -10,7 +10,7 @@ const Seo = (props) => {
   const postCover = ((data || {}).frontmatter || {}).cover
   const postSlug = ((data || {}).fields || {}).slug
 
-  const title = postTitle ? `${postTitle} - ${config.shortSiteTitle}` : config.siteTitle
+  const title = postTitle ? `${postTitle}` : config.siteTitle
   const description = postDescription ? postDescription : config.siteDescription
   const image = postCover ? postCover : config.siteImage
   const url = config.siteUrl + config.pathPrefix + postSlug

@@ -1,6 +1,5 @@
 module.exports = {
   siteTitle: 'Chris Otto | Father, Developer, Test Engineer', // <title>
-  shortSiteTitle: 'Techie, Developer', // <title> ending for posts and pages
   siteDescription: 'Thoughts and projects',
   siteUrl: 'https://chrisotto.dev',
   siteLanguage: 'en',

@@ -55,9 +55,11 @@ export const postQuery = graphql`
         author
         tags
         cover {
-          childImageSharp {
-            resize(width: 300) {
-              src
+          children {
+            ... on ImageSharp {
+              fluid(maxWidth: 750, maxHeight: 380) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
             }
           }
         }

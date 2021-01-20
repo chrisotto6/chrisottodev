@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import 'prismjs/themes/prism-okaidia.css'
+import Img from 'gatsby-image'
 
 import asyncComponent from '../AsyncComponent'
 import Headline from '../Article/Headline'
@@ -25,7 +26,14 @@ const Post = (props) => {
       timeToRead,
       body,
       fields: { prefix },
-      frontmatter: { title, author, tags },
+      frontmatter: {
+        title,
+        author,
+        tags,
+        cover: {
+          children: [{ fluid }],
+        },
+      },
     },
     authornote,
     next: nextPost,
@@ -37,6 +45,7 @@ const Post = (props) => {
     <React.Fragment>
       <header>
         <Headline title={title} theme={theme} />
+        <Img fluid={fluid} />
         <Meta prefix={prefix} author={author} tags={tags} timeToRead={timeToRead} theme={theme} />
       </header>
       <Bodytext body={body} theme={theme} />

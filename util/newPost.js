@@ -9,9 +9,9 @@ const newPost = `${year}-${month}-${day}--${name}`
 
 fs.mkdirSync(`content/posts/${newPost}`)
 
-let stream = fs.createWriteStream(`content/posts/${newPost}/index.mdx`)
+const stream = fs.createWriteStream(`content/posts/${newPost}/index.mdx`)
 
-stream.once('open', function (fd) {
+stream.once('open', () => {
   stream.write('---\n')
   stream.write('title: \n')
   stream.write('cover: \n')
