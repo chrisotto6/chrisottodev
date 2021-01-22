@@ -19,5 +19,6 @@ stream.once('open', () => {
   stream.write("tags: ['']\n")
   stream.write('published: false\n')
   stream.write('---\n\n')
+  stream.write('Image courteous of []().')
   stream.end()
 })
