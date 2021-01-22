@@ -127,8 +127,10 @@
     }
   },
   "lint-staged": {
-    "*.{html,js,yml,mdx}": [
-      "prettier --write",
+    "*.{html,js,yml,mdx,md,json}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
       "yarn run lint"
     ],
     "*.{jpg,png,gif}": [
