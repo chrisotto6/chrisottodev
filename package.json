@@ -134,7 +134,8 @@
       "yarn run lint"
     ],
     "*.{jpg,png,gif}": [
-      "yarn run compress"
+      "yarn run compress",
+      "git add ."
     ]
   }
 }
