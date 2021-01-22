@@ -1,0 +1,56 @@
+---
+title: Synology NAS - SSH To Find User Info
+cover: synology.png
+author: Chris Otto
+tags: ['Synology', 'NAS', ]
+published: true
+---
+
+Image courteous of [unsplash](https://unsplash.com/).
+
+The user information for your user is useful for setting up Docker images/containers that need access. You can either setup a dedicated Docker user in your NAS or any other user that has `admin` privileges.
+
+## Enable SSH
+
+In order to be able to SSH into the NAS, first we need to enable SSH:
+
+* In DSM open up the Control Panel
+* Terminal & SNMP (make sure you're in advanced mode in the control panel)
+* In the Terminal Tab
+* Click the checkbox to Enable SSH Service
+* Change the port from the default port of `22`
+* Apply
+
+## Open Up The Terminal And Find User Info
+
+Now that SSH is enabled we head to the terminal in order to login into our NAS via SSH. If you're on Windows using the default Command Prompt will work or Terminal on MacOS/Linux.
+
+With the terminal open enter the following command:
+
+```bash
+ssh %USERNAME%@%IP_ADDRESS% -p %PORT%
+```
+
+* %USERNAME% - The username for the account that has `admin` access in your NAS. It's standard practice to disable the default admin and guest account for your NAS.
+* %IP_ADDRESS% - The IP address of your Synology NAS
+* %PORT% - Port you set up for SSH when enabling SSH
+
+You'll then be prompted to enter your password, afterwords you should be greeted with the following your terminal:
+
+```bash
+%USERNAME%@%SYNOLOGY_NAS_NAME%:~$
+```
+
+Now enter in `id` and see the information for your user:
+
+```bash
+%USERNAME%@%SYNOLOGY_NAS_NAME%:~$id
+uid=1033(%USERNAME%) gid=100(users) groups=100(users),101(administrators)...
+```
+
+The key information that we need to take out of this is the `uid` and the administrators group ID. A lot of the containers on [Linux Server](https://fleet.linuxserver.io/) require these IDs but they will be mapped a little bit differently:
+
+* `uid` = `PUID`
+* Admin Group ID = `PGID`
+
+That's it. With those two IDs saved off you should now have the prerequisites to set up some Docker containers on your NAS. I will have follow-up posts for some of the containers I've set up on my NAS. Cheers! 🍻
