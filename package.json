@@ -127,13 +127,15 @@
     }
   },
   "lint-staged": {
-    "*.{html,js,yml}": [
-      "yarn run lint",
-      "git add"
+    "*.{html,js,yml,mdx,md,json}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "yarn run lint"
     ],
     "*.{jpg,png,gif}": [
       "yarn run compress",
-      "git add"
+      "git add ."
     ]
   }
 }

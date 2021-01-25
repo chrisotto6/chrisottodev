@@ -1,0 +1,71 @@
+---
+title: Portainer - Docker Container Manager For Your NAS
+cover: shipyard.jpg
+author: Chris Otto
+tags: ['synology', 'docker', 'nas']
+published: true
+---
+
+Image courteous of [Pixabay](https://pixabay.com/).
+
+Portainer is an application that makes it easy for you to manage docker containers that you have running on your system. It is a great tool to add to any NAS running containers or homeserver doing the same. It can also be used for Kubernetes management if that is something you have running or are interested. Some of the features I like:
+
+- SSH into the container right from the UI
+- View logs
+- See resources consumed by each container
+
+## Prerequisites 📃
+
+- Download Docker from Package Center
+  - In DSM head over to Package Center
+  - Search for Docker
+  - Install
+- Enable SSH for your NAS
+  - If you don't have SSH enabled follow this [guide](https://chrisotto.dev/ssh-synology-nas/).
+
+## Create Folder Structure 📂
+
+In DSM, open up the File Station:
+
+- Installing docker creates a `docker` folder at the root of your volume
+- Create a new folder in the `docker` folder for Portainer
+  - I always create the folder based on the name of the image/container I'm setting up, in this case `portainer`
+
+## SSH Into Your NAS And Run the Image 📦
+
+Using your preferred terminal SSH into your NAS, once logged in run the following:
+
+```bash
+%USERNAME%@%NAS_NAME%:~$sudo su -
+```
+
+You may be prompted to re-enter your password and you should do so. This command puts us in the root environment with the root user. Your terminal windows should now look like:
+
+```bash
+root@%NAS_NAME%:~#
+```
+
+Copy and paste the following snippet in your terminal
+
+```bash
+root@%NAS_NAME%:~# docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /volume1/docker/portainer:/data portainer/portainer-ce@latest
+```
+
+If you have any other containers already setup that may be using ports `8000` or `9000` make sure to change that before executing the Docker run command. Now we just have a to setup the portainer instance in the web interface and we'll be all set!
+
+## Setup Portainer 🛳
+
+In your browser navigate to `http://%SYNOLOGY_IP_ADDRESS%:9000`. Here we will be prompted to create a new user for Portainer.
+
+- Create your username
+- Create a new password
+- Confirm your password
+- Uncheck `Allow collection...`
+- Click `Create User`
+
+Once your user is created you will be brought to a screen to choose which container environment we want to manage with Portainer.
+
+- Select Docker (or if you are using this to manage Kubernetes then choose that one)
+- Click `Connect`
+
+Now you should be looking at the Portainer dashboard, congratulations you have successfully set up Portainer in your NAS/homeserver through Docker! Feel free to get out their [image](https://hub.docker.com/r/portainer/portainer-ce) in Docker Hub or the Community Edition [documentation](https://www.portainer.io/products/community-edition) for more information! Cheers! 🍻
