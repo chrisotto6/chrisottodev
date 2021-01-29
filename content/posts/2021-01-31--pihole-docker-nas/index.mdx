@@ -1,0 +1,73 @@
+---
+title: PiHole - Docker NAS Setup
+cover: pi-hole.png
+author: Chris Otto
+tags: ['synology', 'docker', 'nas']
+published: true
+---
+
+Pi-hole is an awesome tool that let's you block certain requests on your home network from devices. The way that Pi-hole does this by either hosting it on a Raspberry Pi or hosted on a machine on your network through Docker. Once that is done you set the IP address of the Pi-hole as your DNS server or if you can't modify your DNS server due ISP restrictions you can set it as your DHCP server. This guide we'll walk through setting up Pi-hole through Docker on a Synology NAS.
+
+## Prerequisites 📃
+
+- Download Docker from Package Center
+  - In DSM head over to Package Center
+  - Search for Docker
+  - Install
+
+## Create Folder Structure 📂
+
+In DSM, open up the File Station:
+
+- Installing docker creates a `docker` folder at the root of your volume
+- Create a new folder in the `docker` folder for Portainer
+  - I always create the folder based on the name of the image/container I'm setting up, in this case `pihole`
+- In the `pihole` directory create two new folders `pihole` and `dnsmasq.d`
+  - These folders will get mounted as volumes for the docker container later on
+
+## Downloading and Configuring the Image 🚢
+
+Open on `Docker` on your NAS. In the `Registry` tab search for pihole. The image that we're looking for is the official Pi-hole image, `pihole/pihole`. Select the image and select Download or just double click it. Once the image has finished downloading, head on over to the `Images` tab and click Launch or again double click it.
+
+Now you should be in the `Create Container` pop-over:
+
+- Enter the container name, `pihole`
+- Enable `Execute container using high privileges`
+- Click Advanced Settings
+
+In the `Advanced Settings` main tab:
+
+- Enable `Enable auto-restart`
+
+In the `Volume` tab, we're going to add the folders we created to the volumes for container, make you match the mount path below:
+
+| File/Folder             | Mount Path     |
+| :---------------------- | :------------- |
+| docker/pihole/dnsmasq.d | /etc/dnsmasq.d |
+| docker/pihole/pihole    | /etc/pihole    |
+
+<br />
+In the `Network` tab:
+
+- Enable `Use the same network as Docker Host`
+
+Finally, in the `Environment` tab we need to set/change some of the default environment variables that come with the image. You'll need to come up with a password for the web interface and that will get set for one of the variables. Also, decide on what port you want this to run on, the default is `8080` so if you have another application using that port pick a new one. Lastly, we'll need to set one of variables to the IP address of your Synology NAS or IP address of where ever you are running the container:
+
+| Variable          | Value                  |
+| :---------------- | :--------------------- |
+| WEBPASSWORD       | [Create a password]    |
+| DNSMASQ_LISTENING | local                  |
+| WEB_PORT          | 8080                   |
+| ServerIP          | [NAS IP or Machine IP] |
+
+## Launch the Container 🚀
+
+With everything configured you're now ready to click `Apply` and launch your new Pi-hole container. Once the container has started, head on over to `http://[YOUR IP ADDRESS]:[YOUR PORT]/admin`. You'll need to login with the password that we set as the environment variables earlier.
+
+## Router Changes 📶
+
+Pi-hole is running and ready to block traffic on your network, but you won't see anything on the admin dashboard until you make the necessary changes to your router. This process is very specific to which router you have so I won't detail it here as it will most likely be different for everyone. But login into your router and change the IP address of your DNS server to the IP address of your NAS. If you are not able to modify your DNS, then you can set Pi-hole to be your DHCP server.
+
+One thing I have noticed with having the Pi-hole set as my DNS server on my router is that I only log traffic for one device. The router. Which makes sense because all traffic is coming to Pi-hole from the router. One way you could get more detailed information per device is using DHCP or individually changing the DNS per device on your network to the Pi-hole. I don't really mind not seeing device specific statistics, so I left it as-is.
+
+I hope you enjoyed this little guide and happy blocking, cheers! 🍻
