@@ -1,0 +1,102 @@
+---
+title: Calibre Library - Docker NAS Setup
+cover: library.jpg
+author: Chris Otto
+tags: ['calibre', 'docker', 'nas']
+published: true
+---
+
+Image courteous of [Susan Yin at Unsplash](https://unsplash.com/@syinq).
+
+Calibre is a free ebook manager. It has been around for a while, has an e-book viewer, ability to share your library and a verbose plugin ecosystem. I have used Calibre for a few years on my desktop computer with great results and once I got a NAS I wanted to switch it over there. I'll guide you how to setup the Calibre docker image, if you want to get it setup on a server or machine running linux you can follow the same steps just ignore the Synology NAS specific steps.~~~~
+
+## Prerequisites 📃
+
+- Download Docker from Package Center
+  - In DSM head over to Package Center
+  - Search for Docker
+  - Install
+- Enable SSH for your NAS
+  - If you don't have SSH enabled follow this [guide](https://chrisotto.dev/ssh-synology-nas/)
+  - Make sure to make note of your user ID and group ID for admin as we will need that later when setting up the container
+
+## Create Folder Structure 📂
+
+In DSM, open up the File Station:
+
+- Installing docker creates a `docker` folder at the root of your volume
+- Create a new folder in the `docker` folder for Calibre
+  - I always create the folder based on the name of the image/container I'm setting up, in this case `calibre`
+- Inside the `calibre` folder create a `plugins` and `upload` directory
+- If you don't have an ebook folder in your NAS create one where ever you want
+  - I have mine setup in `homes/%MY USER%/ebooks`
+
+## Downloading and Configuring the Image 🚢
+
+Open on `Docker` on your NAS. In the `Registry` tab search for `calibre`. The image that we're looking for is the official Pi-hole image, `linuxserver/calibre`, this one of the many Docker images offered by the [linuxserver](https://fleet.linuxserver.io/) folks. Select the image and select Download or just double click it. Once the image has finished downloading, head on over to the `Images` tab and click Launch or again double click it.
+
+Now you should be in the `Create Container` pop-over:
+
+- Enter the container name, `calibre`
+- Click Advanced Settings
+
+In the `Advanced Settings` main tab:
+
+- Enable `Enable auto-restart`
+
+In the `Volume` tab, we're going to add a few folders to be used by our docker container. One for where your ebooks collection and the other for the Calibre config. The plugin ecosystem is strong within Calibre, I would suggest creating a volume for any plugins you may want to add. One final volume you may want to consider is an upload volume. As you want to add ebooks to your library you'll need a place to stage them before importing them into Calibre. Check out the examples below you'll want to match the Mount Paths for the first two, the others can be what ever works for what you want to setup with Calibre:
+
+| File/Folder            | Mount Path       |
+| :--------------------- | :--------------- |
+| homes/%USER%/ebooks    | /Calibre_Library |
+| docker/calibre/calibre | /config          |
+| docker/calibre/upload  | /upload          |
+| docker/calibre/plugins | /plugins         |
+
+<br />
+In the `Port Settings` tab configure what local ports you want to use for the Calibre. You'll want to
+make sure you set them to ports that aren't being used by any other containers or applications. I have
+provided my ports below:
+<br />
+<br />
+
+| Local Port | Container Port | Type |
+| :--------- | :------------- | :--- |
+| 32770      | 3389           | TCP  |
+| 24880      | 8080           | TCP  |
+| 24881      | 8081           | TCP  |
+
+<br />
+Finally, in the `Environment` tab we need to set the `PUID` and `PGID` variables to IDs that you looked
+up earlier in the prerequisites
+<br />
+<br />
+
+| Variable | Value     |
+| :------- | :-------- |
+| PUID     | %USER_ID% |
+| PGID     | %GROUP_ID |
+
+## Launch the Container 🚀
+
+With everything configured you're now ready to click `Apply` and launch your new Pi-hole container. Once the container has started, head on over to `http://[YOUR NAS IP ADDRESS]:[]`, so for me this is `http://192.168.1.74:24880`.
+
+## Configuring Calibre 📚
+
+The Calibre wizard should be present and it will ask you where the database should be. The volume we setup for this is `Calibre_Library` the default is config `config/Calibre_Library` change it to be what was setup for the volume.
+
+Now to set up the coolest part about Calibre, setting up sharing over the internet. With this enabled you can navigate to the URL your Calibre library from your devices and download ebooks. Settings:
+
+- Select `Preferences`
+- Select `Sharing over the net`
+- Select `User Accounts`
+  - Create a new user
+- Make sure the port to listen to connections to is `8081`
+  - This is the internal docker port it shouldn't be the port you set to route to `8081` earlier
+- Check `Require username and password to access the content server`
+- Check `Run server automatically when calibre starts`
+- Select `Apply`
+
+Now on your phone or tablet navigate to your NAS's IP address and the port that forwards to `8081`, in my example this is: `http://192.168.1.74:24881`. You should see your library load up and you'll be able to download them on your various devices.
+
+Happy reading! Cheers! 🍻
