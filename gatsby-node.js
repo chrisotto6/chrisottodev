@@ -24,7 +24,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `prefix`,
-      value: separtorIndex ? slug.substring(1, separtorIndex) : '',
+      value: separtorIndex ? slug.substring(6, separtorIndex) : '',
     })
     createNodeField({
       node,
