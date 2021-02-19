@@ -1,0 +1,47 @@
+---
+title: Watchtower - Docker NAS Setup
+cover: watchtower.jpg
+author: Chris Otto
+tags: ['docker','nas','watchtower']
+published: true
+---
+
+Image courteous of [@kristsll on Unsplash](https://unsplash.com/@kristsll).
+
+Watchtower is a container that will update all your other running containers when a new version is published to the docker registry that they are setup through. This is helpful for your Docker containers to stay up to date on your home server or NAS. If you would like to install on on your home server and not through a NAS you can jump down to the running the container portion.
+
+## Prerequisites 📃
+
+- Enable SSH for your NAS
+  - If you don't have SSH enabled follow this [guide](https://chrisotto.dev/ssh-synology-nas/)
+
+## SSH Into Your NAS 💻
+
+Now that SSH is enabled on our NAS we need to SSH into the machine so that we can run the `docker run` command. Open up the terminal on your machine and enter the following:
+
+```bash
+ssh %USERNAME%@%IP_ADDRESS% -p %PORT%
+```
+
+After you enter in your password you should be greeted with:
+
+```bash
+%USERNAME%@%SYNOLOGY_NAS_NAME%:~$
+```
+
+## Run the Container 🐳
+
+In your terminal enter the following `docker run` command:
+
+```bash
+sudo docker run --name="watchtower" -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower:latest
+```
+
+This will run Watchtower on your NAS allowing it to update existing running images whenever there is a new version pushed! That's it for the main portion of getting Watchtower up and running. Here a few extra notes since I've been running it for a few months:
+
+- I highly recommend getting Portainer set up to maintain the old images that get replaced, I have a guide on how to set that up [here](https://chrisotto.dev/portainer-docker-nas/).
+- If you want to exclude certain images from being updated you can stop them and rerun them with a label of `
+com.centurylinklabs.watchtower.enable=false`
+
+Happy containerization! Cheers! 🍻
+
