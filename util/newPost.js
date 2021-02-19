@@ -7,9 +7,9 @@ const name = process.argv[2]
 
 const newPost = `${year}-${month}-${day}--${name}`
 
-fs.mkdirSync(`content/posts/${newPost}`)
+fs.mkdirSync(`content/posts/${year}/${newPost}`)
 
-const stream = fs.createWriteStream(`content/posts/${newPost}/index.mdx`)
+const stream = fs.createWriteStream(`content/posts/${year}/${newPost}/index.mdx`)
 
 stream.once('open', () => {
   stream.write('---\n')
