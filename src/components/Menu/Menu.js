@@ -22,7 +22,7 @@ class Menu extends React.Component {
       { to: '/about/', label: 'About', icon: FaUser },
       { to: '/tag/', label: 'Tags', icon: FaTag },
       { to: '/project/', label: 'Projects', icon: FaCode },
-      { to: '/uses/', label: 'Uses', icon: FaLaptopCode},
+      { to: '/uses/', label: 'Uses', icon: FaLaptopCode },
       { to: '/search/', label: 'Search', icon: FaSearch },
       { to: '/contact/', label: 'Contact', icon: FaEnvelope },
     ]
