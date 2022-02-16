@@ -1,9 +1,4 @@
 describe('Markdown Generated Pages Tests', () => {
-  it('Uses Page', () => {
-    cy.visit('/uses')
-    cy.get('[id=Uses]').contains('Uses')
-  })
-
   it('Resources Page', () => {
     cy.visit('/resources')
     cy.get('[id=Resources]').contains('Resources')
@@ -29,6 +24,11 @@ describe('Pages Tests', () => {
   it('Projects Page', () => {
     cy.visit('/project')
     cy.get('[id=Projects]').contains('Projects')
+  })
+
+  it('Uses Page', () => {
+    cy.visit('/uses')
+    cy.get('[id=Uses]').contains('Uses')
   })
 
   it('Search Page', () => {
