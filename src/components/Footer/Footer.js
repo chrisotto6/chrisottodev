@@ -22,7 +22,7 @@ const Footer = (props) => {
             >
               Netlify
             </a>{' '}
-            | Build with{' '}
+            | Built with{' '}
             <a
               href="https://www.gatsbyjs.org"
               target="_blank"

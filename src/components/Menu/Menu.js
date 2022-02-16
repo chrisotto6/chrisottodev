@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { FaCode } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa/'
 import { FaHome } from 'react-icons/fa/'
+import { FaLaptopCode } from 'react-icons/fa/'
 import { FaSearch } from 'react-icons/fa/'
 import { FaTag } from 'react-icons/fa/'
 import { FaUser } from 'react-icons/fa/'
@@ -21,6 +22,7 @@ class Menu extends React.Component {
       { to: '/about/', label: 'About', icon: FaUser },
       { to: '/tag/', label: 'Tags', icon: FaTag },
       { to: '/project/', label: 'Projects', icon: FaCode },
+      { to: '/uses/', label: 'Uses', icon: FaLaptopCode},
       { to: '/search/', label: 'Search', icon: FaSearch },
       { to: '/contact/', label: 'Contact', icon: FaEnvelope },
     ]
