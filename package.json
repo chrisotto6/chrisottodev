@@ -29,7 +29,7 @@
     "@testing-library/react": "^11.2.7",
     "algoliasearch": "^4.8.6",
     "antd": "^4.16.1",
-    "fontfaceobserver": "^2.0.13",
+    "fontfaceobserver": "^2.3.0",
     "gatsby": "^2.32.9",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-algolia": "^0.16.3",
