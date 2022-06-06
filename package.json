@@ -105,7 +105,7 @@
     "postcss-cli": "^8.3.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-properties": "^11.0.0",
-    "postcss-custom-selectors": "^6.0.0",
+    "postcss-custom-selectors": "^6.0.3",
     "postcss-easy-media-query": "^1.0.0",
     "postcss-load-plugins": "^2.3.0",
     "postcss-loader": "^3.0.0",
