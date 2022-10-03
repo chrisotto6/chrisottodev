@@ -119,7 +119,7 @@
     "serve": "^11.3.2",
     "start-server-and-test": "^1.12.3",
     "stylelint": "^13.13.1",
-    "tinify": "^1.6.0-beta.2"
+    "tinify": "^1.7.1"
   },
   "husky": {
     "hooks": {

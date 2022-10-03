@@ -18619,10 +18619,10 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tinify@^1.6.0-beta.2:
-  version "1.6.0-beta.2"
-  resolved "https://registry.yarnpkg.com/tinify/-/tinify-1.6.0-beta.2.tgz#5985ca021d11685d846c53ac8465dce78116adfe"
-  integrity sha512-jzOtntNLiRRhMN5AlRlxapUhNYVH3YhU2cfk3Xg2u5g+t4ZfdXe97TqYvIl7cyenfXmqo5SCZet7t4alv53XvQ==
+tinify@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/tinify/-/tinify-1.7.1.tgz#657be3759f3fd2f61dd089f44f29a6c6f0b52203"
+  integrity sha512-IbZwiVG0iN/BwZB0XTA45uNyv3DxDByL9TK0jI++hyWtnV68BgNKl0r+iNLsIEDasN3IntHaeaQbiVfaQVnLdQ==
   dependencies:
     promise-nodeify ">= 0.1"
     proxying-agent ">= 2.1"
