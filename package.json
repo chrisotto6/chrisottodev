@@ -102,7 +102,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.0",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^10.1.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-custom-properties": "^11.0.0",
     "postcss-custom-selectors": "^6.0.0",
